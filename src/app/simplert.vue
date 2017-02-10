@@ -4,32 +4,34 @@
          :class="(isShownData ? 'simplert--shown' : '')"
          @click="overlayClick">
 
-        <div class="simplert__content">
+        <div class="simplert__content"
+             :class="(isUseRadius ? 'simplert__content--radius': '')">
+            
             <div class="simplert__header">
 
-                <div>
-                    <div class="simplert__icon simplert__icon--info">
+                <div v-if="isUseIcon">
+                    <div class="simplert__icon simplert__icon--info" v-if="type === 'info'">
                         <div class="simplert__line simplert__line--info">
                         </div>
                         <div class="simplert__line simplert__line--info-2">
                         </div>
                     </div>
 
-                    <div class="simplert__icon simplert__icon--success">
+                    <div class="simplert__icon simplert__icon--success" v-if="type === 'success'">
                         <div class="simplert__line simplert__line--success">
                         </div>
                         <div class="simplert__line simplert__line--success-2">
                         </div>
                     </div>
 
-                    <div class="simplert__icon simplert__icon--warning">
+                    <div class="simplert__icon simplert__icon--warning" v-if="type === 'warning'">
                         <div class="simplert__line simplert__line--warning">
                         </div>
                         <div class="simplert__line simplert__line--warning-2">
                         </div>
                     </div>
 
-                    <div class="simplert__icon simplert__icon--error">
+                    <div class="simplert__icon simplert__icon--error" v-if="type === 'error'">
                         <div class="simplert__line simplert__line--error">
                         </div>
                         <div class="simplert__line simplert__line--error-2">
@@ -44,7 +46,10 @@
                 <p>{{ message }}</p>
             </div>
             <div class="simplert__footer">
-                <button class="simplert__close">
+                <button class="simplert__close"
+                        v-bind:style="{'background-color': colorBtn}"
+                        :class="(isUseRadius ? 'simplert__close--radius': '')"
+                        @click="changeShown(false)">
                     Close
                 </button>
             </div>
@@ -64,7 +69,7 @@
     props:{
         isUseRadius : false,
         isUseIcon   : false,
-        isShown     : Boolean,
+        simplertData: Object
     },
 
     data() {
@@ -81,8 +86,14 @@
     },
 
     watch:{
-        isShown(val){
+        simplertData(obj){
             this.isShownData = true;
+
+            if(typeof obj !== 'undefined'){
+                this.setTitle(obj.title);
+                this.setMessage(obj.message);
+                this.setType(obj.type);
+            }
         }
     },
 
@@ -90,22 +101,8 @@
         overlayClick(event){
             if(event.target.className === 'simplert simplert--shown'){
                 this.changeShown(false);
+                this.setType(DEFAULT_SIMPLERT_TYPE);
             }
-        },
-
-        openSimplert(title, message, type){
-
-            this.isShownData = true;
-            this.title = title;
-            this.message = message;
-            if(type === ''){
-                // reset to default setting when empty
-                this.type = (DEFAULT_SIMPLERT_TYPE);
-            }else{
-                this.type = type;
-            }
-            // reset to default setting
-            this.colorBtn = (DEFAULT_SIMPLERT_BTN_COLOR);
         },
 
         changeShown(booleanParam){

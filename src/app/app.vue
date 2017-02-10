@@ -6,7 +6,7 @@
     <h5>By Irfan Maulana</h5>
     <div>
       <button class="demo__btn open--info"
-              v-on:click="open('Success!!!', 'Hey, I am Opened...', 'success')">
+              v-on:click="open('Information!', 'Hey, I am Opened...', 'info')">
         Open Information Alert
       </button>
 
@@ -45,7 +45,7 @@
 
     <simplert isUseRadius=true
               isUseIcon=true
-              :isShown=isShown>
+              :simplertData=simplertData>
 
     </simplert>
 
@@ -62,13 +62,20 @@
 
     data(){
       return{
-          isShown: false
+          simplertData    : {}
       }
     },
 
     methods: {
         open(title, message, type){
-            this.isShown = !this.isShown;
+            var obj = {
+                isShown : !this.isShown,
+                title   : title,
+                message : message,
+                type    : type
+            };
+
+            this.simplertData = obj;
         }
     }
   };
@@ -76,15 +83,15 @@
 
 <style scoped>
   .demo__btn{
-    padding: 10px 20px;
-    outline: none;
-    border: none;
-    text-align: center;
-    cursor: pointer;
-    color: #fff;
-    background-color: #068AC9;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+      padding: 10px 20px;
+      outline: none;
+      border: none;
+      text-align: center;
+      cursor: pointer;
+      color: #fff;
+      background-color: #068AC9;
+      -webkit-appearance: none;
+      -moz-appearance: none;
   }
 </style>
 
