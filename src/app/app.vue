@@ -7,32 +7,32 @@
     <div>
       <button class="demo__btn open--info"
               v-on:click="open('Information!', 'Hey, I am Opened...', 'info')">
-        Open Information Alert
+            Open Information Alert
       </button>
 
       <button class="demo__btn open--info"
               v-on:click="open('Success!', 'Hey, I am Opened...', 'success')">
-        Open Success Alert
+            Open Success Alert
       </button>
 
       <button class="demo__btn open--error"
               v-on:click="open('Error!', 'Hey, I am Opened...', 'error')">
-        Open Error Alert
+            Open Error Alert
       </button>
 
       <button class="demo__btn open--warning"
               v-on:click="open('Warning!', 'Hey, I am Opened...', 'warning')">
-        Open Warning Alert
+            Open Warning Alert
       </button>
 
       <button class="demo__btn open--nontitle"
               v-on:click="open('', 'Hey, I am Opened, but I dont have title', '')">
-        Open Alert Without Title
+            Open Alert Without Title
       </button>
 
       <button class="demo__btn open--customcolor"
               v-on:click="open('Custom Button', 'Hey, I am Opened...', '')">
-        Open Alert With Custom Button
+            Open Alert With Custom Button
       </button>
     </div>
     <br/>
@@ -46,7 +46,6 @@
     <simplert isUseRadius=true
               isUseIcon=true
               :simplertData=simplertData>
-
     </simplert>
 
   </div>

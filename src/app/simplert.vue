@@ -6,7 +6,7 @@
 
         <div class="simplert__content"
              :class="(isUseRadius ? 'simplert__content--radius': '')">
-            
+
             <div class="simplert__header">
 
                 <div v-if="isUseIcon">
