@@ -87,12 +87,25 @@
 
     watch:{
         simplertData(obj){
-            this.isShownData = true;
+            var _self = this;
+            _self.isShownData = true;
 
             if(typeof obj !== 'undefined'){
-                this.setTitle(obj.title);
-                this.setMessage(obj.message);
-                this.setType(obj.type);
+                _self.setTitle(obj.title);
+                _self.setMessage(obj.message);
+
+                if(obj.type !== 'undefined'){
+                    _self.setType(obj.type);
+                }else{
+                    _self.setType(DEFAULT_SIMPLERT_TYPE);
+                }
+
+                if(obj.colorBtn !== 'undefined'){
+                    _self.setColorBtn(obj.colorBtn);
+                }else{
+                    _self.setColorBtn(DEFAULT_SIMPLERT_BTN_COLOR);
+                }
+
             }
         }
     },
