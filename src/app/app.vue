@@ -53,6 +53,11 @@
 
 <script>
   import Simplert from './simplert.vue';
+  
+  /*
+  * if you install from npm or Yarn you should import from src
+  * import Simplert from 'vue2-simplert/src/app/simplert.vue';
+  */
 
   export default {
     components: {
