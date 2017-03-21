@@ -69,21 +69,16 @@ module.exports = {
       }
   },
 
-  /*vue: {
-      loaders: {
-          css: ExtractTextPlugin.extract("css"),
-          sass: ExtractTextPlugin.extract("css!sass")
-      }
-  },*/
-
   plugins: [
 
     new webpack.BannerPlugin((
       [
-        " v."+ npm.version,
-        "\n"
+        " @author: Irfan Maulana \n",
+        " vue2-simplert v."+ npm.version +" \n",
+        " https://github.com/mazipan/vue2-simplert",
+        " \n"
       ])
-      .join(",")),
+      .join(" ")),
 
     new webpack.DefinePlugin({
       'process.env': {

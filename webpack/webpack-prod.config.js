@@ -65,6 +65,15 @@ module.exports = {
   },
 
   plugins: [
+    new webpack.BannerPlugin((
+      [
+        " @author: Irfan Maulana \n",
+        " vue2-simplert v."+ npm.version +" \n",
+        " https://github.com/mazipan/vue2-simplert",
+        " \n"
+      ])
+      .join(" ")),
+
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': '"production"'
