@@ -17,8 +17,9 @@ yarn add vue2-simplert
 Or download latest release here : https://github.com/mazipan/vue2-simplert/releases
 
 ## Install to your Project
-+ Copy [simplert.vue](https://github.com/mazipan/vue2-simplert/blob/master/src/app/simplert.vue) to your vue component file
-+ Then import to your using component
++ Copy [simplert.vue](https://github.com/mazipan/vue2-simplert/blob/master/src/app/simplert.vue) from **node_modules/vue2-simplert/src/app/simplert.vue** to your vue component file
++ Sample using **vue-cli**, I copy to **src/simplert.vue**
++ Then import to your component like below :
 
 ## Component Import
 ```javascript
