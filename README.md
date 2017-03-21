@@ -16,17 +16,17 @@ yarn add vue2-simplert
 ```
 Or download latest release here : https://github.com/mazipan/vue2-simplert/releases
 
+## Install to your Project
++ Copy [simplert.vue](https://github.com/mazipan/vue2-simplert/blob/master/src/app/simplert.vue) from **node_modules/vue2-simplert/src/app/simplert.vue** to your vue component file
++ Sample using **vue-cli**, I copy to **src/simplert.vue**
++ Then import to your component like below :
+
 ## Component Import
 ```javascript
 <script>
-    import Simplert from './simplert.vue';
-    /*
-    * if you install from npm or Yarn you should import from src
-    * import Simplert from 'vue2-simplert/src/app/simplert.vue';
-    */
     export default {
         components: {
-            Simplert
+            Simplert: require('./simplert.vue')
         },
 
         data(){
@@ -53,7 +53,7 @@ Or download latest release here : https://github.com/mazipan/vue2-simplert/relea
 ```
 See here : https://github.com/mazipan/vue2-simplert/blob/master/src/app/app.vue
 
-## Template Example
+## Template Usage Example
 ```javascript
 ....
  <button class="demo__btn open--info"
