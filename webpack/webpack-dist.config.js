@@ -4,17 +4,22 @@ var combineLoaders = require('webpack-combine-loaders');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 require('es6-promise').polyfill();
 
+var npm = require("../package.json");
+
 module.exports = {
 
-  devtool: 'eval',
-
-  entry: __dirname + '/../src/main.js',
+  entry: __dirname + '/../src/simplert.js',
 
   output: {
-    path: __dirname + '/../build',
-    publicPath: '/build/',
-    filename: 'bundle.js',
-    chunkFilename: '[name].js'
+    path: __dirname + '/../dist/',
+    publicPath: '../dist/',
+    filename: 'vue2-simplert.js',
+    libraryTarget: "umd",
+    library: "Simplert"
+  },
+
+  externals: {
+    "vue": "Vue"
   },
 
 
@@ -65,6 +70,7 @@ module.exports = {
   },
 
   plugins: [
+
     new webpack.BannerPlugin((
       [
         " @author: Irfan Maulana \n",
@@ -79,6 +85,7 @@ module.exports = {
         'NODE_ENV': '"production"'
       }
     }),
+
   ]
 
 };

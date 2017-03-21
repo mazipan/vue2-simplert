@@ -1,7 +1,7 @@
 {
   "name": "vue2-simplert",
   "description": "Vue 2 Alert Component (SweetAlert Inspired)",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "author": "Irfan Maulana (https://github.com/mazipan/)",
   "homepage": "https://mazipan.github.io/ng-simplert/",
@@ -23,7 +23,7 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --config ./webpack/webpack.config.js --inline --hot --port 3000",
-    "build": "webpack --config ./webpack/webpack-prod.config.js -p",
+    "dist": "webpack --config ./webpack/webpack-dist.config.js -p",
     "bundle": "webpack --config ./webpack/webpack-bundle.config.js -p"
   },
   "devDependencies": {

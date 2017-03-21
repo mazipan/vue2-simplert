@@ -8,18 +8,15 @@ var npm = require("../package.json");
 
 module.exports = {
 
-  entry: __dirname + '/../src/simplert.js',
+  devtool: 'eval',
+
+  entry: __dirname + '/../src/main.js',
 
   output: {
-    path: __dirname + '/../dist/',
-    publicPath: '../dist/',
-    filename: 'vue2-simplert.js',
-    libraryTarget: "umd",
-    library: "Simplert"
-  },
-
-  externals: {
-    "vue": "Vue"
+    path: __dirname + '/../build',
+    publicPath: '/build/',
+    filename: 'bundle.js',
+    chunkFilename: '[name].js'
   },
 
 
@@ -70,7 +67,6 @@ module.exports = {
   },
 
   plugins: [
-
     new webpack.BannerPlugin((
       [
         " @author: Irfan Maulana \n",
@@ -85,7 +81,6 @@ module.exports = {
         'NODE_ENV': '"production"'
       }
     }),
-
   ]
 
 };
