@@ -1,6 +1,12 @@
 # vue2-simplert
 Vue 2 Simple Alert Component (SweetAlert Inspired)
 
+[![License](https://img.shields.io/github/license/mazipan/vue2-simplert.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert) 
+[![Github Issue](https://img.shields.io/github/issues/mazipan/vue2-simplert.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert/issues) 
+[![GitHub Fork](https://img.shields.io/github/forks/mazipan/vue2-simplert.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert/network) 
+[![GitHub Star](https://img.shields.io/github/stars/mazipan/vue2-simplert.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert/stargazers) 
+[![GitHub Contributors](https://img.shields.io/github/contributors/mazipan/vue2-simplert.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert/network/members)
+
 We use icon from [SweetAlert](https://github.com/t4t5/sweetalert)
 
 ![Vue2-Simplert](https://raw.githubusercontent.com/mazipan/vue2-simplert/master/screenshoot.PNG)
