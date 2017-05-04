@@ -25,7 +25,7 @@ Or download latest release here : https://github.com/mazipan/vue2-simplert/relea
 ## Install to your Project
 
 + Using import from node_modules, just import like
-```
+```javascript
 import Simplert from '~vue2-simplert/src/app/simplert.vue'
 ```
 
