@@ -1,6 +1,6 @@
 /*!
  *  @author: Irfan Maulana 
- *   vue2-simplert v.0.0.4 
+ *   vue2-simplert v.0.0.5 
  *   https://github.com/mazipan/vue2-simplert  
  * 
  */

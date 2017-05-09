@@ -23,8 +23,7 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loader: 'babel',
         query: {
-          presets: ["es2015"],
-          plugins: ["transform-object-rest-spread","transform-vue-jsx"]
+          presets: ["es2015"]
         }
       },
       {

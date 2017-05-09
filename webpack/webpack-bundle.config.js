@@ -33,30 +33,13 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loader: 'babel',
         query: {
-          presets: ["es2015"],
-          plugins: ["transform-object-rest-spread","transform-vue-jsx"]
+          presets: ["es2015"]
         }
       },
-
       {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        loader: 'url',
-      },
-
-      {
-        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: 'url',
-      },
-
-      {
-        test: /\.s[a|c]ss$/,
-        loader: 'style!css!sass'
-      },
-
-      {
-        test: /\.json$/,
-        loader: 'json'
-      },
+          test: /\.s[a|c]ss$/,
+          loader: 'style!css!sass'
+      }
     ]
   },
 
