@@ -6,8 +6,10 @@ Vue 2 Simple Alert Component (SweetAlert Inspired)
 [![GitHub Fork](https://img.shields.io/github/forks/mazipan/vue2-simplert.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert/network) 
 [![GitHub Star](https://img.shields.io/github/stars/mazipan/vue2-simplert.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert/stargazers) 
 [![GitHub Contributors](https://img.shields.io/github/contributors/mazipan/vue2-simplert.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert/network/members) 
-[![npmjs](https://img.shields.io/badge/download-npmjs-red.svg?maxAge=3600)](https://www.npmjs.com/package/vue2-simplert) 
-[![yarnpkg](https://img.shields.io/badge/download-yarn-blue.svg?maxAge=3600)](https://yarnpkg.com/en/package/vue2-simplert)
+
+
+[![version](https://img.shields.io/npm/v/vue2-simplert.svg?maxAge=3600)](https://www.npmjs.com/package/vue2-simplert)
+[![downloads](https://img.shields.io/npm/dt/vue2-simplert.svg?maxAge=3600)](https://www.npmjs.com/package/vue2-simplert) 
 
 We use icon from [SweetAlert](https://github.com/t4t5/sweetalert)
 
@@ -17,6 +19,8 @@ We use icon from [SweetAlert](https://github.com/t4t5/sweetalert)
 https://mazipan.github.io/vue2-simplert/
 
 ## Download
+[![npmjs](https://img.shields.io/badge/download-npmjs-red.svg?maxAge=3600)](https://www.npmjs.com/package/vue2-simplert) 
+[![yarnpkg](https://img.shields.io/badge/download-yarn-blue.svg?maxAge=3600)](https://yarnpkg.com/en/package/vue2-simplert)
 ```
 npm install vue2-simplert --save
 -- OR --
