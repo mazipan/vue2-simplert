@@ -1,5 +1,4 @@
 node_modules
-build
 webpack
 src/main.js
 src/app/app.vue
