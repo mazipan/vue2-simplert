@@ -172,12 +172,14 @@ $simplertDefaultBtn : #068AC9 !default;
     background-color: rgba(0,0,0,.4);
     text-align: center;
     opacity: 0;
-    transition: opacity .3s ease;
 
     &--shown{
       display: flex;
       align-items: center;
       opacity: 1;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-name: zoomIn;
     }
 
     &__header
@@ -198,10 +200,6 @@ $simplertDefaultBtn : #068AC9 !default;
         max-width: 400px;
         margin: 0 auto;
         padding: 0;
-        -webkit-animation-name: animateOpacity;
-                animation-name: animateOpacity;
-        -webkit-animation-duration: .4s;
-                animation-duration: .4s;
         background-color: #fff;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);
 
@@ -369,28 +367,14 @@ $simplertDefaultBtn : #068AC9 !default;
     }
 }
 
-@-webkit-keyframes animateOpacity
-{
-    from
-    {
-        opacity: 0;
-    }
-    to
-    {
-        opacity: 1;
-    }
-}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
 
-@keyframes animateOpacity
-{
-    from
-    {
-        opacity: 0;
-    }
-    to
-    {
-        opacity: 1;
-    }
+  50% {
+    opacity: 1;
+  }
 }
-
 </style>
