@@ -178,7 +178,7 @@ $simplertDefaultBtn : #068AC9 !default;
       align-items: center;
 
       .simplert__content{
-        animation-duration: 1s;
+        animation-duration: .5s;
         animation-fill-mode: both;
         animation-name: zoomIn;        
       }
