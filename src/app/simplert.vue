@@ -85,19 +85,19 @@
         _self.isShownData = true
 
         if (typeof obj !== 'undefined') {
-          _self.title(obj.title)
-          _self.message(obj.message)
+          _self.title = obj.title
+          _self.message = obj.message
 
           if (typeof obj.type !== 'undefined') {
-            _self.type(obj.type)
+            _self.type = obj.type
           } else {
-            _self.type(DEFAULT_SIMPLERT_TYPE)
+            _self.type = DEFAULT_SIMPLERT_TYPE
           }
 
           if (typeof obj.colorBtn !== 'undefined') {
-            _self.colorBtn(obj.colorBtn)
+            _self.colorBtn = obj.colorBtn
           } else {
-            _self.colorBtn(DEFAULT_SIMPLERT_BTN_COLOR)
+            _self.colorBtn = DEFAULT_SIMPLERT_BTN_COLOR
           }
 
         }
@@ -109,14 +109,14 @@
         let _self = this
         if (e.target.className === 'simplert simplert--shown') {
           _self.isShownData = false
-          _self.type(DEFAULT_SIMPLERT_TYPE)
+          _self.type = DEFAULT_SIMPLERT_TYPE
         }
       },
       close: function (e) {
         let _self = this
         e.preventDefault()
         _self.isShownData = false
-        _self.type(DEFAULT_SIMPLERT_TYPE)
+        _self.type = DEFAULT_SIMPLERT_TYPE
       },
       changeShown: function (booleanParam) {
         let _self = this
