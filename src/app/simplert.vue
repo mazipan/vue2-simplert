@@ -274,7 +274,7 @@ $simplertDefaultBtn : #068AC9 !default;
           border-radius: 2px;
           margin-left: -2px;
           left: 50%;
-          bottom: 17px;
+          bottom: 15px;
         }
       }
 
@@ -300,7 +300,7 @@ $simplertDefaultBtn : #068AC9 !default;
       {
         position: absolute;
         width: 5px;
-        height: 47px;
+        height: 35px;
         left: 50%;
         top: 10px;
         -webkit-border-radius: 2px;
