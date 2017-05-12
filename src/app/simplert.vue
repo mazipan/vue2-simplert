@@ -126,7 +126,7 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 @mixin border-radius($radius)
 {
