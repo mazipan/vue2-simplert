@@ -56,24 +56,21 @@
     components: {
       Simplert: require('./simplert.vue')
     },
-
     data(){
       return{
-          simplertData    : {}
+        simplertData: {}
       }
     },
-
     methods: {
-        open(title, message, type){
-            var obj = {
-                isShown : !this.isShown,
-                title   : title,
-                message : message,
-                type    : type
-            };
-
-            this.simplertData = obj;
+      open(title, message, type){
+        var obj = {
+          isShown: !this.isShown,
+          title: title,
+          message: message,
+          type: type
         }
+        this.simplertData = obj
+      }
     }
   };
 </script>

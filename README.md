@@ -32,7 +32,7 @@ Or download latest release here : https://github.com/mazipan/vue2-simplert/relea
 
 + Using import from node_modules, just import like
 ```javascript
-import Simplert from '~vue2-simplert/src/app/simplert.vue'
+import Simplert from 'vue2-simplert/src/app/simplert.vue'
 ```
 
 + Using copy source manual, after `npm install vue2-simplert --save`

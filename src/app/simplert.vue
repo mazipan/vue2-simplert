@@ -49,7 +49,7 @@
                 <button class="simplert__close"
                         v-bind:style="{'background-color': colorBtn}"
                         :class="(isUseRadius ? 'simplert__close--radius': '')"
-                        @click="changeShown(false)">
+                        @click="close">
                     Close
                 </button>
             </div>
@@ -60,95 +60,81 @@
 
 
 <script>
-
-  const DEFAULT_SIMPLERT_BTN_COLOR = "#068AC9";
-  const DEFAULT_SIMPLERT_TYPE = "info";
+  const DEFAULT_SIMPLERT_BTN_COLOR = "#068AC9"
+  const DEFAULT_SIMPLERT_TYPE = "info"
 
   export default {
-
-    props:{
-        isUseRadius : false,
-        isUseIcon   : false,
-        simplertData: Object
+    props: {
+      isUseRadius: false,
+      isUseIcon: false,
+      simplertData: Object
     },
-
-    data() {
+    data () {
       return {
-          isShownData: false,
-          title      : "",
-          message    : "",
-          /*
-           * type enum : info (default), success, warning, error
-           * */
-          type       : DEFAULT_SIMPLERT_TYPE,
-          colorBtn   : DEFAULT_SIMPLERT_BTN_COLOR
+        isShownData: false,
+        title: "",
+        message: "",
+        //type enum: info (default), success, warning, error
+        type: DEFAULT_SIMPLERT_TYPE,
+        colorBtn: DEFAULT_SIMPLERT_BTN_COLOR
       };
     },
+    watch: {
+      simplertData (obj) {
+        let _self = this
+        _self.isShownData = true
 
-    watch:{
-        simplertData(obj){
-            var _self = this;
-            _self.isShownData = true;
+        if (typeof obj !== 'undefined') {
+          _self.title(obj.title)
+          _self.message(obj.message)
 
-            if(typeof obj !== 'undefined'){
-                _self.setTitle(obj.title);
-                _self.setMessage(obj.message);
+          if (typeof obj.type !== 'undefined') {
+            _self.type(obj.type)
+          } else {
+            _self.type(DEFAULT_SIMPLERT_TYPE)
+          }
 
-                if(obj.type !== 'undefined'){
-                    _self.setType(obj.type);
-                }else{
-                    _self.setType(DEFAULT_SIMPLERT_TYPE);
-                }
+          if (typeof obj.colorBtn !== 'undefined') {
+            _self.colorBtn(obj.colorBtn)
+          } else {
+            _self.colorBtn(DEFAULT_SIMPLERT_BTN_COLOR)
+          }
 
-                if(obj.colorBtn !== 'undefined'){
-                    _self.setColorBtn(obj.colorBtn);
-                }else{
-                    _self.setColorBtn(DEFAULT_SIMPLERT_BTN_COLOR);
-                }
-
-            }
         }
+      }
     },
 
     methods: {
-        overlayClick(event){
-            if(event.target.className === 'simplert simplert--shown'){
-                this.changeShown(false);
-                this.setType(DEFAULT_SIMPLERT_TYPE);
-            }
-        },
-
-        changeShown(booleanParam){
-            this.isShownData = booleanParam;
-        },
-
-        setTitle(title){
-            this.title = title;
-        },
-
-        setMessage(message){
-            this.message = message;
-        },
-
-        setType(type){
-            this.type = type;
-        },
-
-        setColorBtn(btnColor){
-            this.colorBtn = btnColor;
-        },
-    },
-
+      overlayClick: function (e) {
+        let _self = this
+        if (e.target.className === 'simplert simplert--shown') {
+          _self.isShownData = false
+          _self.type(DEFAULT_SIMPLERT_TYPE)
+        }
+      },
+      close: function (e) {
+        let _self = this
+        e.preventDefault()
+        _self.isShownData = false
+        _self.type(DEFAULT_SIMPLERT_TYPE)
+      },
+      changeShown: function (booleanParam) {
+        let _self = this
+        _self.isShownData = booleanParam;
+      }
+    }
   }
 </script>
 
 <style lang="scss" scoped>
+
 @mixin border-radius($radius)
 {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
   border-radius: $radius;
 }
+
 @mixin appearance($appearance)
 {
   -webkit-appearance: $appearance;
@@ -167,13 +153,10 @@ $simplertDefaultBtn : #068AC9 !default;
     z-index: 999;
     top: 0;
     left: 0;
-
     display: none;
     overflow: auto;
-
     width: 100%;
     height: 100%;
-
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,.4);
     text-align: center;
@@ -187,11 +170,13 @@ $simplertDefaultBtn : #068AC9 !default;
     {
         padding: 2em 0 0;
     }
+
     &__title
     {
       display: block;
       font-size: 30px;
     }
+
     &__content
     {
         position: relative;
@@ -199,12 +184,10 @@ $simplertDefaultBtn : #068AC9 !default;
         max-width: 400px;
         margin: 0 auto;
         padding: 0;
-
         -webkit-animation-name: animateOpacity;
                 animation-name: animateOpacity;
         -webkit-animation-duration: .4s;
                 animation-duration: .4s;
-
         background-color: #fff;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);
 
@@ -217,17 +200,18 @@ $simplertDefaultBtn : #068AC9 !default;
         }
 
     }
+
     &__body
     {
 
     }
+
     &__icon
     {
       margin: 10px auto;
       width: 80px;
       height: 80px;
       position: relative;
-
       @include border-radius(50%);
 
       &--info
@@ -354,6 +338,7 @@ $simplertDefaultBtn : #068AC9 !default;
     {
         padding: 1em 0;
     }
+
     &__close{
       display: inline-block;
       padding: 10px 20px;
