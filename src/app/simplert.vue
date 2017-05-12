@@ -141,6 +141,15 @@
   -moz-appearance: $appearance;
 }
 
+@mixin box-sizing($box-size)
+{
+    -webkit-box-sizing: $box-size;
+       -moz-box-sizing: $box-size;
+            box-sizing: $box-size;
+         -o-box-sizing: $box-size;
+        -ms-box-sizing: $box-size;
+}
+
 $simplertInfo       : #C9DAE1 !default;
 $simplertSuccess		: #A5DC86 !default;
 $simplertWarning 		: #F8BB86 !default;
@@ -150,11 +159,16 @@ $simplertDefaultBtn : #068AC9 !default;
 %baseSetting
 {
   line-height: 1.15;
-  font-size: 1.3rem;
+  font-size: 14px;
+}
 
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
+html {
+    @include box-sizing(border-box);
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 .simplert
