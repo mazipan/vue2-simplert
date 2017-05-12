@@ -2,7 +2,6 @@
 var webpack = require('webpack');
 var combineLoaders = require('webpack-combine-loaders');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-require('es6-promise').polyfill();
 
 var npm = require("../package.json");
 

@@ -4,7 +4,8 @@
   "version": "0.0.7",
   "license": "MIT",
   "author": "Irfan Maulana (https://github.com/mazipan/)",
-  "homepage": "https://mazipan.github.io/ng-simplert/",
+  "homepage": "https://mazipan.github.io/vue2-simplert/",
+  "main": "./dist/vue2-simplert.js",
   "keywords": [
     "vue2 alert",
     "vue2 sweet alert",
@@ -22,9 +23,9 @@
     "node": ">=4"
   },
   "scripts": {
-    "dev": "webpack-dev-server --config ./webpack/webpack.config.js --inline --hot --port 3000",
-    "dist": "webpack --config ./webpack/webpack-dist.config.js -p",
-    "bundle": "webpack --config ./webpack/webpack-bundle.config.js -p"
+    "dev": "webpack-dev-server --config ./webpack/webpack.dev.config.js --inline --hot --port 3000",
+    "dist": "webpack --config ./webpack/webpack.prod.config.js -p",
+    "browser": "webpack --config ./webpack/webpack.prod.browser.config.js -p"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.2.0",
