@@ -148,7 +148,7 @@
 
 
 <style lang="scss">
-.body{
+body{
   background-color: #f2f4f6;
 }
 .centered{
