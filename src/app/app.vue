@@ -20,60 +20,96 @@
 
       <div class="grid__col-12">
         <div class="grid__col-3 example__title">Information Alert</div>
-        <button class="button button--radius button--blue"
-                v-on:click="open('Information!', 'Hey, I am Opened...', 'info')">
-              Click Me!
-        </button>        
+        <div class="grid__col-3">
+          <button class="button button--radius button--blue"
+                  v-on:click="open('Information!', 'Hey, I am Opened...', 'info')">
+                Click Me!
+          </button>  
+        </div>      
       </div>
 
       <div class="grid__col-12">
         <div class="grid__col-3 example__title">Success Alert</div>
-        <button class="button button--radius button--green"
-                v-on:click="open('Success!', 'Hey, I am Opened...', 'success')">
-              Click Me!
-        </button>        
+        <div class="grid__col-3">
+          <button class="button button--radius button--green"
+                  v-on:click="open('Success!', 'Hey, I am Opened...', 'success')">
+                Click Me!
+          </button>   
+        </div>         
       </div>
 
       <div class="grid__col-12">
         <div class="grid__col-3 example__title">Error Alert</div>
-        <button class="button button--radius button--red"
-                v-on:click="open('Error!', 'Hey, I am Opened...', 'error')">
-              Click Me!
-        </button>
+        <div class="grid__col-3">
+          <button class="button button--radius button--red"
+                  v-on:click="open('Error!', 'Hey, I am Opened...', 'error')">
+                Click Me!
+          </button>
+        </div>    
       </div>
 
       <div class="grid__col-12">
         <div class="grid__col-3 example__title">Warning Alert</div>
-        <button class="button button--radius button--orange"
-                v-on:click="open('Warning!', 'Hey, I am Opened...', 'warning')">
-              Click Me!
-        </button>        
+        <div class="grid__col-3">
+          <button class="button button--radius button--orange"
+                  v-on:click="open('Warning!', 'Hey, I am Opened...', 'warning')">
+                Click Me!
+          </button>    
+        </div>        
       </div>
 
       <div class="grid__col-12">
         <div class="grid__col-3 example__title">Alert Without Title</div>
-        <button class="button button--radius button--blue"
-                v-on:click="open('', 'Hey, I am Opened, but I dont have title', '')">
-              Click Me!
-        </button>        
+        <div class="grid__col-3">
+          <button class="button button--radius button--blue"
+                  v-on:click="open('', 'Hey, I am Opened, but I dont have title', '')">
+                Click Me!
+          </button>    
+        </div>        
       </div>
 
       <div class="grid__col-12">
         <div class="grid__col-3 example__title">Alert With Custom Button</div>
-        <button class="button button--radius button--blue"
-                v-on:click="open('Custom Button', 'Hey, I am Opened...', '')">
-              Click Me!
-        </button>        
+        <div class="grid__col-3">
+          <button class="button button--radius button--blue"
+                  v-on:click="open('Custom Button', 'Hey, I am Opened...', '')">
+                Click Me!
+          </button>   
+        </div>    
       </div>
+    </div>
+
+
+    <div class="grid__row content">
+      <h2>Download</h2>
+
+      <p>        
+        <a href="https://www.npmjs.com/package/vue2-simplert">
+          <img src="https://img.shields.io/badge/download-npmjs-red.svg?maxAge=3600" alt="npmjs">
+        </a>
+        <br/><br/>
+        <code>npm install vue2-simplert --save</code>
+      </p>
+
+      <p>        
+        <a href="https://yarnpkg.com/en/package/vue2-simplert">
+          <img src="https://img.shields.io/badge/download-yarn-blue.svg?maxAge=3600" alt="yarnpkg">
+        </a>
+        <br/><br/>
+        <code>yarn add vue2-simplert</code>
+      </p>
+
+      <p>Or download latest release <a href="https://github.com/mazipan/vue2-simplert/releases">here</a></p>
+
     </div>
 
     <div class="grid__row content centered">
       <h2>Contribute</h2>
 
-      <span>
+      <p>
         Feel free to fork Vue2-Simplert on <a href="https://github.com/mazipan/vue2-simplert"
-       target="_blank">GitHub</a> if you have any features or bugs!        
-      </span>
+       target="_blank">GitHub</a> if you have any features or bugs!    
+      </p>      
 
     </div>
 
@@ -112,6 +148,9 @@
 
 
 <style lang="scss">
+.body{
+  background-color: #f2f4f6;
+}
 .centered{
   text-align: center;
 }

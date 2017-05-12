@@ -2,7 +2,7 @@
 <template>
     <div class="simplert" role="modal"
          :class="(isShownData ? 'simplert--shown' : '')"
-         @click="overlayClick">
+         @click="closeOverlay">
 
         <div class="simplert__content"
              :class="(isUseRadius ? 'simplert__content--radius': '')">
@@ -49,7 +49,7 @@
                 <button class="simplert__close"
                         v-bind:style="{'background-color': colorBtn}"
                         :class="(isUseRadius ? 'simplert__close--radius': '')"
-                        @click="close">
+                        @click="closeSimplert">
                     Close
                 </button>
             </div>
@@ -64,11 +64,13 @@
   const DEFAULT_SIMPLERT_TYPE = "info"
 
   export default {
+
     props: {
       isUseRadius: false,
       isUseIcon: false,
       simplertData: Object
     },
+
     data () {
       return {
         isShownData: false,
@@ -79,8 +81,31 @@
         colorBtn: DEFAULT_SIMPLERT_BTN_COLOR
       };
     },
+
     watch: {
       simplertData (obj) {
+        let _self = this
+        _self.openSimplert(obj)
+      }
+    },
+
+    methods: {
+      closeOverlay: function (e) {
+        let _self = this
+        if (e.target.className === 'simplert simplert--shown') {
+          _self.isShownData = false
+          _self.type = DEFAULT_SIMPLERT_TYPE
+        }
+      },
+
+      closeSimplert: function (e) {
+        let _self = this
+        e.preventDefault()
+        _self.isShownData = false
+        _self.type = DEFAULT_SIMPLERT_TYPE
+      },
+
+      openSimplert: function (obj) {
         let _self = this
         _self.isShownData = true
 
@@ -101,26 +126,6 @@
           }
 
         }
-      }
-    },
-
-    methods: {
-      overlayClick: function (e) {
-        let _self = this
-        if (e.target.className === 'simplert simplert--shown') {
-          _self.isShownData = false
-          _self.type = DEFAULT_SIMPLERT_TYPE
-        }
-      },
-      close: function (e) {
-        let _self = this
-        e.preventDefault()
-        _self.isShownData = false
-        _self.type = DEFAULT_SIMPLERT_TYPE
-      },
-      changeShown: function (booleanParam) {
-        let _self = this
-        _self.isShownData = booleanParam;
       }
     }
   }
@@ -192,7 +197,7 @@ html {
       align-items: center;
 
       .simplert__content{
-        animation-duration: .5s;
+        animation-duration: .3s;
         animation-fill-mode: both;
         animation-name: zoomIn;        
       }

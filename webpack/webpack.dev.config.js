@@ -6,9 +6,9 @@ module.exports = {
   entry: __dirname + '/../src/main.js',
 
   output: {
-    path: __dirname + '/../build',
-    publicPath: '/build/',
-    filename: 'bundle.js',
+    path: __dirname + '/../dist/',
+    publicPath: '../dist/',
+    filename: 'vue2-simplert.browser.js',
     chunkFilename: '[name].js'
   },
 
