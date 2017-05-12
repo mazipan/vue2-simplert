@@ -159,23 +159,25 @@ $simplertDefaultBtn : #068AC9 !default;
 
 .simplert
 {
+    @extend %baseSetting;
+
     position: fixed;
     z-index: 999;
     top: 0;
     left: 0;
-    display: none;
     overflow: auto;
     width: 100%;
     height: 100%;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,.4);
     text-align: center;
-
-    @extend %baseSetting;
+    opacity: 0;
+    transition: opacity .3s ease;
 
     &--shown{
       display: flex;
       align-items: center;
+      opacity: 1;
     }
 
     &__header
