@@ -147,6 +147,16 @@ $simplertWarning 		: #F8BB86 !default;
 $simplertError   		: #F27474 !default;
 $simplertDefaultBtn : #068AC9 !default;
 
+%baseSetting
+{
+  line-height: 1.15;
+  font-size: 1.3rem;
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+}
+
 .simplert
 {
     position: fixed;
@@ -160,6 +170,8 @@ $simplertDefaultBtn : #068AC9 !default;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,.4);
     text-align: center;
+
+    @extend %baseSetting;
 
     &--shown{
       display: flex;
@@ -271,15 +283,15 @@ $simplertDefaultBtn : #068AC9 !default;
         width: 25px;
         -webkit-transform: rotate(45deg);
         transform: rotate(45deg);
-        left: 14px;
-        top: 46px;
+        left: 6px;
+        top: 44px;
 
         &-2 {
           background-color: $simplertSuccess;
           width: 47px;
           -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-          right: 8px;
+          right: 6px;
           top: 38px;
         }
       }
@@ -312,24 +324,21 @@ $simplertDefaultBtn : #068AC9 !default;
 
       &--error
       {
-
+        background-color: $simplertError;
         -webkit-transform: rotate(45deg);
         transform: rotate(45deg);
-        left: 17px;
-
+        left: 13px;
         width: 47px;
-        background-color: $simplertError;
-        top: 37px;
+        top: 35px;
 
         &-2
         {
+          background-color: $simplertError;
           -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-          right: 16px;
-
+          right: 13px;
           width: 47px;
-          background-color: $simplertError;
-          top: 37px;
+          top: 35px;
         }
       }
     }
