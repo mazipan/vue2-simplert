@@ -171,15 +171,17 @@ $simplertDefaultBtn : #068AC9 !default;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,.4);
     text-align: center;
-    opacity: 0;
+    display: none;
 
     &--shown{
       display: flex;
       align-items: center;
-      opacity: 1;
-      animation-duration: 1s;
-      animation-fill-mode: both;
-      animation-name: zoomIn;
+
+      .simplert__content{
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        animation-name: zoomIn;        
+      }
     }
 
     &__header
