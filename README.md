@@ -1,5 +1,4 @@
 # vue2-simplert
-Vue 2 Simple Alert Component (SweetAlert Inspired)
 
 [![License](https://img.shields.io/github/license/mazipan/vue2-simplert.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert) 
 [![Github Issue](https://img.shields.io/github/issues/mazipan/vue2-simplert.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert/issues) 
@@ -7,16 +6,18 @@ Vue 2 Simple Alert Component (SweetAlert Inspired)
 [![GitHub Star](https://img.shields.io/github/stars/mazipan/vue2-simplert.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert/stargazers) 
 [![GitHub Contributors](https://img.shields.io/github/contributors/mazipan/vue2-simplert.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert/network/members) 
 
-
 [![version](https://img.shields.io/npm/v/vue2-simplert.svg?maxAge=3600)](https://www.npmjs.com/package/vue2-simplert)
 [![downloads](https://img.shields.io/npm/dt/vue2-simplert.svg?maxAge=3600)](https://www.npmjs.com/package/vue2-simplert) 
 
-We use icon from [SweetAlert](https://github.com/t4t5/sweetalert)
+![vue2-simplert](https://mazipan.github.io/vue2-simplert/images/vue2-simplert-logo.png)
 
-![Vue2-Simplert](https://raw.githubusercontent.com/mazipan/vue2-simplert/master/screenshoot.PNG)
+Vue 2 Simple Alert Component (SweetAlert Inspired)
+
 
 ## Demo
 https://mazipan.github.io/vue2-simplert/
+
+![Vue2-Simplert](https://raw.githubusercontent.com/mazipan/vue2-simplert/master/screenshoot.PNG)
 
 ## Download
 [![npmjs](https://img.shields.io/badge/download-npmjs-red.svg?maxAge=3600)](https://www.npmjs.com/package/vue2-simplert) 
@@ -100,6 +101,8 @@ You can add this attribute below in <SimplertComponent> :
 | isUseIcon         	        | Boolean                   | true : will use icon, false : not use icon         	|
 | :simplertData         	    | Object                    | will set all data simplert needed                  	|
 
+## Credit 
++ Icon from [SweetAlert](https://github.com/t4t5/sweetalert)
 
 ## License
 MIT License
