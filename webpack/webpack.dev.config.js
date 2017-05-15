@@ -5,6 +5,10 @@ module.exports = {
 
   entry: __dirname + '/../src/main.js',
 
+  devServer: {
+    hot: true
+  },
+
   output: {
     path: __dirname + '/../dist/',
     publicPath: '../dist/',

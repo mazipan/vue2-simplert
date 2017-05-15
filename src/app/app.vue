@@ -22,7 +22,7 @@
         <div class="grid__col-3 example__title">Information Alert</div>
         <div class="grid__col-3">
           <button class="button button--radius button--blue"
-                  v-on:click="open('Information!', 'Hey, I am Opened...', 'info')">
+                  @click="open('Information!', 'Hey, I am Opened...', 'info')">
                 Click Me!
           </button>  
         </div>      
@@ -32,7 +32,7 @@
         <div class="grid__col-3 example__title">Success Alert</div>
         <div class="grid__col-3">
           <button class="button button--radius button--green"
-                  v-on:click="open('Success!', 'Hey, I am Opened...', 'success')">
+                  @click="open('Success!', 'Hey, I am Opened...', 'success')">
                 Click Me!
           </button>   
         </div>         
@@ -42,7 +42,7 @@
         <div class="grid__col-3 example__title">Error Alert</div>
         <div class="grid__col-3">
           <button class="button button--radius button--red"
-                  v-on:click="open('Error!', 'Hey, I am Opened...', 'error')">
+                  @click="open('Error!', 'Hey, I am Opened...', 'error')">
                 Click Me!
           </button>
         </div>    
@@ -52,7 +52,7 @@
         <div class="grid__col-3 example__title">Warning Alert</div>
         <div class="grid__col-3">
           <button class="button button--radius button--orange"
-                  v-on:click="open('Warning!', 'Hey, I am Opened...', 'warning')">
+                  @click="open('Warning!', 'Hey, I am Opened...', 'warning')">
                 Click Me!
           </button>    
         </div>        
@@ -62,7 +62,7 @@
         <div class="grid__col-3 example__title">Alert Without Title</div>
         <div class="grid__col-3">
           <button class="button button--radius button--blue"
-                  v-on:click="open('', 'Hey, I am Opened, but I dont have title', '')">
+                  @click="open('', 'Hey, I am Opened, but I dont have title', '')">
                 Click Me!
           </button>    
         </div>        
@@ -71,12 +71,23 @@
       <div class="grid__col-12">
         <div class="grid__col-3 example__title">Alert With Custom Button</div>
         <div class="grid__col-3">
-          <button class="button button--radius button--blue"
-                  v-on:click="open('Custom Button', 'Hey, I am Opened...', '')">
+          <button class="button button--radius button--green"
+                  @click="open('Custom Button', 'Hey, I am Opened...', '', '#00b35e')">
                 Click Me!
           </button>   
         </div>    
       </div>
+
+      <div class="grid__col-12">
+        <div class="grid__col-3 example__title">Alert With HTML</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--green"
+                  @click="openCustomHtml">
+                Click Me!
+          </button>   
+        </div>    
+      </div>
+
     </div>
 
 
@@ -116,6 +127,7 @@
     <!-- Vue2-Simplert DOM start -->
     <simplert isUseRadius=true
               isUseIcon=true
+              ref="simplert"
               :simplertData=simplertData>
     </simplert>
 
@@ -133,14 +145,27 @@
       }
     },
     methods: {
-      open(title, message, type){
-        var obj = {
-          isShown: !this.isShown,
+      open(title, message, type, color){
+        let obj = {
           title: title,
           message: message,
           type: type
         }
-        this.simplertData = obj
+
+        if(color){
+          obj.colorBtn = color
+        }
+
+        this.$refs.simplert.openSimplert(obj)
+      },
+
+      openCustomHtml(){
+        let obj = {
+          title: 'Custom HTML',
+          message: '<h5>I am HTML<h5><ul><li>List 1<li><li>List 2<li><li>List 3<li><ul>',
+          type: 'info'
+        }
+        this.$refs.simplert.openSimplert(obj)
       }
     }
   };
@@ -165,13 +190,13 @@ body{
   font-weight: 200;
 }
 .btn-download{  
-    position: fixed;
-    right: 30px;
-    top: 0;
-    font-weight: 500;
-    text-transform: uppercase;
-    z-index: 3;
-    margin: 26px 5px 0 5px;
+  position: fixed;
+  right: 30px;
+  top: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  z-index: 3;
+  margin: 26px 5px 0 5px;
 }
 .example__title{
   margin-right: 2em;

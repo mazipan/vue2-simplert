@@ -87,6 +87,7 @@ See here : https://github.com/mazipan/vue2-simplert/blob/master/src/app/app.vue
 ....
 <simplert isUseRadius=true
           isUseIcon=true
+          ref="simplert"
           :simplertData=simplertData>
 </simplert>
 ```

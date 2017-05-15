@@ -23,7 +23,7 @@
     "node": ">=4"
   },
   "scripts": {
-    "dev": "webpack-dev-server --config ./webpack/webpack.dev.config.js --inline --hot --port 3000",
+    "dev": "webpack-dev-server --config ./webpack/webpack.dev.config.js --hot --inline --port 3000 --open --colors",
     "dist": "webpack --config ./webpack/webpack.prod.config.js -p",
     "browser": "webpack --config ./webpack/webpack.prod.browser.config.js -p"
   },

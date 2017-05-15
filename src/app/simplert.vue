@@ -43,7 +43,7 @@
 
             </div>
             <div class="simplert__body">
-                <p>{{ message }}</p>
+              <div v-html="message"></div>
             </div>
             <div class="simplert__footer">
                 <button class="simplert__close"
@@ -205,7 +205,7 @@ html {
 
     &__header
     {
-        padding: 2em 0 0;
+        padding: 2em 0;
     }
 
     &__title
@@ -236,7 +236,7 @@ html {
 
     &__body
     {
-
+      padding-bottom: 1em;
     }
 
     &__icon
