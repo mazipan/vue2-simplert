@@ -144,8 +144,7 @@
     <!-- Vue2-Simplert DOM start -->
     <simplert isUseRadius=true
               isUseIcon=true
-              ref="simplert"
-              :simplertData=simplertData>
+              ref="simplert">
     </simplert>
 
   </div>
@@ -157,9 +156,7 @@
       Simplert: require('./simplert.vue')
     },
     data(){
-      return{
-        simplertData: {}
-      }
+      return{}
     },
     methods: {
       open(title, message, type, color){

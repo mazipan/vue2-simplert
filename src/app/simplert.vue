@@ -67,8 +67,7 @@
 
     props: {
       isUseRadius: false,
-      isUseIcon: false,
-      simplertData: Object
+      isUseIcon: false
     },
 
     data () {
@@ -81,13 +80,6 @@
         colorBtn: DEFAULT_SIMPLERT_BTN_COLOR,
         onClose: null
       };
-    },
-
-    watch: {
-      simplertData (obj) {
-        let _self = this
-        _self.openSimplert(obj)
-      }
     },
 
     methods: {
