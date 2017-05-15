@@ -10,10 +10,16 @@
     </div>
 
 
-    <a class="button button--radius button--blue btn-download"  href="https://github.com/mazipan/vue2-simplert"
-       target="_blank">
-        Download
-    </a>   
+    <div class="fixed-top">      
+      <a class="button button--radius button--green btn-top"  href="https://github.com/mazipan/vue2-simplert/wiki"
+         target="_blank">
+          Docs
+      </a> 
+      <a class="button button--radius button--blue btn-top"  href="https://github.com/mazipan/vue2-simplert"
+         target="_blank">
+          Download
+      </a> 
+    </div>  
 
     <div class="grid__row content">
       <h2>Example</h2>
@@ -87,7 +93,7 @@
           </button>   
         </div>    
       </div>
-      <!--
+      
       <div class="grid__col-12">
         <div class="grid__col-3 example__title">Alert With Custom Function</div>
         <div class="grid__col-3">
@@ -97,7 +103,7 @@
           </button>   
         </div>    
       </div>
-      -->
+      
 
     </div>
 
@@ -179,15 +185,16 @@
         this.$refs.simplert.openSimplert(obj)
       },
 
+      onClose(){
+        alert('Hey, I am Triggred')
+      },
+
       openCustomFunction(){
-        let customFunc = function(){
-          alert('Hey, I am Triggred')
-        }
         let obj = {
           title: 'Custom Function',
           message: 'Click close to trigger custom function',
           type: 'info',
-          onClose: customFunc
+          onClose: this.onClose
         }
         this.$refs.simplert.openSimplert(obj)
       }
@@ -213,15 +220,20 @@ body{
   color: #a6b6b9;
   font-weight: 200;
 }
-.btn-download{  
+
+.fixed-top{
   position: fixed;
   right: 30px;
   top: 0;
-  font-weight: 500;
-  text-transform: uppercase;
   z-index: 3;
   margin: 26px 5px 0 5px;
 }
+
+.btn-top{  
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
 .example__title{
   margin-right: 2em;
   font-size: 1.6rem;

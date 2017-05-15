@@ -78,7 +78,8 @@
         message: "",
         //type enum: info (default), success, warning, error
         type: DEFAULT_SIMPLERT_TYPE,
-        colorBtn: DEFAULT_SIMPLERT_BTN_COLOR
+        colorBtn: DEFAULT_SIMPLERT_BTN_COLOR,
+        onClose: null
       };
     },
 
@@ -103,6 +104,10 @@
 
         _self.isShownData = false
         _self.type = DEFAULT_SIMPLERT_TYPE
+
+        if (typeof _self.onClose !== 'undefined' && _self.onClose !== null) {
+          _self.onClose();
+        }
       },
 
       openSimplert: function (obj) {
@@ -123,6 +128,12 @@
             _self.colorBtn = obj.colorBtn
           } else {
             _self.colorBtn = DEFAULT_SIMPLERT_BTN_COLOR
+          }
+
+          if (typeof obj.onClose !== 'undefined' && obj.onClose !== null) {
+            _self.onClose = obj.onClose
+          } else {
+            _self.onClose = null
           }
 
         }
