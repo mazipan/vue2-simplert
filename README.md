@@ -17,97 +17,18 @@ Vue 2 Simple Alert Component (SweetAlert Inspired)
 ## Demo
 https://mazipan.github.io/vue2-simplert/
 
-![Vue2-Simplert](https://raw.githubusercontent.com/mazipan/vue2-simplert/master/screenshoot.PNG)
-
 ## Download
-[![npmjs](https://img.shields.io/badge/download-npmjs-red.svg?maxAge=3600)](https://www.npmjs.com/package/vue2-simplert) 
-[![yarnpkg](https://img.shields.io/badge/download-yarn-blue.svg?maxAge=3600)](https://yarnpkg.com/en/package/vue2-simplert)
-```
-npm install vue2-simplert --save
--- OR --
-yarn add vue2-simplert
-```
-Or download latest release here : https://github.com/mazipan/vue2-simplert/releases
+https://github.com/mazipan/vue2-simplert/wiki/Downloads
 
-## Install to your Project
+## Usage Guide
+https://github.com/mazipan/vue2-simplert/wiki/Usage-Guidance
 
-+ Using import from node_modules, just import like
-```javascript
-import Simplert from 'vue2-simplert/src/app/simplert.vue'
-```
-
-+ Using copy source manual, after `npm install vue2-simplert --save`
-
-    - Copy [simplert.vue](https://github.com/mazipan/vue2-simplert/blob/master/src/app/simplert.vue) from **node_modules/vue2-simplert/src/app/simplert.vue** to your vue component file
-    - Sample using **vue-cli**, I copy to **src/simplert.vue**
-    
-+ Then import to your component like below :
-
-## Component Import
-```javascript
-<script>
-    export default {
-        components: {
-            Simplert: Simplert
-            // or if you copy manual
-            // Simplert: require('./simplert.vue')
-        },
-
-        data(){
-          return{
-              simplertData    : {}
-          }
-        },
-
-        methods: {
-            //trigger open simplert
-            open(title, message, type){
-                var obj = {
-                    isShown : !this.isShown,
-                    title   : title,
-                    message : message,
-                    type    : type
-                };
-
-                this.simplertData = obj;
-            }
-        }
-      };
-</script>
-```
-See here : https://github.com/mazipan/vue2-simplert/blob/master/src/app/app.vue
-
-## Template Usage Example
-```javascript
-....
- <button class="demo__btn open--info"
-      v-on:click="open('Information!', 'Hey, I am Opened...', 'info')">
-        Open Information Alert
-</button>
-....
-<simplert isUseRadius=true
-          isUseIcon=true
-          ref="simplert"
-          :simplertData=simplertData>
-</simplert>
-```
-See here : https://github.com/mazipan/vue2-simplert/blob/master/src/app/app.vue
-
-## Exposed Attribute
-You can add this attribute below in <SimplertComponent> :
-
-| Attribute         	        | Parameter             	| Description                                        	|
-|---------------------------	|-----------------------	|---------------------------------------------------	|
-| isUseRadius         	        | Boolean                   | true : will use radius, false : not use radius     	|
-| isUseIcon         	        | Boolean                   | true : will use icon, false : not use icon         	|
-| :simplertData         	    | Object                    | will set all data simplert needed                  	|
+## Methods And Props
+https://github.com/mazipan/vue2-simplert/wiki/Methods-And-Props
 
 ## Credit 
 + Icon from [SweetAlert](https://github.com/t4t5/sweetalert)
 
-## License
-MIT License
-
-
 Hope will usefull for you all.
+
 Question ? please email : mazipanneh@gmail.com
