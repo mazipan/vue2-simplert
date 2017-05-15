@@ -81,12 +81,23 @@
       <div class="grid__col-12">
         <div class="grid__col-3 example__title">Alert With HTML</div>
         <div class="grid__col-3">
-          <button class="button button--radius button--green"
+          <button class="button button--radius button--orange"
                   @click="openCustomHtml">
                 Click Me!
           </button>   
         </div>    
       </div>
+      <!--
+      <div class="grid__col-12">
+        <div class="grid__col-3 example__title">Alert With Custom Function</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--red"
+                  @click="openCustomFunction">
+                Click Me!
+          </button>   
+        </div>    
+      </div>
+      -->
 
     </div>
 
@@ -164,6 +175,19 @@
           title: 'Custom HTML',
           message: '<h5>I am HTML<h5><ul><li>List 1<li><li>List 2<li><li>List 3<li><ul>',
           type: 'info'
+        }
+        this.$refs.simplert.openSimplert(obj)
+      },
+
+      openCustomFunction(){
+        let customFunc = function(){
+          alert('Hey, I am Triggred')
+        }
+        let obj = {
+          title: 'Custom Function',
+          message: 'Click close to trigger custom function',
+          type: 'info',
+          onClose: customFunc
         }
         this.$refs.simplert.openSimplert(obj)
       }

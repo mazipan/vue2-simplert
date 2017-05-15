@@ -93,14 +93,14 @@
       closeOverlay: function (e) {
         let _self = this
         if (e.target.className === 'simplert simplert--shown') {
-          _self.isShownData = false
-          _self.type = DEFAULT_SIMPLERT_TYPE
+          _self.closeSimplert(e)
         }
       },
 
       closeSimplert: function (e) {
         let _self = this
         e.preventDefault()
+
         _self.isShownData = false
         _self.type = DEFAULT_SIMPLERT_TYPE
       },
