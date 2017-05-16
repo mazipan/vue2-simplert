@@ -1,11 +1,11 @@
 
 <template>
     <div class="simplert" role="modal"
-         :class="(isShownData ? 'simplert--shown' : '')"
+         :class="classSimplert"
          @click="closeOverlay">
 
         <div class="simplert__content"
-             :class="(isUseRadius ? 'simplert__content--radius': '')">
+             :class="classContent">
 
             <div class="simplert__header">
 
@@ -37,9 +37,13 @@
                         <div class="simplert__line simplert__line--error-2">
                         </div>
                     </div>
+
+                    <div class="simplert__icon" v-if="customIconUrl !== ''">
+                      <img :src="customIconUrl" />
+                    </div>
                 </div>
 
-                <b class="simplert__title">{{title}}</b>
+                <b class="simplert__title">{{ title }}</b>
 
             </div>
             <div class="simplert__body">
@@ -48,9 +52,9 @@
             <div class="simplert__footer">
                 <button class="simplert__close"
                         v-bind:style="{'background-color': colorBtn}"
-                        :class="(isUseRadius ? 'simplert__close--radius': '')"
+                        :class="classBtnClose"
                         @click="closeSimplert">
-                    Close
+                    {{ customCloseBtnText }}
                 </button>
             </div>
         </div>
@@ -60,8 +64,10 @@
 
 
 <script>
-  const DEFAULT_SIMPLERT_BTN_COLOR = "#068AC9"
   const DEFAULT_SIMPLERT_TYPE = "info"
+  const DEFAULT_SIMPLERT_BTN_COLOR = "#068AC9"
+  const DEFAULT_SIMPLERT_BTN_CLOSE_TEXT = "Close"
+  const INVALID_TYPE = "INVALID_TYPE"
 
   export default {
 
@@ -78,8 +84,38 @@
         //type enum: info (default), success, warning, error
         type: DEFAULT_SIMPLERT_TYPE,
         colorBtn: DEFAULT_SIMPLERT_BTN_COLOR,
+        customCloseBtnText: DEFAULT_SIMPLERT_BTN_CLOSE_TEXT,
+        customCloseBtnClass: '',
+        customClass: '',
+        customIconUrl: '',
         onClose: null
       };
+    },
+
+    computed: {
+      classSimplert: function () {
+        let clasz = this.customClass
+        if (this.isShownData) {
+          clasz = this.customClass + ' simplert--shown'
+        } 
+        return clasz
+      },
+
+      classBtnClose: function () {
+        let clasz = this.customCloseBtnClass
+        if (this.isUseRadius) {
+          clasz = this.customCloseBtnClass + ' simplert__close--radius'
+        } 
+         return clasz
+      },
+
+      classContent: function () {
+        let clasz = ''
+        if (this.isUseRadius) {
+          clasz = 'simplert__content--radius'
+        } 
+        return clasz
+      }
     },
 
     methods: {
@@ -95,10 +131,9 @@
         e.preventDefault()
 
         _self.isShownData = false
-        _self.type = DEFAULT_SIMPLERT_TYPE
 
         if (typeof _self.onClose !== 'undefined' && _self.onClose !== null) {
-          _self.onClose();
+          _self.onClose()
         }
       },
 
@@ -108,7 +143,12 @@
 
         if (typeof obj !== 'undefined') {
           _self.title = obj.title
-          _self.message = obj.message
+
+          if (typeof obj.message !== 'undefined') {
+            _self.message = obj.message
+          } else {
+            _self.message = ''
+          }
 
           if (typeof obj.type !== 'undefined') {
             _self.type = obj.type
@@ -116,10 +156,35 @@
             _self.type = DEFAULT_SIMPLERT_TYPE
           }
 
-          if (typeof obj.colorBtn !== 'undefined') {
+          if (typeof obj.colorBtn !== 'undefined' && obj.colorBtn !== '') {
             _self.colorBtn = obj.colorBtn
           } else {
             _self.colorBtn = DEFAULT_SIMPLERT_BTN_COLOR
+          }
+
+          if (typeof obj.customCloseBtnText !== 'undefined' && obj.customCloseBtnText !== '') {
+            _self.customCloseBtnText = obj.customCloseBtnText
+          } else {
+            _self.customCloseBtnText = DEFAULT_SIMPLERT_BTN_CLOSE_TEXT
+          }
+
+          if (typeof obj.customCloseBtnClass !== 'undefined') {
+            _self.customCloseBtnClass = obj.customCloseBtnClass
+          } else {
+            _self.customCloseBtnClass = ''
+          }
+
+          if (typeof obj.customClass !== 'undefined') {
+            _self.customClass = obj.customClass
+          } else {
+            _self.customClass = ''
+          }
+
+          if (typeof obj.customIconUrl !== 'undefined' && obj.customCloseBtnText !== '') {
+            _self.customIconUrl = obj.customIconUrl
+            _self.type = INVALID_TYPE
+          } else {
+            _self.customIconUrl = ''
           }
 
           if (typeof obj.onClose !== 'undefined' && obj.onClose !== null) {
@@ -266,6 +331,11 @@ html {
       &--error
       {
         border: 4px solid $simplertError;
+      }
+
+      img {
+        width: 80px;
+        height: 80px;        
       }
 
     }

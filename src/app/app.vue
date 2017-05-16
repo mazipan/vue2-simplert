@@ -31,18 +31,17 @@
                   @click="open('Information!', 'Hey, I am Opened...', 'info')">
                 Click Me!
           </button>  
-        </div>      
-      </div>
+        </div>     
 
-      <div class="grid__col-12">
         <div class="grid__col-3 example__title">Success Alert</div>
         <div class="grid__col-3">
           <button class="button button--radius button--green"
                   @click="open('Success!', 'Hey, I am Opened...', 'success')">
                 Click Me!
           </button>   
-        </div>         
+        </div>       
       </div>
+
 
       <div class="grid__col-12">
         <div class="grid__col-3 example__title">Error Alert</div>
@@ -52,17 +51,16 @@
                 Click Me!
           </button>
         </div>    
-      </div>
 
-      <div class="grid__col-12">
         <div class="grid__col-3 example__title">Warning Alert</div>
         <div class="grid__col-3">
           <button class="button button--radius button--orange"
                   @click="open('Warning!', 'Hey, I am Opened...', 'warning')">
                 Click Me!
           </button>    
-        </div>        
+        </div>   
       </div>
+
 
       <div class="grid__col-12">
         <div class="grid__col-3 example__title">Alert Without Title</div>
@@ -71,18 +69,17 @@
                   @click="open('', 'Hey, I am Opened, but I dont have title', '')">
                 Click Me!
           </button>    
-        </div>        
-      </div>
+        </div>     
 
-      <div class="grid__col-12">
         <div class="grid__col-3 example__title">Alert With Custom Button</div>
         <div class="grid__col-3">
           <button class="button button--radius button--green"
                   @click="open('Custom Button', 'Hey, I am Opened...', '', '#00b35e')">
                 Click Me!
           </button>   
-        </div>    
+        </div>       
       </div>
+
 
       <div class="grid__col-12">
         <div class="grid__col-3 example__title">Alert With HTML</div>
@@ -92,9 +89,7 @@
                 Click Me!
           </button>   
         </div>    
-      </div>
-      
-      <div class="grid__col-12">
+
         <div class="grid__col-3 example__title">Alert With Custom Function</div>
         <div class="grid__col-3">
           <button class="button button--radius button--red"
@@ -103,7 +98,43 @@
           </button>   
         </div>    
       </div>
-      
+
+      <div class="grid__col-12">
+        <div class="grid__col-3 example__title">Alert With Custom Close Text</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--green"
+                  @click="open('Custom Close Text', 'Hey, I am Opened...', '', '', 'Custom Close Text')">
+                Click Me!
+          </button>   
+        </div>    
+
+        <div class="grid__col-3 example__title">Alert With Custom Close Class</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--blue"
+                  @click="open('Custom Close Class', 'Hey, I am Opened...', '', '', '', 'custom-class')">
+                Click Me!
+          </button>   
+        </div>    
+      </div>
+
+      <div class="grid__col-12">
+        <div class="grid__col-3 example__title">Alert With Custom Class</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--red"
+                  @click="open('Custom Class', 'Hey, I am Opened...', '', '', '', '', 'custom-class')">
+                Click Me!
+          </button>   
+        </div>    
+
+        <div class="grid__col-3 example__title">Alert With Custom Icon</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--green"
+                  @click="open('Custom Icon', 'Hey, I am Opened...', '', '', '', '', '', 'https://cdn2.iconfinder.com/data/icons/social-productivity-line-art-1/128/face-sad-512.png')">
+                Click Me!
+          </button>   
+        </div>    
+      </div>
+            
 
     </div>
 
@@ -159,21 +190,37 @@
       return{}
     },
     methods: {
-      open(title, message, type, color){
+      open (title, message, type, color, customCloseBtnText, customCloseBtnClass, customClass, customIconUrl) {
         let obj = {
           title: title,
           message: message,
           type: type
         }
 
-        if(color){
+        if (color) {
           obj.colorBtn = color
+        }
+
+        if (customCloseBtnText) {
+          obj.customCloseBtnText = customCloseBtnText
+        }
+
+        if (customCloseBtnClass) {
+          obj.customCloseBtnClass = customCloseBtnClass
+        }
+
+        if (customClass) {
+          obj.customClass = customClass
+        }
+
+        if (customIconUrl) {
+          obj.customIconUrl = customIconUrl
         }
 
         this.$refs.simplert.openSimplert(obj)
       },
 
-      openCustomHtml(){
+      openCustomHtml () {
         let obj = {
           title: 'Custom HTML',
           message: '<h5>I am HTML<h5><ul><li>List 1<li><li>List 2<li><li>List 3<li><ul>',
@@ -182,11 +229,11 @@
         this.$refs.simplert.openSimplert(obj)
       },
 
-      onClose(){
+      onClose () {
         alert('Hey, I am Triggred')
       },
 
-      openCustomFunction(){
+      openCustomFunction () {
         let obj = {
           title: 'Custom Function',
           message: 'Click close to trigger custom function',
@@ -194,7 +241,8 @@
           onClose: this.onClose
         }
         this.$refs.simplert.openSimplert(obj)
-      }
+      },
+
     }
   };
 </script>
@@ -217,7 +265,6 @@ body{
   color: #a6b6b9;
   font-weight: 200;
 }
-
 .fixed-top{
   position: fixed;
   right: 30px;
@@ -225,14 +272,11 @@ body{
   z-index: 3;
   margin: 26px 5px 0 5px;
 }
-
 .btn-top{  
   font-weight: 500;
   text-transform: uppercase;
 }
-
 .example__title{
-  margin-right: 2em;
   font-size: 1.6rem;
   color: #a6b6b9;
 }
@@ -241,5 +285,8 @@ body{
 }
 .content{
   margin: 20px 0;
+}
+.custom-class{
+  color: purple !important;
 }
 </style>
