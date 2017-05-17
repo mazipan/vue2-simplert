@@ -288,7 +288,7 @@ html {
         width: 90%;
         max-width: 400px;
         margin: 0 auto;
-        padding: 0;
+        padding: 0 20px;
         background-color: #fff;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);
 
