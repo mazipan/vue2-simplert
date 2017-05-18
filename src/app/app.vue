@@ -13,15 +13,15 @@
     <div class="fixed-top">      
       <a class="button button--radius button--green btn-top"  href="https://github.com/mazipan/vue2-simplert/wiki"
          target="_blank">
-          Docs
+          <i class="fa fa-book" aria-hidden="true"></i> Docs
       </a> 
       <a class="button button--radius button--blue btn-top"  href="https://github.com/mazipan/vue2-simplert"
          target="_blank">
-          Download
+          <i class="fa fa-download" aria-hidden="true"></i> Download
       </a> 
     </div>  
 
-    <div class="grid__row content">
+    <div class="grid__row content centered">
       <h2>Example</h2>
 
       <div class="grid__col-12">
@@ -139,7 +139,7 @@
     </div>
 
 
-    <div class="grid__row content">
+    <div class="grid__row content centered">
       <h2>Download</h2>
 
       <p>        
@@ -159,6 +159,29 @@
       </p>
 
       <p>Or download latest release <a href="https://github.com/mazipan/vue2-simplert/releases">here</a></p>
+
+    </div>
+
+    <div class="grid__row content centered">
+      <h2>Projects Using Vue2-Simplert</h2>
+
+      <ul class="users">
+          <li>
+              <a href="https://www.blibli.com/" title="Blibli.com">
+                <img src="https://www.static-src.com/resources/images/logo-blibli.png">
+              </a>
+          </li>
+          <li>
+              <a href="https://www.blibli.com/travel" title="Blibli.com Travel">
+                <img src="https://www.static-src.com/travel/2.2.1/resources/hotel/images/thumbnail-blibli-travel.png">
+              </a>
+          </li>
+          <li>
+            <a class="add-button" href="https://github.com/mazipan/vue2-simplert/issues/14" title="Add your project here">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </a>
+          </li>
+      </ul>    
 
     </div>
 
@@ -283,10 +306,48 @@ body{
 .grid__col-12{
   margin: 20px 0;
 }
+.grid__col-3{
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+    padding: .5em 1em;
+  }
+}
 .content{
   margin: 20px 0;
 }
 .custom-class{
   color: purple !important;
+}
+
+.users{
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li{
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    a {
+      padding: 20px;
+      display: block;
+      transition: all .3s ease;
+
+      &:hover {
+        background-color: darken(#f2f4f6, 10%);
+      }
+
+      img {
+        height: 40px;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.add-button{
+  font-size: 3rem;
 }
 </style>
