@@ -121,7 +121,7 @@
     methods: {
       closeOverlay: function (e) {
         let _self = this
-        if (e.target.className === 'simplert simplert--shown') {
+        if (e.target.className.indexOf('simplert--shown') > 0) {
           _self.closeSimplert(e)
         }
       },
