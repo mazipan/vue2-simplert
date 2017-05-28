@@ -9,7 +9,7 @@
 
             <div class="simplert__header">
 
-                <div v-if="isUseIcon">
+                <div v-if="useIcon">
                     <div class="simplert__icon simplert__icon--info" v-if="type === 'info'">
                         <div class="simplert__line simplert__line--info">
                         </div>
@@ -49,13 +49,18 @@
             <div class="simplert__body">
               <div v-html="message"></div>
             </div>
-            <div class="simplert__footer">
+            <div class="simplert__footer">              
+                <button class="simplert__confirm"
+                        v-if="useConfirmBtn"
+                        :class="classBtnConfirm"
+                        @click="whenConfirm">
+                    {{ customConfirmBtnText }}
+                </button>
                 <button class="simplert__close"
-                        v-bind:style="{'background-color': colorBtn}"
                         :class="classBtnClose"
                         @click="closeSimplert">
                     {{ customCloseBtnText }}
-                </button>
+                </button>  
             </div>
         </div>
     </div>
@@ -64,57 +69,71 @@
 
 
 <script>
-  const DEFAULT_SIMPLERT_TYPE = "info"
-  const DEFAULT_SIMPLERT_BTN_COLOR = "#068AC9"
-  const DEFAULT_SIMPLERT_BTN_CLOSE_TEXT = "Close"
+  const DEFAULT_TYPE = "info"
+  const DEFAULT_BTN_CLOSE_TEXT = "Close"
+  const DEFAULT_BTN_CONFIRM_TEXT = "Confirm"
   const INVALID_TYPE = "INVALID_TYPE"
 
   export default {
 
     props: {
-      isUseRadius: false,
-      isUseIcon: false
+      useRadius: true,
+      useIcon: true
     },
 
     data () {
       return {
-        isShownData: false,
+        // hide/show alert
+        showSimplert: false,
+        // basic setup
         title: "",
-        message: "",
-        //type enum: info (default), success, warning, error
-        type: DEFAULT_SIMPLERT_TYPE,
-        colorBtn: DEFAULT_SIMPLERT_BTN_COLOR,
-        customCloseBtnText: DEFAULT_SIMPLERT_BTN_CLOSE_TEXT,
-        customCloseBtnClass: '',
+        message: "",        
+        type: DEFAULT_TYPE, // info (default), success, warning, error
         customClass: '',
         customIconUrl: '',
-        onClose: null
+        // close button
+        customCloseBtnText: DEFAULT_BTN_CLOSE_TEXT,
+        customCloseBtnClass: '',
+        onClose: null,
+        // confirm button
+        useConfirmBtn: false,
+        customConfirmBtnText: DEFAULT_BTN_CONFIRM_TEXT,
+        customConfirmBtnClass: '',
+        onConfirm: null
       };
     },
 
     computed: {
       classSimplert: function () {
         let clasz = this.customClass
-        if (this.isShownData) {
+        if (this.showSimplert) {
           clasz = this.customClass + ' simplert--shown'
+        } 
+        return clasz
+      },
+
+      classContent: function () {
+        let clasz = ''
+        if (this.useRadius) {
+          clasz = 'simplert__content--radius'
         } 
         return clasz
       },
 
       classBtnClose: function () {
         let clasz = this.customCloseBtnClass
-        if (this.isUseRadius) {
+        if (this.useRadius) {
           clasz = this.customCloseBtnClass + ' simplert__close--radius'
         } 
          return clasz
       },
 
-      classContent: function () {
-        let clasz = ''
-        if (this.isUseRadius) {
-          clasz = 'simplert__content--radius'
+      classBtnConfirm: function () {
+        let clasz = this.customConfirmBtnClass
+        if (this.useRadius) {
+          clasz = this.customConfirmBtnClass + ' simplert__confirm--radius'
         } 
-        return clasz
+         return clasz
       }
     },
 
@@ -126,20 +145,31 @@
         }
       },
 
+      whenConfirm: function (e) {
+        let _self = this
+        e.preventDefault()
+
+        _self.showSimplert = false
+
+        if (_self.onConfirm !== null) {
+          _self.onConfirm()
+        }
+      },
+
       closeSimplert: function (e) {
         let _self = this
         e.preventDefault()
 
-        _self.isShownData = false
+        _self.showSimplert = false
 
-        if (typeof _self.onClose !== 'undefined' && _self.onClose !== null) {
+        if (_self.onClose !== null) {
           _self.onClose()
         }
       },
 
       openSimplert: function (obj) {
         let _self = this
-        _self.isShownData = true
+        _self.showSimplert = true
 
         if (typeof obj !== 'undefined') {
           _self.title = obj.title
@@ -153,25 +183,7 @@
           if (typeof obj.type !== 'undefined') {
             _self.type = obj.type
           } else {
-            _self.type = DEFAULT_SIMPLERT_TYPE
-          }
-
-          if (typeof obj.colorBtn !== 'undefined' && obj.colorBtn !== '') {
-            _self.colorBtn = obj.colorBtn
-          } else {
-            _self.colorBtn = DEFAULT_SIMPLERT_BTN_COLOR
-          }
-
-          if (typeof obj.customCloseBtnText !== 'undefined' && obj.customCloseBtnText !== '') {
-            _self.customCloseBtnText = obj.customCloseBtnText
-          } else {
-            _self.customCloseBtnText = DEFAULT_SIMPLERT_BTN_CLOSE_TEXT
-          }
-
-          if (typeof obj.customCloseBtnClass !== 'undefined') {
-            _self.customCloseBtnClass = obj.customCloseBtnClass
-          } else {
-            _self.customCloseBtnClass = ''
+            _self.type = DEFAULT_TYPE
           }
 
           if (typeof obj.customClass !== 'undefined') {
@@ -187,10 +199,48 @@
             _self.customIconUrl = ''
           }
 
+          // close button setup
+          if (typeof obj.customCloseBtnText !== 'undefined' && obj.customCloseBtnText !== '') {
+            _self.customCloseBtnText = obj.customCloseBtnText
+          } else {
+            _self.customCloseBtnText = DEFAULT_BTN_CLOSE_TEXT
+          }
+
+          if (typeof obj.customCloseBtnClass !== 'undefined') {
+            _self.customCloseBtnClass = obj.customCloseBtnClass
+          } else {
+            _self.customCloseBtnClass = ''
+          }
+
           if (typeof obj.onClose !== 'undefined' && obj.onClose !== null) {
             _self.onClose = obj.onClose
           } else {
             _self.onClose = null
+          }
+
+          // confirm button setup
+          if (typeof obj.useConfirmBtn !== 'undefined') {
+            _self.useConfirmBtn = obj.useConfirmBtn
+          } else {
+            _self.useConfirmBtn = false
+          }
+
+          if (typeof obj.customConfirmBtnText !== 'undefined' && obj.customConfirmBtnText !== '') {
+            _self.customConfirmBtnText = obj.customConfirmBtnText
+          } else {
+            _self.customConfirmBtnText = DEFAULT_BTN_CONFIRM_TEXT
+          }
+
+          if (typeof obj.customConfirmBtnClass !== 'undefined') {
+            _self.customConfirmBtnClass = obj.customConfirmBtnClass
+          } else {
+            _self.customConfirmBtnClass = ''
+          }
+
+          if (typeof obj.onConfirm !== 'undefined' && obj.onConfirm !== null) {
+            _self.onConfirm = obj.onConfirm
+          } else {
+            _self.onConfirm = null
           }
 
         }
@@ -199,8 +249,31 @@
   }
 </script>
 
-<style lang="scss">
 
+<style lang="scss">
+// Non-Scope style
+@mixin box-sizing($box-size)
+{
+    -webkit-box-sizing: $box-size;
+       -moz-box-sizing: $box-size;
+            box-sizing: $box-size;
+         -o-box-sizing: $box-size;
+        -ms-box-sizing: $box-size;
+}
+
+html {
+    @include box-sizing(border-box);
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+</style>
+
+<style lang="scss">
+// Scoped style
 @mixin border-radius($radius)
 {
   -webkit-border-radius: $radius;
@@ -212,15 +285,6 @@
 {
   -webkit-appearance: $appearance;
   -moz-appearance: $appearance;
-}
-
-@mixin box-sizing($box-size)
-{
-    -webkit-box-sizing: $box-size;
-       -moz-box-sizing: $box-size;
-            box-sizing: $box-size;
-         -o-box-sizing: $box-size;
-        -ms-box-sizing: $box-size;
 }
 
 $simplertInfo       : #C9DAE1 !default;
@@ -235,14 +299,6 @@ $simplertDefaultBtn : #068AC9 !default;
   font-size: 14px;
 }
 
-html {
-    @include box-sizing(border-box);
-    font-size: 62.5%;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
 
 .simplert
 {
@@ -442,9 +498,11 @@ html {
         padding: 1em 0;
     }
 
-    &__close{
+    &__close, &__confirm
+    {
       display: inline-block;
       padding: 10px 20px;
+      margin: 0 .5em;
       outline: none;
       border: none;
       text-align: center;

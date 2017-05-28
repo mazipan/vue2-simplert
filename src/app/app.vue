@@ -6,7 +6,9 @@
       <img src="https://mazipan.github.io/vue2-simplert/images/vue2-simplert-logo.png" 
       alt="Vue2-Simplert" title="Vue2-Simplert" />
 
-      <h5 class="header__subtitle">Vue 2 Simple Alert Component (SweetAlert Inspired) By Irfan Maulana</h5>
+      <h1 class="header__subtitle">
+        Vue 2 Simple Alert Component (SweetAlert Inspired) By Irfan Maulana
+      </h1>
     </div>
 
 
@@ -24,7 +26,7 @@
     <div class="grid__row content centered">
       <h2>Example</h2>
 
-      <div class="grid__col-12">
+      <div class="grid__row content__row">
         <div class="grid__col-3 example__title">Information Alert</div>
         <div class="grid__col-3">
           <button class="button button--radius button--blue"
@@ -43,7 +45,7 @@
       </div>
 
 
-      <div class="grid__col-12">
+      <div class="grid__row content__row">
         <div class="grid__col-3 example__title">Error Alert</div>
         <div class="grid__col-3">
           <button class="button button--radius button--red"
@@ -62,7 +64,7 @@
       </div>
 
 
-      <div class="grid__col-12">
+      <div class="grid__row content__row">
         <div class="grid__col-3 example__title">Alert Without Title</div>
         <div class="grid__col-3">
           <button class="button button--radius button--blue"
@@ -71,35 +73,17 @@
           </button>    
         </div>     
 
-        <div class="grid__col-3 example__title">Alert With Custom Button</div>
-        <div class="grid__col-3">
-          <button class="button button--radius button--green"
-                  @click="open('Custom Button', 'Hey, I am Opened...', '', '#00b35e')">
-                Click Me!
-          </button>   
-        </div>       
-      </div>
-
-
-      <div class="grid__col-12">
         <div class="grid__col-3 example__title">Alert With HTML</div>
         <div class="grid__col-3">
           <button class="button button--radius button--orange"
                   @click="openCustomHtml">
                 Click Me!
           </button>   
-        </div>    
-
-        <div class="grid__col-3 example__title">Alert With Custom Function</div>
-        <div class="grid__col-3">
-          <button class="button button--radius button--red"
-                  @click="openCustomFunction">
-                Click Me!
-          </button>   
-        </div>    
+        </div>      
       </div>
 
-      <div class="grid__col-12">
+
+      <div class="grid__row content__row">
         <div class="grid__col-3 example__title">Alert With Custom Close Text</div>
         <div class="grid__col-3">
           <button class="button button--radius button--green"
@@ -111,25 +95,71 @@
         <div class="grid__col-3 example__title">Alert With Custom Close Class</div>
         <div class="grid__col-3">
           <button class="button button--radius button--blue"
-                  @click="open('Custom Close Class', 'Hey, I am Opened...', '', '', '', 'custom-class')">
+                  @click="open('Custom Close Class', 'Hey, I am Opened...', '', '', '', 'custom-class-btn')">
                 Click Me!
           </button>   
         </div>    
       </div>
 
-      <div class="grid__col-12">
+      <div class="grid__row content__row">
+        <div class="grid__col-3 example__title">Alert With Custom Close Function</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--red"
+                  @click="openCustomFunction">
+                Click Me!
+          </button>   
+        </div>   
+
         <div class="grid__col-3 example__title">Alert With Custom Class</div>
         <div class="grid__col-3">
           <button class="button button--radius button--red"
                   @click="open('Custom Class', 'Hey, I am Opened...', '', '', '', '', 'custom-class')">
                 Click Me!
           </button>   
-        </div>    
+        </div>     
+      </div>
 
+      <div class="grid__row content__row">
         <div class="grid__col-3 example__title">Alert With Custom Icon</div>
         <div class="grid__col-3">
           <button class="button button--radius button--green"
                   @click="open('Custom Icon', 'Hey, I am Opened...', '', '', '', '', '', 'https://cdn2.iconfinder.com/data/icons/social-productivity-line-art-1/128/face-sad-512.png')">
+                Click Me!
+          </button>   
+        </div>    
+
+        <div class="grid__col-3 example__title">Alert With Confirm Button</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--blue"
+                  @click="openWithConfirm('Confirm Button', 'Hey, I have Confirm Button Now', false)">
+                Click Me!
+          </button>   
+        </div>    
+      </div>
+
+      <div class="grid__row content__row">
+        <div class="grid__col-3 example__title">Alert With Confirm Button Custom Text</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--blue"
+                  @click="openWithConfirm('Confirm Button Custom Text', 'Hey, I am Opened...', false, 'Custom Text Confirm')">
+                Click Me!
+          </button>   
+        </div>  
+
+        <div class="grid__col-3 example__title">Alert With Confirm Function</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--blue"
+                  @click="openWithConfirm('Confirm Function', 'Click Confirm to trigger function', true)">
+                Click Me!
+          </button>   
+        </div>    
+      </div>
+
+      <div class="grid__row content__row">
+        <div class="grid__col-3 example__title">Alert With Confirm Button Custom Class</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--blue"
+                  @click="openWithConfirm('Confirm Button Custom Class', 'Hey, I am Opened...', false, '', 'custom-class-btn')">
                 Click Me!
           </button>   
         </div>    
@@ -177,8 +207,13 @@
               </a>
           </li>
           <li>
-            <a class="add-button" href="https://github.com/mazipan/vue2-simplert/issues/14" title="Add your project here">
+            <a class="add-button" href="https://github.com/mazipan/vue2-simplert/issues/19" title="Add your logo here">
               <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a class="add-button" href="https://github.com/mazipan/vue2-simplert/issues/14" title="Share your experience">
+              <i class="fa fa-comments" aria-hidden="true"></i>
             </a>
           </li>
       </ul>    
@@ -189,15 +224,21 @@
       <h2>Contribute</h2>
 
       <p>
-        Feel free to fork Vue2-Simplert on <a href="https://github.com/mazipan/vue2-simplert"
-       target="_blank">GitHub</a> if you have any features or bugs!    
+        Feel free to fork <i class="fa fa-code-fork"></i> Vue2-Simplert on <a href="https://github.com/mazipan/vue2-simplert"
+       target="_blank">GitHub <i class="fa fa-github"></i></a> if you have any features <i class="fa fa-cart-plus"></i> or bugs <i class="fa fa-bug"></i>!    
       </p>      
 
     </div>
 
+    <div class="grid__row content centered">
+      <p>
+        Copyright © 2017 <a href="https://mazipanneh.com/blog/">Irfan Maulana</a>, All Rights Reserved.   
+      </p>      
+    </div>
+
     <!-- Vue2-Simplert DOM start -->
-    <simplert isUseRadius=true
-              isUseIcon=true
+    <simplert useRadius=true
+              useIcon=true
               ref="simplert">
     </simplert>
 
@@ -220,10 +261,6 @@
           type: type
         }
 
-        if (color) {
-          obj.colorBtn = color
-        }
-
         if (customCloseBtnText) {
           obj.customCloseBtnText = customCloseBtnText
         }
@@ -240,6 +277,7 @@
           obj.customIconUrl = customIconUrl
         }
 
+        console.log('open simplert with obj : ', obj)
         this.$refs.simplert.openSimplert(obj)
       },
 
@@ -249,11 +287,17 @@
           message: '<h5>I am HTML<h5><ul><li>List 1<li><li>List 2<li><li>List 3<li><ul>',
           type: 'info'
         }
+
+        console.log('open simplert with obj : ', obj)
         this.$refs.simplert.openSimplert(obj)
       },
 
       onClose () {
-        alert('Hey, I am Triggred')
+        alert('Hey, I am Close Function')
+      },
+
+      onConfirm () {
+        alert('Hey, You Confirmed')
       },
 
       openCustomFunction () {
@@ -263,6 +307,32 @@
           type: 'info',
           onClose: this.onClose
         }
+
+        console.log('open simplert with obj : ', obj)
+        this.$refs.simplert.openSimplert(obj)
+      },
+
+      openWithConfirm (title, message, isCustomFunction, customConfirmBtnText, customConfirmBtnClass) {
+        let obj = {
+          title: title,
+          message: message,
+          type: 'info',
+          useConfirmBtn: true,          
+        }
+
+        if (isCustomFunction) {
+          obj.onConfirm = this.onConfirm
+        }
+
+        if (customConfirmBtnText) {
+          obj.customConfirmBtnText = customConfirmBtnText
+        }
+
+        if (customConfirmBtnClass) {
+          obj.customConfirmBtnClass = customConfirmBtnClass
+        }
+
+        console.log('open simplert with obj : ', obj)
         this.$refs.simplert.openSimplert(obj)
       },
 
@@ -303,11 +373,11 @@ body{
   font-size: 1.6rem;
   color: #a6b6b9;
 }
-.grid__col-12{
+.content__row{
   margin: 20px 0;
 }
-.grid__col-3{
-  @media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
+  .grid__col-3{
     text-align: center;
     padding: .5em 1em;
   }
@@ -317,6 +387,9 @@ body{
 }
 .custom-class{
   color: purple !important;
+}
+.custom-class-btn{
+  background-color: purple !important;
 }
 
 .users{
