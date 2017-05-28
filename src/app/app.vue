@@ -284,7 +284,7 @@
       openCustomHtml () {
         let obj = {
           title: 'Custom HTML',
-          message: '<h5>I am HTML<h5><ul><li>List 1<li><li>List 2<li><li>List 3<li><ul>',
+          message: '<span style="color:red;">I am HTML</span>',
           type: 'info'
         }
 
