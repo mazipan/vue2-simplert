@@ -26,6 +26,13 @@ https://github.com/mazipan/vue2-simplert/wiki/Usage-Guidance
 ## Methods And Props
 https://github.com/mazipan/vue2-simplert/wiki/Methods-And-Props
 
+## Example Code
+https://github.com/mazipan/vue2-simplert/wiki/Example-Code
+
+## Stories
+https://github.com/mazipan/vue2-simplert/wiki/Stories
+
+
 ## Credit 
 + Icon from [SweetAlert](https://github.com/t4t5/sweetalert)
 
