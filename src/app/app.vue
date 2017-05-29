@@ -2,16 +2,6 @@
 <template>
   <div class="grid__row">
 
-    <div class="header__title">      
-      <img src="https://mazipan.github.io/vue2-simplert/images/vue2-simplert-logo.png" 
-      alt="Vue2-Simplert" title="Vue2-Simplert" />
-
-      <h1 class="header__subtitle">
-        Vue 2 Simple Alert Component (SweetAlert Inspired) By Irfan Maulana
-      </h1>
-    </div>
-
-
     <div class="fixed-top">      
       <a class="button button--radius button--green btn-top"  href="https://github.com/mazipan/vue2-simplert/wiki"
          target="_blank">
@@ -22,6 +12,15 @@
           <i class="fa fa-download" aria-hidden="true"></i> Download
       </a> 
     </div>  
+
+    <div class="header__title">      
+      <img src="https://mazipan.github.io/vue2-simplert/images/vue2-simplert-logo.png" 
+      alt="Vue2-Simplert" title="Vue2-Simplert" />
+
+      <h1 class="header__subtitle">
+        Vue 2 Simple Alert Component (SweetAlert Inspired) By Irfan Maulana
+      </h1>
+    </div>
 
     <div class="grid__row content centered">
       <h2>Example</h2>
@@ -376,12 +375,6 @@ body{
 .content__row{
   margin: 20px 0;
 }
-@media only screen and (min-width: 768px) {
-  .grid__col-3{
-    text-align: center;
-    padding: .5em 1em;
-  }
-}
 .content{
   margin: 20px 0;
 }
@@ -419,8 +412,20 @@ body{
     }
   }
 }
-
 .add-button{
   font-size: 3rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .header__title img{
+    width: 80%;
+  }
+  .fixed-top{
+    position: inherit;
+  }
+  .grid__col-3{
+    text-align: center;
+    padding: .5em 1em;
+  }
 }
 </style>
