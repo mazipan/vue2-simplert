@@ -1,0 +1,8 @@
+language: node_js
+node_js: '7'
+before_install: npm install -g eslint
+script: npm test
+deploy:
+  provider: npm
+  on:
+    tags: true
