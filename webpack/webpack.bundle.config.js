@@ -7,6 +7,12 @@ function resolve (dir) {
 }
 
 module.exports = {
+  entry: './src/simplert.js',
+  output: {
+    path: path.resolve(__dirname, '../dist'),
+    publicPath: '../',
+    filename: 'vue2-simplert.js'
+  },
   module: {
     rules: [
       {
@@ -35,24 +41,37 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
-    modules: [
-      resolve('src'),
-      resolve('node_modules')
-    ],
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
     }
   },
+  devServer: {
+    historyApiFallback: true,
+    noInfo: true
+  },
   performance: {
     hints: false
   },
-  devtool: '#inline-source-map',
+  devtool: '#source-map',
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: '"testing"'
+        NODE_ENV: '"production"'
       }
-    })
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: false,
+      compress: {
+        warnings: false,
+        drop_console: true
+      }
+    }),
+    new webpack.BannerPlugin((
+    [
+      " Vue2-Simplert v."+ npm.version +" \n",
+      "(c) 2017 Irfan Maulana \n",
+      "MIT License"
+    ])
+    .join(" "))
   ]
 }

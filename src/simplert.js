@@ -1,3 +1,3 @@
-import simplert from './app/simplert.vue';
+import simplert from './app/simplert.vue'
 
-module.exports = simplert;
+module.exports = simplert
