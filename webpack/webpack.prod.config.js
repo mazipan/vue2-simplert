@@ -1,7 +1,4 @@
-
 var webpack = require('webpack');
-var combineLoaders = require('webpack-combine-loaders');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var npm = require("../package.json");
 

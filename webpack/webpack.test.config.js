@@ -1,13 +1,17 @@
 var webpack = require('webpack');
+var path = require('path');
+var npm = require("../package.json");
+
 require('es6-promise').polyfill();
 
-var npm = require("../package.json");
+
+function resolve (dir) {
+  return path.join(__dirname, '..', dir)
+}
 
 module.exports = {
 
-  devtool: 'eval',
-
-  entry: __dirname + '/../src/index.js',
+  devtool: '#inline-source-map',
 
   output: {
     path: __dirname + '/../dist/',
@@ -15,7 +19,6 @@ module.exports = {
     filename: 'vue2-simplert.demo.js',
     chunkFilename: '[name].js'
   },
-
 
   module: {
 
@@ -47,20 +50,12 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.BannerPlugin((
-      [
-        " @author: Irfan Maulana \n",
-        " vue2-simplert v."+ npm.version +" \n",
-        " https://github.com/mazipan/vue2-simplert",
-        " \n"
-      ])
-      .join(" ")),
-
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': '"production"'
+        'NODE_ENV': '"testing"'
       }
     }),
+    new webpack.ContextReplacementPlugin(/sinon/, /^$/)
   ]
 
 };
