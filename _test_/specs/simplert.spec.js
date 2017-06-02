@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import sinon from 'sinon'
-import Simplert from '../src/app/simplert.vue'
 
 describe('Simplert', () => {
   let app

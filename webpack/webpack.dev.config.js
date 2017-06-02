@@ -3,7 +3,7 @@ require('es6-promise').polyfill();
 
 module.exports = {
 
-  entry: __dirname + '/../src/main.js',
+  entry: __dirname + '/../src/index.js',
 
   devServer: {
     hot: true
