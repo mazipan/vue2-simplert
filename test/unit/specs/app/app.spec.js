@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import app from 'src/app/app.vue'
+import app from '@/app/app.vue'
 
 describe('app.vue', () => {
   var vm = null

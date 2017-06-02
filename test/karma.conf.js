@@ -14,9 +14,9 @@ module.exports = function (config) {
     browsers: ['Chrome'],
     frameworks: ['mocha', 'sinon-chai'],
     reporters: ['spec', 'coverage'],
-    files: ['./index.js'],
+    files: ['unit/index.js'],
     preprocessors: {
-      './index.js': ['webpack', 'sourcemap']
+      'unit/index.js': ['webpack', 'sourcemap']
     },
     babelPreprocessor: {
       options: {
