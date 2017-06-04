@@ -1,4 +1,3 @@
-
 <template>
   <div class="grid__row">
 
@@ -245,9 +244,11 @@
 </template>
 
 <script>
+  import Simplert from 'components/simplert'
+
   export default {
     components: {
-      Simplert: require('./simplert.vue')
+      Simplert
     },
     data(){
       return{}
@@ -338,3 +339,5 @@
     }
   };
 </script>
+
+<style lang="scss" src="./custom-style.scss"></style>

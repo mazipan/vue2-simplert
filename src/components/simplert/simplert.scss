@@ -1,0 +1,279 @@
+// Scoped style
+@mixin border-radius($radius)
+{
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+            border-radius: $radius;
+}
+
+@mixin appearance($appearance)
+{
+    -webkit-appearance: $appearance;
+       -moz-appearance: $appearance;
+}
+
+$simplertInfo: #c9dae1 !default;
+$simplertSuccess: #a5dc86 !default;
+$simplertWarning: #f8bb86 !default;
+$simplertError: #f27474 !default;
+$simplertDefaultBtn: #068ac9 !default;
+
+%baseSetting
+{
+    font-size: 14px;
+    line-height: 1.15;
+}
+
+
+.simplert
+{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+
+    display: none;
+    overflow: auto;
+
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,.4);
+
+    @extend %baseSetting;
+    &--shown
+    {
+        display: flex;
+
+        align-items: center;
+        .simplert__content
+        {
+            animation-name: zoomIn;
+            animation-duration: .3s;
+
+            animation-fill-mode: both;
+        }
+    }
+    &__header
+    {
+        padding: 2em 0;
+    }
+    &__title
+    {
+        font-size: 30px;
+
+        display: block;
+    }
+    &__content
+    {
+        position: relative;
+
+        width: 90%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        background-color: #fff;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);
+        @media only screen and (min-width: 768px)
+        {
+            width: 30%;
+        }
+        &--radius
+        {
+            @include border-radius(.3em);
+        }
+    }
+    &__body
+    {
+        padding-bottom: 1em;
+    }
+    &__icon
+    {
+        position: relative;
+
+        width: 80px;
+        height: 80px;
+        margin: 10px auto;
+
+        @include border-radius(50%);
+        &--info
+        {
+            border: 4px solid $simplertInfo;
+        }
+        &--success
+        {
+            border: 4px solid $simplertSuccess;
+        }
+        &--warning
+        {
+            border: 4px solid $simplertWarning;
+        }
+        &--error
+        {
+            border: 4px solid $simplertError;
+        }
+        img
+        {
+            width: 80px;
+            height: 80px;
+        }
+    }
+    &__line
+    {
+        position: absolute;
+        z-index: 2;
+
+        display: block;
+
+        height: 5px;
+
+        border-radius: 2px;
+        &--info
+        {
+            position: absolute;
+            top: 19px;
+            left: 50%;
+
+            width: 7px;
+            height: 7px;
+            margin-left: -3px;
+
+            border-radius: 50%;
+            background-color: $simplertInfo;
+            &-2
+            {
+                position: absolute;
+                bottom: 15px;
+                left: 50%;
+
+                width: 5px;
+                height: 29px;
+                margin-left: -2px;
+
+                border-radius: 2px;
+                background-color: $simplertInfo;
+            }
+        }
+        &--success
+        {
+            top: 44px;
+            left: 6px;
+
+            width: 25px;
+
+            -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+
+            background-color: $simplertSuccess;
+            &-2
+            {
+                top: 38px;
+                right: 6px;
+
+                width: 47px;
+
+                -webkit-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+
+                background-color: $simplertSuccess;
+            }
+        }
+        &--warning
+        {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+
+            width: 5px;
+            height: 35px;
+            margin-left: -2px;
+
+            -webkit-border-radius: 2px;
+                    border-radius: 2px;
+            background-color: $simplertWarning;
+            &-2
+            {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+
+                width: 7px;
+                height: 7px;
+                margin-left: -3px;
+
+                -webkit-border-radius: 50%;
+                        border-radius: 50%;
+                background-color: $simplertWarning;
+            }
+        }
+        &--error
+        {
+            top: 35px;
+            left: 13px;
+
+            width: 47px;
+
+            -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+
+            background-color: $simplertError;
+            &-2
+            {
+                top: 35px;
+                right: 13px;
+
+                width: 47px;
+
+                -webkit-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+
+                background-color: $simplertError;
+            }
+        }
+    }
+    &__footer
+    {
+        padding: 1em 0;
+    }
+    &__close,
+    &__confirm
+    {
+        display: inline-block;
+
+        margin: 0 .5em;
+        padding: 10px 20px;
+
+        cursor: pointer;
+        text-align: center;
+
+        color: #fff;
+        border: none;
+        outline: none;
+        background-color: $simplertDefaultBtn;
+
+        @include appearance(none);
+        &--radius
+        {
+            @include border-radius(.3em);
+        }
+    }
+}
+
+@keyframes zoomIn
+{
+    from
+    {
+        transform: scale3d(.3, .3, .3);
+
+        opacity: 0;
+    }
+
+    50%
+    {
+        opacity: 1;
+    }
+}

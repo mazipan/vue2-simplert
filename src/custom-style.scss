@@ -45,7 +45,10 @@ body {
 }
 
 .custom-class {
-    color: purple !important;
+		.simplert__content{
+			background-color: purple !important;
+			color: #fff !important;
+		}    
 }
 
 .custom-class-btn {
