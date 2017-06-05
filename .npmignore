@@ -1,6 +1,10 @@
 node_modules
+
 build
 config
+dist/index.js
+dist/index.js.gz
+dist/index.js.map
 favicon
 images
 test
@@ -15,5 +19,7 @@ index.html
 npm-debug.log
 screenshoot.PNG
 yarn-error.log
-src/main.js
+yarn.lock
 src/App.vue
+src/custom-style.scss
+src/main.js
