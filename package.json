@@ -35,8 +35,7 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^6.7.2",
     "babel-core": "^6.22.1",
@@ -95,18 +94,17 @@
     "sinon": "^1.17.7",
     "sinon-chai": "^2.8.0",
     "url-loader": "^0.5.7",
+    "vue": "^2.1.10",
     "vue-loader": "^10.3.0",
+    "vue-resource": "^1.2.0",
+    "vue-router": "^2.2.0",
     "vue-style-loader": "^2.0.0",
     "vue-template-compiler": "^2.1.10",
-    "vue2-simplert": "0.0.2",
     "webpack": "^2.2.1",
     "webpack-bundle-analyzer": "^2.2.1",
     "webpack-dev-middleware": "^1.10.0",
     "webpack-hot-middleware": "^2.16.1",
     "webpack-merge": "^2.6.1",
-    "webpack-shell-plugin": "^0.5.0",
-    "vue": "^2.1.10",
-    "vue-resource": "^1.2.0",
-    "vue-router": "^2.2.0"
+    "webpack-shell-plugin": "^0.5.0"
   }
 }
