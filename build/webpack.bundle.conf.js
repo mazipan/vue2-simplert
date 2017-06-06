@@ -16,6 +16,8 @@ var webpackConfig = merge(baseWebpackConfig, {
   output: {
     path: config.build.assetsRoot,
     filename: 'vue2-simplert.js',
+    library: 'Simplert',
+    libraryTarget: 'umd'
   },
   module: {
     rules: utils.styleLoaders({
