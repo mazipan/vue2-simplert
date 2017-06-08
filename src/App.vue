@@ -128,7 +128,7 @@
 
         <div class="grid__col-3 example__title">Alert With Confirm Button</div>
         <div class="grid__col-3">
-          <button class="button button--radius button--blue"
+          <button class="button button--radius button--red"
                   @click="openWithConfirm('Confirm Button', 'Hey, I have Confirm Button Now', false)">
                 Click Me!
           </button>   
@@ -146,7 +146,7 @@
 
         <div class="grid__col-3 example__title">Alert With Confirm Function</div>
         <div class="grid__col-3">
-          <button class="button button--radius button--blue"
+          <button class="button button--radius button--orange"
                   @click="openWithConfirm('Confirm Function', 'Click Confirm to trigger function', true)">
                 Click Me!
           </button>   
@@ -158,6 +158,16 @@
         <div class="grid__col-3">
           <button class="button button--radius button--blue"
                   @click="openWithConfirm('Confirm Button Custom Class', 'Hey, I am Opened...', false, '', 'custom-class-btn')">
+                Click Me!
+          </button>   
+        </div>    
+      </div>
+
+      <div class="grid__row content__row">
+        <div class="grid__col-3 example__title">Alert With Disable Overlay Click</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--green"
+                  @click="openDisabledOverlayClick">
                 Click Me!
           </button>   
         </div>    
@@ -330,6 +340,18 @@
 
         if (customConfirmBtnClass) {
           obj.customConfirmBtnClass = customConfirmBtnClass
+        }
+
+        console.log('open simplert with obj : ', obj)
+        this.$refs.simplert.openSimplert(obj)
+      },
+
+      openDisabledOverlayClick () {
+        let obj = {
+          title: 'Disable Overlay Click',
+          message: 'Now You can not close me by clicking overlay',
+          type: 'info',
+          disableOverlayClick: true
         }
 
         console.log('open simplert with obj : ', obj)

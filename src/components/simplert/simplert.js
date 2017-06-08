@@ -26,7 +26,9 @@ export default {
       useConfirmBtn: false,
       customConfirmBtnText: this.DEFAULT_BTN_CONFIRM_TEXT,
       customConfirmBtnClass: '',
-      onConfirm: null
+      onConfirm: null,
+      // disabled overlay
+      disableOverlayClick: false
     };
   },
 
@@ -67,7 +69,7 @@ export default {
   methods: {
     closeOverlay: function (e) {
       let _self = this
-      if (e.target.className.indexOf('simplert--shown') > 0) {
+      if (e.target.className.indexOf('simplert--shown') > 0 && !_self.disableOverlayClick) {
         _self.closeSimplert(e)
       }
     },
@@ -96,9 +98,9 @@ export default {
 
     openSimplert: function (obj) {
       let _self = this
-      _self.showSimplert = true
 
       if (typeof obj !== 'undefined') {
+        _self.showSimplert = true
         _self.title = obj.title
 
         if (typeof obj.message !== 'undefined') {
@@ -168,6 +170,12 @@ export default {
           _self.onConfirm = obj.onConfirm
         } else {
           _self.onConfirm = null
+        }
+
+        if (typeof obj.disableOverlayClick !== 'undefined') {
+          _self.disableOverlayClick = obj.disableOverlayClick
+        } else {
+          _self.disableOverlayClick = false
         }
 
       }
