@@ -195,12 +195,12 @@
 
       <ul class="users">
           <li>
-              <a href="https://www.blibli.com/" title="Blibli.com">
+              <a href="https://www.blibli.com/?utm_source=mazipan-github-io&utm_medium=vue2-simplert" title="Blibli.com">
                 <img src="https://www.static-src.com/resources/images/logo-blibli.png">
               </a>
           </li>
           <li>
-              <a href="https://www.blibli.com/travel" title="Blibli.com Travel">
+              <a href="https://www.blibli.com/travel?utm_source=mazipan-github-io&utm_medium=vue2-simplert" title="Blibli.com Travel">
                 <img src="https://www.static-src.com/travel/2.2.1/resources/hotel/images/thumbnail-blibli-travel.png">
               </a>
           </li>
