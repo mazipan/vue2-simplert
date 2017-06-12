@@ -4,12 +4,12 @@
 [![Github Issue](https://img.shields.io/github/issues/mazipan/vue2-simplert.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert/issues) 
 [![GitHub Fork](https://img.shields.io/github/forks/mazipan/vue2-simplert.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert/network) 
 [![GitHub Star](https://img.shields.io/github/stars/mazipan/vue2-simplert.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert/stargazers) 
-[![GitHub Contributors](https://img.shields.io/github/contributors/mazipan/vue2-simplert.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert/network/members) 
 
 [![Travis](https://img.shields.io/travis/mazipan/vue2-simplert.svg)](https://travis-ci.org/mazipan/vue2-simplert)
 [![codecov](https://codecov.io/gh/mazipan/vue2-simplert/branch/master/graph/badge.svg)](https://codecov.io/gh/mazipan/vue2-simplert)
 
 [![version](https://img.shields.io/npm/v/vue2-simplert.svg)](https://www.npmjs.com/package/vue2-simplert)
+[![downloads monthly](https://img.shields.io/npm/dm/vue2-simplert.svg)](https://www.npmjs.com/package/vue2-simplert) 
 [![downloads](https://img.shields.io/npm/dt/vue2-simplert.svg)](https://www.npmjs.com/package/vue2-simplert) 
 
 ![vue2-simplert](https://mazipan.github.io/vue2-simplert/images/vue2-simplert-logo.png)
