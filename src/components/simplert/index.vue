@@ -71,7 +71,6 @@
 
 
 <style lang="scss">
-// Non-Scope style
 @mixin box-sizing($box-size)
 {
     -webkit-box-sizing: $box-size;
@@ -89,7 +88,6 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
 </style>
 
-<style lang="scss" src="./simplert.scss" scoped></style>
+<style lang="scss" src="./simplert.scss"></style>
