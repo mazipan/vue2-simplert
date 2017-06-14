@@ -198,13 +198,6 @@
       <h2>Download</h2>
 
       <p>        
-        Current Version 
-        <a href="https://www.npmjs.com/package/vue2-simplert">
-          <img src="https://img.shields.io/npm/v/vue2-simplert.svg" alt="vue2simplert-version">
-        </a>
-      </p>
-
-      <p>        
         <a href="https://www.npmjs.com/package/vue2-simplert">
           <img src="https://img.shields.io/badge/download-npmjs-red.svg?maxAge=3600" alt="vue2simplert-npmjs">
         </a>
@@ -220,7 +213,18 @@
         <code>yarn add vue2-simplert</code>
       </p>
 
-      <p>Or download latest release <a href="https://github.com/mazipan/vue2-simplert/releases">here</a></p>
+      <p>
+        Or download latest release <a href="https://github.com/mazipan/vue2-simplert/releases">here</a>
+      </p>
+
+
+      <p>        
+        Current Version 
+        <br/><br/>
+        <a href="https://www.npmjs.com/package/vue2-simplert">
+          <img src="https://img.shields.io/npm/v/vue2-simplert.svg" alt="vue2simplert-version">
+        </a>
+      </p>
 
     </div>
 
@@ -265,7 +269,13 @@
     <div class="grid__row content centered">
       <h2>Contact Developer</h2>
 
-      <p>        
+      <p>    
+
+        <a href="https://github.com/mazipan">
+          <img src="https://img.shields.io/badge/mazipan-Github-lightgrey.svg?maxAge=3600" 
+            alt="Github">
+        </a>
+
         <a href="mailto:mazipanneh@gmail.com">
           <img src="https://img.shields.io/badge/mazipanneh-Email-yellow.svg?maxAge=3600" 
             alt="Email">
