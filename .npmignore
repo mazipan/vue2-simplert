@@ -2,9 +2,7 @@ node_modules
 .idea
 build
 config
-dist/index.js
-dist/index.js.gz
-dist/index.js.map
+dist
 favicon
 images
 test
@@ -23,3 +21,4 @@ yarn.lock
 src/App.vue
 src/custom-style.scss
 src/main.js
+src/vue2-simplert.js
