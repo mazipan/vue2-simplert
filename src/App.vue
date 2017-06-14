@@ -198,8 +198,15 @@
       <h2>Download</h2>
 
       <p>        
+        Current Version 
         <a href="https://www.npmjs.com/package/vue2-simplert">
-          <img src="https://img.shields.io/badge/download-npmjs-red.svg?maxAge=3600" alt="npmjs">
+          <img src="https://img.shields.io/npm/v/vue2-simplert.svg" alt="vue2simplert-version">
+        </a>
+      </p>
+
+      <p>        
+        <a href="https://www.npmjs.com/package/vue2-simplert">
+          <img src="https://img.shields.io/badge/download-npmjs-red.svg?maxAge=3600" alt="vue2simplert-npmjs">
         </a>
         <br/><br/>
         <code>npm install vue2-simplert --save</code>
@@ -207,7 +214,7 @@
 
       <p>        
         <a href="https://yarnpkg.com/en/package/vue2-simplert">
-          <img src="https://img.shields.io/badge/download-yarn-blue.svg?maxAge=3600" alt="yarnpkg">
+          <img src="https://img.shields.io/badge/download-yarn-blue.svg?maxAge=3600" alt="vue2simplert-yarnpkg">
         </a>
         <br/><br/>
         <code>yarn add vue2-simplert</code>
@@ -251,6 +258,44 @@
       <p>
         Feel free to fork <i class="fa fa-code-fork"></i> Vue2-Simplert on <a href="https://github.com/mazipan/vue2-simplert"
        target="_blank">GitHub <i class="fa fa-github"></i></a> if you have any features <i class="fa fa-cart-plus"></i> or bugs <i class="fa fa-bug"></i>!    
+      </p>      
+
+    </div>
+
+    <div class="grid__row content centered">
+      <h2>Contact Developer</h2>
+
+      <p>        
+        <a href="mailto:mazipanneh@gmail.com">
+          <img src="https://img.shields.io/badge/mazipanneh-Email-yellow.svg?maxAge=3600" 
+            alt="Email">
+        </a>
+
+        <a href="https://mazipanneh.com/blog/">
+          <img src="https://img.shields.io/badge/mazipanneh-Blog-brightgreen.svg?maxAge=3600"   alt="Blog">
+        </a>
+
+        <a href="https://facebook.com/mazipanneh">
+          <img src="https://img.shields.io/badge/mazipanneh-Facebook-blue.svg?maxAge=3600" 
+            alt="Facebook">
+        </a>
+
+        <br/>
+
+        <a href="https://twitter.com/Maz_Ipan">
+          <img src="https://img.shields.io/badge/Maz_Ipan-Twitter-55acee.svg?maxAge=3600" 
+            alt="Twitter">
+        </a>  
+
+        <a href="https://id.linkedin.com/in/irfanmaulanamazipan">
+          <img src="https://img.shields.io/badge/irfanmaulanamazipan-Linkedin-0077b5.svg?maxAge=3600" 
+            alt="Linkedin">
+        </a> 
+
+        <a href="https://www.slideshare.net/IrfanMaulana21">
+          <img src="https://img.shields.io/badge/IrfanMaulana21-Slideshare-0077b5.svg?maxAge=3600" 
+            alt="Slideshare">
+        </a>  
       </p>      
 
     </div>

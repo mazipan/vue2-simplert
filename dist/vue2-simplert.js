@@ -1,5 +1,5 @@
 /*!
- *  Vue2-Simplert v.0.2.4 
+ *  Vue2-Simplert v.0.2.5 
  *  (c) 2017 Irfan Maulana 
  *  MIT License
  */
