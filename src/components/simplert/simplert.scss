@@ -1,4 +1,23 @@
-// Scoped style
+// BASE --start
+@mixin box-sizing($box-size)
+{
+    -webkit-box-sizing: $box-size;
+       -moz-box-sizing: $box-size;
+            box-sizing: $box-size;
+         -o-box-sizing: $box-size;
+        -ms-box-sizing: $box-size;
+}
+
+html {
+    @include box-sizing(border-box);
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+// BASE --end
+
 @mixin border-radius($radius)
 {
     -webkit-border-radius: $radius;

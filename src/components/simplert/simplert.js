@@ -28,7 +28,8 @@ export default {
       customConfirmBtnClass: '',
       onConfirm: null,
       // disabled overlay
-      disableOverlayClick: false
+      disableOverlayClick: false,
+      hideAllButton: false,
     };
   },
 
@@ -52,7 +53,7 @@ export default {
     classBtnClose: function () {
       let clasz = this.customCloseBtnClass
       if (this.useRadius) {
-        clasz = this.customCloseBtnClass + ' simplert__close--radius'
+        clasz = ' simplert__close--radius ' + this.customCloseBtnClass
       } 
        return clasz
     },
@@ -60,7 +61,7 @@ export default {
     classBtnConfirm: function () {
       let clasz = this.customConfirmBtnClass
       if (this.useRadius) {
-        clasz = this.customConfirmBtnClass + ' simplert__confirm--radius'
+        clasz =  ' simplert__confirm--radius ' + this.customConfirmBtnClass
       } 
        return clasz
     }
@@ -176,6 +177,12 @@ export default {
           _self.disableOverlayClick = obj.disableOverlayClick
         } else {
           _self.disableOverlayClick = false
+        }
+
+        if (typeof obj.hideAllButton !== 'undefined') {
+          _self.hideAllButton = obj.hideAllButton
+        } else {
+          _self.hideAllButton = false
         }
 
       }

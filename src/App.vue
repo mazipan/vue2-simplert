@@ -170,6 +170,25 @@
           </button>   
         </div>    
       </div>
+
+       <div class="grid__row content__row">
+        <div class="grid__col-3 example__title">Alert With All Button Hidden</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--orange"
+                  @click="openWithHiddenButton">
+                Click Me!
+          </button>   
+        </div>    
+  
+        <div class="grid__col-3 example__title">Alert With Very Custom Style</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--green"
+                  @click="openWithStyle">
+                Click Me!
+          </button>   
+        </div>    
+
+      </div>
             
 
     </div>
@@ -355,6 +374,37 @@
         console.log('open simplert with obj : ', obj)
         this.$refs.simplert.openSimplert(obj)
       },
+
+      openWithHiddenButton () {
+        let obj = {
+          title: 'Hey, I am Title',
+          message: 'I am Message',
+          type: 'info',
+          hideAllButton: true
+        }
+
+        console.log('open simplert with obj : ', obj)
+        this.$refs.simplert.openSimplert(obj)
+      },
+
+      openWithStyle () {
+        let obj = {
+          title: 'Confirmation',
+          message: 'Do you want to procced ?',
+          customClass: 'custom-simplert',
+          customIconUrl: '',
+          customCloseBtnText: 'No, Just Close',
+          customCloseBtnClass: 'no-procced-btn',
+          onClose: this.onClose,
+          useConfirmBtn: true,
+          customConfirmBtnText: 'Yes, Procced Me',
+          customConfirmBtnClass: 'procced-btn',
+          onConfirm: this.onConfirm
+        }
+
+        console.log('open simplert with obj : ', obj)
+        this.$refs.simplert.openSimplert(obj)        
+      }
 
     }
   };

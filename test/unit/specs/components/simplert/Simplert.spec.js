@@ -138,21 +138,18 @@ describe('Simplert.vue', () => {
   	let obj = {
       title: 'title',
       message: 'message',
-      type: 'success',
       customClass: 'custom-class'
     }
     vm.openSimplert(obj)
     expect(vm.showSimplert).to.be.true
     expect(vm.title).to.equal('title')
     expect(vm.message).to.equal('message')
-    expect(vm.type).to.equal('success')
     expect(vm.customClass).to.equal('custom-class')
   })
   it('Open with custom icon', () => {
   	let obj = {
       title: 'title',
       message: 'message',
-      customClass: 'custom-class',
       customIconUrl: 'url'
     }
     vm.openSimplert(obj)
@@ -160,98 +157,60 @@ describe('Simplert.vue', () => {
     expect(vm.title).to.equal('title')
     expect(vm.message).to.equal('message')
     expect(vm.type).to.equal('INVALID_TYPE')
-    expect(vm.customClass).to.equal('custom-class')
     expect(vm.customIconUrl).to.equal('url')
   })
   it('Open with custom close button text', () => {
   	let obj = {
       title: 'title',
       message: 'message',
-      customClass: 'custom-class',
-      customIconUrl: 'url',
       customCloseBtnText: 'close me'
     }
     vm.openSimplert(obj)
     expect(vm.showSimplert).to.be.true
     expect(vm.title).to.equal('title')
     expect(vm.message).to.equal('message')
-    expect(vm.type).to.equal('INVALID_TYPE')
-    expect(vm.customClass).to.equal('custom-class')
-    expect(vm.customIconUrl).to.equal('url')
     expect(vm.customCloseBtnText).to.equal('close me')
   })
   it('Open with custom close button class', () => {
   	let obj = {
       title: 'title',
       message: 'message',
-      customClass: 'custom-class',
-      customIconUrl: 'url',
-      customCloseBtnText: 'close me',
       customCloseBtnClass: 'custom-class'
     }
     vm.openSimplert(obj)
     expect(vm.showSimplert).to.be.true
     expect(vm.title).to.equal('title')
     expect(vm.message).to.equal('message')
-    expect(vm.type).to.equal('INVALID_TYPE')
-    expect(vm.customClass).to.equal('custom-class')
-    expect(vm.customIconUrl).to.equal('url')
-    expect(vm.customCloseBtnText).to.equal('close me')
     expect(vm.customCloseBtnClass).to.equal('custom-class')
   })
   it('Open with custom close function', () => {
   	let obj = {
       title: 'title',
       message: 'message',
-      customClass: 'custom-class',
-      customIconUrl: 'url',
-      customCloseBtnText: 'close me',
-      customCloseBtnClass: 'custom-class',
       onClose: function(){}
     }
     vm.openSimplert(obj)
     expect(vm.showSimplert).to.be.true
     expect(vm.title).to.equal('title')
     expect(vm.message).to.equal('message')
-    expect(vm.type).to.equal('INVALID_TYPE')
-    expect(vm.customClass).to.equal('custom-class')
-    expect(vm.customIconUrl).to.equal('url')
-    expect(vm.customCloseBtnText).to.equal('close me')
-    expect(vm.customCloseBtnClass).to.equal('custom-class')
     expect(vm.onClose).to.be.not.null
   })
   it('Open with confirm button', () => {
   	let obj = {
       title: 'title',
       message: 'message',
-      customClass: 'custom-class',
-      customIconUrl: 'url',
-      customCloseBtnText: 'close me',
-      customCloseBtnClass: 'custom-class',
-      onClose: function(){},
       useConfirmBtn: true
     }
     vm.openSimplert(obj)
     expect(vm.showSimplert).to.be.true
     expect(vm.title).to.equal('title')
     expect(vm.message).to.equal('message')
-    expect(vm.type).to.equal('INVALID_TYPE')
-    expect(vm.customClass).to.equal('custom-class')
-    expect(vm.customIconUrl).to.equal('url')
-    expect(vm.customCloseBtnText).to.equal('close me')
-    expect(vm.customCloseBtnClass).to.equal('custom-class')
-    expect(vm.onClose).to.be.not.null
     expect(vm.useConfirmBtn).to.be.true
   })
   it('Open with custom confirm button text', () => {
   	let obj = {
       title: 'title',
       message: 'message',
-      customClass: 'custom-class',
-      customIconUrl: 'url',
-      customCloseBtnText: 'close me',
-      customCloseBtnClass: 'custom-class',
-      onClose: function(){},
       useConfirmBtn: true,
       customConfirmBtnText: 'confirm me'
     }
@@ -259,12 +218,6 @@ describe('Simplert.vue', () => {
     expect(vm.showSimplert).to.be.true
     expect(vm.title).to.equal('title')
     expect(vm.message).to.equal('message')
-    expect(vm.type).to.equal('INVALID_TYPE')
-    expect(vm.customClass).to.equal('custom-class')
-    expect(vm.customIconUrl).to.equal('url')
-    expect(vm.customCloseBtnText).to.equal('close me')
-    expect(vm.customCloseBtnClass).to.equal('custom-class')
-    expect(vm.onClose).to.be.not.null
     expect(vm.useConfirmBtn).to.be.true
     expect(vm.customConfirmBtnText).to.equal('confirm me')
   })
@@ -272,87 +225,52 @@ describe('Simplert.vue', () => {
   	let obj = {
       title: 'title',
       message: 'message',
-      customClass: 'custom-class',
-      customIconUrl: 'url',
-      customCloseBtnText: 'close me',
-      customCloseBtnClass: 'custom-class',
-      onClose: function(){},
       useConfirmBtn: true,
-      customConfirmBtnText: 'confirm me',
       customConfirmBtnClass: 'custom-class'
     }
     vm.openSimplert(obj)
     expect(vm.showSimplert).to.be.true
     expect(vm.title).to.equal('title')
     expect(vm.message).to.equal('message')
-    expect(vm.type).to.equal('INVALID_TYPE')
-    expect(vm.customClass).to.equal('custom-class')
-    expect(vm.customIconUrl).to.equal('url')
-    expect(vm.customCloseBtnText).to.equal('close me')
-    expect(vm.customCloseBtnClass).to.equal('custom-class')
-    expect(vm.onClose).to.be.not.null
     expect(vm.useConfirmBtn).to.be.true
-    expect(vm.customConfirmBtnText).to.equal('confirm me')
     expect(vm.customConfirmBtnClass).to.equal('custom-class')
   })
   it('Open with custom confirm function', () => {
   	let obj = {
       title: 'title',
       message: 'message',
-      customClass: 'custom-class',
-      customIconUrl: 'url',
-      customCloseBtnText: 'close me',
-      customCloseBtnClass: 'custom-class',
-      onClose: function(){},
       useConfirmBtn: true,
-      customConfirmBtnText: 'confirm me',
-      customConfirmBtnClass: 'custom-class',
       onConfirm: function(){}
     }
     vm.openSimplert(obj)
     expect(vm.showSimplert).to.be.true
     expect(vm.title).to.equal('title')
     expect(vm.message).to.equal('message')
-    expect(vm.type).to.equal('INVALID_TYPE')
-    expect(vm.customClass).to.equal('custom-class')
-    expect(vm.customIconUrl).to.equal('url')
-    expect(vm.customCloseBtnText).to.equal('close me')
-    expect(vm.customCloseBtnClass).to.equal('custom-class')
-    expect(vm.onClose).to.be.not.null
     expect(vm.useConfirmBtn).to.be.true
-    expect(vm.customConfirmBtnText).to.equal('confirm me')
-    expect(vm.customConfirmBtnClass).to.equal('custom-class')
     expect(vm.onConfirm).to.be.not.null
   })
   it('Open with disabled overlay click', () => {
     let obj = {
       title: 'title',
       message: 'message',
-      customClass: 'custom-class',
-      customIconUrl: 'url',
-      customCloseBtnText: 'close me',
-      customCloseBtnClass: 'custom-class',
-      onClose: function(){},
-      useConfirmBtn: true,
-      customConfirmBtnText: 'confirm me',
-      customConfirmBtnClass: 'custom-class',
-      onConfirm: function(){},
       disableOverlayClick: true
     }
     vm.openSimplert(obj)
     expect(vm.showSimplert).to.be.true
     expect(vm.title).to.equal('title')
     expect(vm.message).to.equal('message')
-    expect(vm.type).to.equal('INVALID_TYPE')
-    expect(vm.customClass).to.equal('custom-class')
-    expect(vm.customIconUrl).to.equal('url')
-    expect(vm.customCloseBtnText).to.equal('close me')
-    expect(vm.customCloseBtnClass).to.equal('custom-class')
-    expect(vm.onClose).to.be.not.null
-    expect(vm.useConfirmBtn).to.be.true
-    expect(vm.customConfirmBtnText).to.equal('confirm me')
-    expect(vm.customConfirmBtnClass).to.equal('custom-class')
-    expect(vm.onConfirm).to.be.not.null
     expect(vm.disableOverlayClick).to.be.true
+  })
+  it('Open with all button hidden', () => {
+    let obj = {
+      title: 'title',
+      message: 'message',
+      hideAllButton: true
+    }
+    vm.openSimplert(obj)
+    expect(vm.showSimplert).to.be.true
+    expect(vm.title).to.equal('title')
+    expect(vm.message).to.equal('message')
+    expect(vm.hideAllButton).to.be.true
   })
 })
