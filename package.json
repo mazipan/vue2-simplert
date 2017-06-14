@@ -5,7 +5,7 @@
   "license": "MIT",
   "author": "Irfan Maulana (https://github.com/mazipan/)",
   "homepage": "https://mazipan.github.io/vue2-simplert/",
-  "main": "./dist/vue2-simplert.js",
+  "main": "./src/components/simplert/index.vue",
   "keywords": [
     "vue2 alert",
     "vue2 sweet alert",
