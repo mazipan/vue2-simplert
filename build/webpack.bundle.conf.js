@@ -25,17 +25,10 @@ var webpackConfig = merge(baseWebpackConfig, {
       extract: false
     })
   },
-  devtool: config.build.productionSourceMap ? '#source-map' : false,
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
       'process.env': '"production"'
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      },
-      sourceMap: false
     }),
     new webpack.BannerPlugin((
     [
@@ -43,34 +36,8 @@ var webpackConfig = merge(baseWebpackConfig, {
       "(c) 2017 Irfan Maulana \n",
       "MIT License"
     ])
-    .join(" ")),
-    new WebpackShellPlugin({
-      onBuildStart: ['echo "Starting"']
-    })
+    .join(" "))
   ]
 })
-
-if (config.build.productionGzip) {
-  var CompressionWebpackPlugin = require('compression-webpack-plugin')
-
-  webpackConfig.plugins.push(
-    new CompressionWebpackPlugin({
-      asset: '[path].gz[query]',
-      algorithm: 'gzip',
-      test: new RegExp(
-        '\\.(' +
-        config.build.productionGzipExtensions.join('|') +
-        ')$'
-      ),
-      threshold: 10240,
-      minRatio: 0.8
-    })
-  )
-}
-
-if (config.build.bundleAnalyzerReport) {
-  var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-  webpackConfig.plugins.push(new BundleAnalyzerPlugin())
-}
 
 module.exports = webpackConfig
