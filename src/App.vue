@@ -202,7 +202,7 @@
           <img src="https://img.shields.io/badge/download-npmjs-red.svg?maxAge=3600" alt="vue2simplert-npmjs">
         </a>
         <br/><br/>
-        <code>npm install vue2-simplert --save</code>
+        <code>npm install vue2-simplert@latest --save-dev</code>
       </p>
 
       <p>        
@@ -210,7 +210,7 @@
           <img src="https://img.shields.io/badge/download-yarn-blue.svg?maxAge=3600" alt="vue2simplert-yarnpkg">
         </a>
         <br/><br/>
-        <code>yarn add vue2-simplert</code>
+        <code>yarn add vue2-simplert@latest</code>
       </p>
 
       <p>

@@ -1,7 +1,7 @@
 {
   "name": "vue2-simplert",
   "description": "Vue 2 Alert Component (SweetAlert Inspired)",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "license": "MIT",
   "author": "Irfan Maulana (https://github.com/mazipan/)",
   "homepage": "https://mazipan.github.io/vue2-simplert/",

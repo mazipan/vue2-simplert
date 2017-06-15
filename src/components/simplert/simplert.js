@@ -1,10 +1,16 @@
 export default {
   props: {
-    useRadius: true,
-    useIcon: true
+    useRadius: {
+      type: Boolean,
+      default: true
+    },
+    useIcon: {
+      type: Boolean,
+      default: true
+    },
   },
 
-  data () {
+  data: function () {
     return {
       DEFAULT_TYPE: "info",
       DEFAULT_BTN_CLOSE_TEXT: "Close",
@@ -29,13 +35,13 @@ export default {
       onConfirm: null,
       // disabled overlay
       disableOverlayClick: false,
-      hideAllButton: false,
-    };
+      hideAllButton: false
+    }
   },
 
   computed: {
     classSimplert: function () {
-      let clasz = this.customClass
+      var clasz = this.customClass
       if (this.showSimplert) {
         clasz = this.customClass + ' simplert--shown'
       } 
@@ -43,7 +49,7 @@ export default {
     },
 
     classContent: function () {
-      let clasz = ''
+      var clasz = ''
       if (this.useRadius) {
         clasz = 'simplert__content--radius'
       } 
@@ -51,7 +57,7 @@ export default {
     },
 
     classBtnClose: function () {
-      let clasz = this.customCloseBtnClass
+      var clasz = this.customCloseBtnClass
       if (this.useRadius) {
         clasz = ' simplert__close--radius ' + this.customCloseBtnClass
       } 
@@ -59,7 +65,7 @@ export default {
     },
 
     classBtnConfirm: function () {
-      let clasz = this.customConfirmBtnClass
+      var clasz = this.customConfirmBtnClass
       if (this.useRadius) {
         clasz =  ' simplert__confirm--radius ' + this.customConfirmBtnClass
       } 
@@ -69,14 +75,14 @@ export default {
 
   methods: {
     closeOverlay: function (e) {
-      let _self = this
+      var _self = this
       if (e.target.className.indexOf('simplert--shown') > 0 && !_self.disableOverlayClick) {
         _self.closeSimplert(e)
       }
     },
 
     whenConfirm: function (e) {
-      let _self = this
+      var _self = this
       e.preventDefault()
 
       _self.showSimplert = false
@@ -87,7 +93,7 @@ export default {
     },
 
     closeSimplert: function (e) {
-      let _self = this
+      var _self = this
       e.preventDefault()
 
       _self.showSimplert = false
@@ -98,7 +104,7 @@ export default {
     },
 
     openSimplert: function (obj) {
-      let _self = this
+      var _self = this
 
       if (typeof obj !== 'undefined') {
         _self.showSimplert = true
