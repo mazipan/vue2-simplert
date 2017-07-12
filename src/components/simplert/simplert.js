@@ -77,7 +77,7 @@ export default {
     closeOverlay: function (e) {
       var _self = this
       if (e.target.className.indexOf('simplert--shown') > 0 && !_self.disableOverlayClick) {
-        _self.closeSimplert(e)
+        _self.showSimplert = false
       }
     },
 
