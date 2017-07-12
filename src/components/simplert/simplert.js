@@ -56,20 +56,26 @@ export default {
       return clasz
     },
 
-    classBtnClose: function () {
-      var clasz = this.customCloseBtnClass
+    classBtnClose: function() {
+      var clasz = 'simplert__close'
       if (this.useRadius) {
-        clasz = ' simplert__close--radius ' + this.customCloseBtnClass
-      } 
-       return clasz
+        clasz = 'simplert__close simplert__close--radius'
+      }
+      if (this.customCloseBtnClass) {
+        clasz = this.customCloseBtnClass
+      }
+      return clasz
     },
 
-    classBtnConfirm: function () {
-      var clasz = this.customConfirmBtnClass
+    classBtnConfirm: function() {
+      var clasz = 'simplert__confirm'
       if (this.useRadius) {
-        clasz =  ' simplert__confirm--radius ' + this.customConfirmBtnClass
-      } 
-       return clasz
+        clasz = 'simplert__confirm simplert__confirm--radius'
+      }
+      if (this.customConfirmBtnClass) {
+        clasz = this.customConfirmBtnClass
+      }
+      return clasz
     }
   },
 

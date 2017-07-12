@@ -37,10 +37,10 @@
         <div v-html="message"></div>
       </div>
       <div class="simplert__footer">
-        <button class="simplert__confirm" v-if="useConfirmBtn && !hideAllButton" :class="classBtnConfirm" @click="whenConfirm">
+        <button :class="classBtnConfirm" v-if="useConfirmBtn && !hideAllButton"  @click="whenConfirm">
           {{ customConfirmBtnText }}
         </button>
-        <button class="simplert__close" :class="classBtnClose" v-if="!hideAllButton" @click="closeSimplert">
+        <button :class="classBtnClose" v-if="!hideAllButton" @click="closeSimplert">
           {{ customCloseBtnText }}
         </button>
       </div>

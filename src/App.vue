@@ -93,7 +93,7 @@
         <div class="grid__col-3 example__title">Alert With Custom Close Class</div>
         <div class="grid__col-3">
           <button class="button button--radius button--blue"
-                  @click="open('Custom Close Class', 'Hey, I am Opened...', '', '', '', 'custom-class-btn')">
+                  @click="open('Custom Close Class', 'Hey, I am Opened...', '', '', '', 'button button--radius button--red')">
                 Click Me!
           </button>   
         </div>    
@@ -157,7 +157,7 @@
         <div class="grid__col-3 example__title">Alert With Confirm Button Custom Class</div>
         <div class="grid__col-3">
           <button class="button button--radius button--blue"
-                  @click="openWithConfirm('Confirm Button Custom Class', 'Hey, I am Opened...', false, '', 'custom-class-btn')">
+                  @click="openWithConfirm('Confirm Button Custom Class', 'Hey, I am Opened...', false, '', 'button button--radius button--red')">
                 Click Me!
           </button>   
         </div>    

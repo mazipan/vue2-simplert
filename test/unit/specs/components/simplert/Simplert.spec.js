@@ -30,24 +30,28 @@ describe('Simplert.vue', () => {
     expect(vm.classContent).to.equal('simplert__content--radius')
   })
   it('Computed Class Button Close', () => {
-  	vm.customCloseBtnClass = 'custom'
   	vm.useRadius = false
-    expect(vm.classBtnClose).to.equal('custom')
+    expect(vm.classBtnClose).to.equal('simplert__close')
   })
   it('Computed Class Button Close When useRadius', () => {
-  	vm.customCloseBtnClass = 'custom'
   	vm.useRadius = true
-    expect(vm.classBtnClose).to.equal(' simplert__close--radius custom')
+    expect(vm.classBtnClose).to.equal('simplert__close simplert__close--radius')
+  })
+  it('Computed Class Button Close When customCloseBtnClass', () => {
+    vm.customCloseBtnClass = 'custom'
+    expect(vm.classBtnClose).to.equal('custom')
   })
   it('Computed Class Button Confirm', () => {
-  	vm.customConfirmBtnClass = 'custom'
   	vm.useRadius = false
-    expect(vm.classBtnConfirm).to.equal('custom')
+    expect(vm.classBtnConfirm).to.equal('simplert__confirm')
   })
   it('Computed Class Button Confirm When useRadius', () => {
-  	vm.customConfirmBtnClass = 'custom'
   	vm.useRadius = true
-    expect(vm.classBtnConfirm).to.equal(' simplert__confirm--radius custom')
+    expect(vm.classBtnConfirm).to.equal('simplert__confirm simplert__confirm--radius')
+  })
+  it('Computed Class Button Confirm When customConfirmBtnClass', () => {
+    vm.customConfirmBtnClass = 'custom'
+    expect(vm.classBtnConfirm).to.equal('custom')
   })
   // -- UNIT TEST METHOD FUNCTION
   it('Close Overlay Wrong Class', () => {
