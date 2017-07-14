@@ -1,11 +1,11 @@
 {
   "name": "vue2-simplert",
   "description": "Vue 2 Alert Component (SweetAlert Inspired)",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "license": "MIT",
   "author": "Irfan Maulana (https://github.com/mazipan/)",
   "homepage": "https://mazipan.github.io/vue2-simplert/",
-  "main": "./src/components/simplert/index.vue",
+  "main": "./dist/simplert.bundle.js",
   "keywords": [
     "vue2 alert",
     "vue2 sweet alert",
@@ -28,7 +28,7 @@
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
-    "dist": "npm run build",
+    "dist": "node build/dist.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",

@@ -317,8 +317,8 @@
     </div>
 
     <!-- Vue2-Simplert DOM start -->
-    <simplert useRadius=true
-              useIcon=true
+    <simplert :useRadius="true"
+              :useIcon="true"
               ref="simplert">
     </simplert>
 
@@ -326,7 +326,7 @@
 </template>
 
 <script>
-  import Simplert from 'components/simplert'
+  import Simplert from '../dist/simplert.bundle.js'
 
   export default {
     components: {
