@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Simplert from 'components/simplert'
+import Simplert from 'src/Simplert'
 
 describe('Simplert.vue', () => {
   var vm = null

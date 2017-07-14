@@ -326,7 +326,7 @@
 </template>
 
 <script>
-  import Simplert from '../dist/simplert.bundle.js'
+  import Simplert from './Simplert.vue'
 
   export default {
     components: {

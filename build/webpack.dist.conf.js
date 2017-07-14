@@ -13,14 +13,15 @@ var env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
   : config.build.env
 
-var webpackConfig = merge(baseWebpackConfig, {  
+var webpackConfig = merge(baseWebpackConfig, {
   entry: {
     app: './src/main-dist.js'
   },
   output: {
-    path: config.build.assetsRoot,
+    path: path.resolve(__dirname, '../dist'),
+    publicPath: '/dist',
     filename: 'simplert.bundle.js',
-    library: 'simplert',
+    library: 'Simplert',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
@@ -30,7 +31,11 @@ var webpackConfig = merge(baseWebpackConfig, {
       extract: false
     })
   },
-  devtool: config.build.productionSourceMap ? '#source-map' : false,
+  devtool: '#source-map',
+  externals: {
+    // Use external version of Vue
+    "vue": "Vue",
+  },
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({

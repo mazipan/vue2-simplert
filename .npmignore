@@ -14,6 +14,7 @@ test
 .travis.yml
 http-dist.js
 index.html
+index-dev.html
 npm-debug.log
 screenshoot.PNG
 yarn-error.log
@@ -21,4 +22,3 @@ yarn.lock
 src/App.vue
 src/custom-style.scss
 src/main.js
-src/vue2-simplert.js

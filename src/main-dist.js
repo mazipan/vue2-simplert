@@ -1,3 +1,3 @@
-import Simplert from 'components/simplert'
+import Simplert from './Simplert'
 
 export default Simplert
