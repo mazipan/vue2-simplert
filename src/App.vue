@@ -189,7 +189,16 @@
         </div>    
 
       </div>
-            
+
+      <div class="grid__row content__row">
+        <div class="grid__col-3 example__title">Alert with OnOpen Function</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--blue"
+                  @click="openWithOnOpen">
+            Click Me!
+          </button>
+        </div>
+      </div>
 
     </div>
 
@@ -374,6 +383,10 @@
         this.$refs.simplert.openSimplert(obj)
       },
 
+      onOpen () {
+        alert("Hey, I am called when alert is opened")
+      },
+
       onClose () {
         alert('Hey, I am Close Function')
       },
@@ -391,6 +404,18 @@
         }
 
         console.log('open simplert with obj : ', obj)
+        this.$refs.simplert.openSimplert(obj)
+      },
+
+      openWithOnOpen () {
+        let obj = {
+          title: 'On Open Function',
+          message: 'There should be an alert before you see this',
+          type: 'info',
+          onOpen: this.onOpen
+        }
+
+        console.log('open simplert with obj: ', obj)
         this.$refs.simplert.openSimplert(obj)
       },
 

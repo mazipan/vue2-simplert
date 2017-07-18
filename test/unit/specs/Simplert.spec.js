@@ -277,4 +277,16 @@ describe('Simplert.vue', () => {
     expect(vm.message).to.equal('message')
     expect(vm.hideAllButton).to.be.true
   })
+  it('Open with onOpen function', () => {
+    let obj = {
+      title: 'title',
+      message: 'message',
+      onOpen: function(){}
+    }
+    vm.openSimplert(obj)
+    expect(vm.showSimplert).to.be.true
+    expect(vm.title).to.equal('title')
+    expect(vm.message).to.equal('message')
+    expect(vm.onOpen).to.be.not.null
+  })
 })
