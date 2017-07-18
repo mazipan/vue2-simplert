@@ -80,6 +80,8 @@ export default {
       type: this.DEFAULT_TYPE, // info (default), success, warning, error
       customClass: '',
       customIconUrl: '',
+      // open event
+      onOpen: null,
       // close button
       customCloseBtnText: this.DEFAULT_BTN_CLOSE_TEXT,
       customCloseBtnClass: '',
@@ -253,6 +255,15 @@ export default {
           _self.hideAllButton = false
         }
 
+        if (typeof obj.onOpen !== 'undefined') {
+          _self.onOpen = obj.onOpen
+        } else {
+          _self.onOpen = null
+        }
+
+        if (_self.onOpen !== null) {
+          _self.onOpen()
+        }
       }
     }
   }
