@@ -1,4 +1,12 @@
-<template>
+/*!
+* Vue2-Simplert
+* @author : Irfan Maulana (https://github.com/mazipan)
+**/
+
+require('./simplert.css')
+
+Vue.component('simplert', {
+  template: `
   <div class="simplert" role="modal" :class="classSimplert" @click="closeOverlay">
     <div class="simplert__content" :class="classContent">
       <div class="simplert__header">
@@ -46,15 +54,7 @@
       </div>
     </div>
   </div>
-</template>
-
-<script type="text/javascript">
-/*!
-* Vue2-Simplert
-* @author : Irfan Maulana (https://github.com/mazipan)
-**/
-export default {
-  name: 'Simplert',
+  `,
   props: {
     useRadius: {
       type: Boolean,
@@ -65,8 +65,7 @@ export default {
       default: true
     },
   },
-
-  data: function () {
+  data: function() {
     return {
       DEFAULT_TYPE: "info",
       DEFAULT_BTN_CLOSE_TEXT: "Close",
@@ -76,7 +75,7 @@ export default {
       showSimplert: false,
       // basic setup
       title: "",
-      message: "",        
+      message: "",
       type: this.DEFAULT_TYPE, // info (default), success, warning, error
       customClass: '',
       customIconUrl: '',
@@ -96,21 +95,20 @@ export default {
       hideAllButton: false
     }
   },
-
   computed: {
-    classSimplert: function () {
+    classSimplert: function() {
       var clasz = this.customClass
       if (this.showSimplert) {
         clasz = this.customClass + ' simplert--shown'
-      } 
+      }
       return clasz
     },
 
-    classContent: function () {
+    classContent: function() {
       var clasz = ''
       if (this.useRadius) {
         clasz = 'simplert__content--radius'
-      } 
+      }
       return clasz
     },
 
@@ -136,16 +134,15 @@ export default {
       return clasz
     }
   },
-
   methods: {
-    closeOverlay: function (e) {
+    closeOverlay: function(e) {
       var _self = this
       if (e.target.className.indexOf('simplert--shown') > 0 && !_self.disableOverlayClick) {
         _self.showSimplert = false
       }
     },
 
-    whenConfirm: function (e) {
+    whenConfirm: function(e) {
       var _self = this
       e.preventDefault()
 
@@ -156,7 +153,7 @@ export default {
       }
     },
 
-    closeSimplert: function (e) {
+    closeSimplert: function(e) {
       var _self = this
       e.preventDefault()
 
@@ -167,7 +164,7 @@ export default {
       }
     },
 
-    openSimplert: function (obj) {
+    openSimplert: function(obj) {
       var _self = this
 
       if (typeof obj !== 'undefined') {
@@ -267,6 +264,4 @@ export default {
       }
     }
   }
-}
-</script>
-<style lang="css" src="./simplert.css"></style>
+})

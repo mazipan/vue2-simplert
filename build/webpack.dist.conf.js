@@ -15,7 +15,7 @@ var env = process.env.NODE_ENV === 'testing'
 
 var webpackConfig = merge(baseWebpackConfig, {
   entry: {
-    app: './src/main-dist.js'
+    app: './src/simplert.es5.js'
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
