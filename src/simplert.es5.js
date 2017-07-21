@@ -1,8 +1,4 @@
-/*!
-* Vue2-Simplert
-* @author : Irfan Maulana (https://github.com/mazipan)
-**/
-
+import Vue from 'vue'
 require('./simplert.css')
 
 Vue.component('simplert', {

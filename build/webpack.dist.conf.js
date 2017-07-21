@@ -47,6 +47,9 @@ var webpackConfig = merge(baseWebpackConfig, {
       },
       sourceMap: false
     }),
+    new webpack.BannerPlugin({
+      banner: `Vue2-Simplert v.${npm.version}\nIrfan Maulana (https://github.com/mazipan)`
+    }),
     new WebpackShellPlugin({
       onBuildStart: ['echo "Starting"']
     })
