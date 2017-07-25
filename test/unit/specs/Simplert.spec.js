@@ -289,4 +289,9 @@ describe('Simplert.vue', () => {
     expect(vm.message).to.equal('message')
     expect(vm.onOpen).to.be.not.null
   })
+  it('Call justCloseSimplert', () => {
+    vm.showSimplert = true
+    vm.justCloseSimplert()
+    expect(vm.showSimplert).to.be.false
+  })
 })

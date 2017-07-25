@@ -138,6 +138,10 @@ export default {
   },
 
   methods: {
+    justCloseSimplert: function () {
+      this.showSimplert = false
+    },
+
     closeOverlay: function (e) {
       var _self = this
       if (e.target.className.indexOf('simplert--shown') > 0 && !_self.disableOverlayClick) {
