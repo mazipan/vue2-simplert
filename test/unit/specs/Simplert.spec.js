@@ -89,7 +89,7 @@ describe('Simplert.vue', () => {
   })
   it('Custom Confirm Function', () => {
   	vm.showSimplert = true
-  	vm.onConfirm = function(){}
+  	vm.onConfirm = function (){}
     vm.whenConfirm({preventDefault: function () {}})
     expect(vm.showSimplert).to.be.false
   })
@@ -100,7 +100,7 @@ describe('Simplert.vue', () => {
   })
   it('Custom Close Simplert', () => {
   	vm.showSimplert = true
-  	vm.onClose = function(){}
+  	vm.onClose = function (){}
     vm.closeSimplert({preventDefault: function () {}})
     expect(vm.showSimplert).to.be.false
   })
@@ -191,7 +191,7 @@ describe('Simplert.vue', () => {
   	let obj = {
       title: 'title',
       message: 'message',
-      onClose: function(){}
+      onClose: function (){}
     }
     vm.openSimplert(obj)
     expect(vm.showSimplert).to.be.true
@@ -244,7 +244,7 @@ describe('Simplert.vue', () => {
       title: 'title',
       message: 'message',
       useConfirmBtn: true,
-      onConfirm: function(){}
+      onConfirm: function (){}
     }
     vm.openSimplert(obj)
     expect(vm.showSimplert).to.be.true
@@ -277,11 +277,23 @@ describe('Simplert.vue', () => {
     expect(vm.message).to.equal('message')
     expect(vm.hideAllButton).to.be.true
   })
+  it('Open with showXclose', () => {
+    let obj = {
+      title: 'title',
+      message: 'message',
+      showXclose: true
+    }
+    vm.openSimplert(obj)
+    expect(vm.showSimplert).to.be.true
+    expect(vm.title).to.equal('title')
+    expect(vm.message).to.equal('message')
+    expect(vm.showXclose).to.be.true
+  })
   it('Open with onOpen function', () => {
     let obj = {
       title: 'title',
       message: 'message',
-      onOpen: function(){}
+      onOpen: function (){}
     }
     vm.openSimplert(obj)
     expect(vm.showSimplert).to.be.true

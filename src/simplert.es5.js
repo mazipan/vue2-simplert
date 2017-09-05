@@ -5,7 +5,8 @@ Vue.component('simplert', {
   template: `
   <div class="simplert" role="modal" :class="classSimplert" @click="closeOverlay">
     <div class="simplert__content" :class="classContent">
-      <div class="simplert__header">
+      <div class="simplert__header">      
+      <div class="simplert__x" v-if="showXclose" @click="justCloseSimplert">&#9587;</div>
         <div v-if="useIcon">
           <div class="simplert__icon simplert__icon--info" v-if="type === 'info'">
             <div class="simplert__line simplert__line--info">
@@ -59,19 +60,19 @@ Vue.component('simplert', {
     useIcon: {
       type: Boolean,
       default: true
-    },
+    }
   },
-  data: function() {
+  data: function () {
     return {
-      DEFAULT_TYPE: "info",
-      DEFAULT_BTN_CLOSE_TEXT: "Close",
-      DEFAULT_BTN_CONFIRM_TEXT: "Confirm",
-      INVALID_TYPE: "INVALID_TYPE",
+      DEFAULT_TYPE: 'info',
+      DEFAULT_BTN_CLOSE_TEXT: 'Close',
+      DEFAULT_BTN_CONFIRM_TEXT: 'Confirm',
+      INVALID_TYPE: 'INVALID_TYPE',
       // hide/show alert
       showSimplert: false,
       // basic setup
-      title: "",
-      message: "",
+      title: '',
+      message: '',
       type: this.DEFAULT_TYPE, // info (default), success, warning, error
       customClass: '',
       customIconUrl: '',
@@ -88,11 +89,13 @@ Vue.component('simplert', {
       onConfirm: null,
       // disabled overlay
       disableOverlayClick: false,
-      hideAllButton: false
+      hideAllButton: false,
+      // x close
+      showXclose: false
     }
   },
   computed: {
-    classSimplert: function() {
+    classSimplert: function () {
       var clasz = this.customClass
       if (this.showSimplert) {
         clasz = this.customClass + ' simplert--shown'
@@ -100,7 +103,7 @@ Vue.component('simplert', {
       return clasz
     },
 
-    classContent: function() {
+    classContent: function () {
       var clasz = ''
       if (this.useRadius) {
         clasz = 'simplert__content--radius'
@@ -108,7 +111,7 @@ Vue.component('simplert', {
       return clasz
     },
 
-    classBtnClose: function() {
+    classBtnClose: function () {
       var clasz = 'simplert__close'
       if (this.useRadius) {
         clasz = 'simplert__close simplert__close--radius'
@@ -119,7 +122,7 @@ Vue.component('simplert', {
       return clasz
     },
 
-    classBtnConfirm: function() {
+    classBtnConfirm: function () {
       var clasz = 'simplert__confirm'
       if (this.useRadius) {
         clasz = 'simplert__confirm simplert__confirm--radius'
@@ -135,14 +138,14 @@ Vue.component('simplert', {
       this.showSimplert = false
     },
 
-    closeOverlay: function(e) {
+    closeOverlay: function (e) {
       var _self = this
       if (e.target.className.indexOf('simplert--shown') > 0 && !_self.disableOverlayClick) {
         _self.showSimplert = false
       }
     },
 
-    whenConfirm: function(e) {
+    whenConfirm: function (e) {
       var _self = this
       e.preventDefault()
 
@@ -153,7 +156,7 @@ Vue.component('simplert', {
       }
     },
 
-    closeSimplert: function(e) {
+    closeSimplert: function (e) {
       var _self = this
       e.preventDefault()
 
@@ -164,7 +167,7 @@ Vue.component('simplert', {
       }
     },
 
-    openSimplert: function(obj) {
+    openSimplert: function (obj) {
       var _self = this
 
       if (typeof obj !== 'undefined') {
@@ -250,6 +253,12 @@ Vue.component('simplert', {
           _self.hideAllButton = obj.hideAllButton
         } else {
           _self.hideAllButton = false
+        }
+
+        if (typeof obj.showXclose !== 'undefined') {
+          _self.showXclose = obj.showXclose
+        } else {
+          _self.showXclose = false
         }
 
         if (typeof obj.onOpen !== 'undefined') {

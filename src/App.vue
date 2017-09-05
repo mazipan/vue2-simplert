@@ -198,6 +198,15 @@
             Click Me!
           </button>
         </div>
+
+        
+        <div class="grid__col-3 example__title">Alert with X close button</div>
+        <div class="grid__col-3">
+          <button class="button button--radius button--blue"
+                  @click="openWithXbtn">
+            Click Me!
+          </button>
+        </div>
       </div>
 
     </div>
@@ -461,6 +470,18 @@
           message: 'I am Message',
           type: 'info',
           hideAllButton: true
+        }
+
+        console.log('open simplert with obj : ', obj)
+        this.$refs.simplert.openSimplert(obj)
+      },
+
+      openWithXbtn () {
+        let obj = {
+          title: 'Hey, I am Title',
+          message: 'I am Message',
+          type: 'info',
+          showXclose: true
         }
 
         console.log('open simplert with obj : ', obj)

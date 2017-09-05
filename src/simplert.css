@@ -37,6 +37,15 @@ html {
   animation-duration: .3s;
   animation-fill-mode: both;
 }
+.simplert__x{
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+  color: #b3aaaa;
+  font-weight: bold;
+  font-size: 11px;
+}
 .simplert__header {
   padding: 2em 0;
 }

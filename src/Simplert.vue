@@ -2,6 +2,7 @@
   <div class="simplert" role="modal" :class="classSimplert" @click="closeOverlay">
     <div class="simplert__content" :class="classContent">
       <div class="simplert__header">
+        <div class="simplert__x" v-if="showXclose" @click="justCloseSimplert">&#9587;</div>
         <div v-if="useIcon">
           <div class="simplert__icon simplert__icon--info" v-if="type === 'info'">
             <div class="simplert__line simplert__line--info">
@@ -63,20 +64,20 @@ export default {
     useIcon: {
       type: Boolean,
       default: true
-    },
+    }
   },
 
   data: function () {
     return {
-      DEFAULT_TYPE: "info",
-      DEFAULT_BTN_CLOSE_TEXT: "Close",
-      DEFAULT_BTN_CONFIRM_TEXT: "Confirm",
-      INVALID_TYPE: "INVALID_TYPE",
+      DEFAULT_TYPE: 'info',
+      DEFAULT_BTN_CLOSE_TEXT: 'Close',
+      DEFAULT_BTN_CONFIRM_TEXT: 'Confirm',
+      INVALID_TYPE: 'INVALID_TYPE',
       // hide/show alert
       showSimplert: false,
       // basic setup
-      title: "",
-      message: "",        
+      title: '',
+      message: '',        
       type: this.DEFAULT_TYPE, // info (default), success, warning, error
       customClass: '',
       customIconUrl: '',
@@ -93,7 +94,9 @@ export default {
       onConfirm: null,
       // disabled overlay
       disableOverlayClick: false,
-      hideAllButton: false
+      hideAllButton: false,
+      // x close
+      showXclose: false
     }
   },
 
@@ -114,7 +117,7 @@ export default {
       return clasz
     },
 
-    classBtnClose: function() {
+    classBtnClose: function () {
       var clasz = 'simplert__close'
       if (this.useRadius) {
         clasz = 'simplert__close simplert__close--radius'
@@ -125,7 +128,7 @@ export default {
       return clasz
     },
 
-    classBtnConfirm: function() {
+    classBtnConfirm: function () {
       var clasz = 'simplert__confirm'
       if (this.useRadius) {
         clasz = 'simplert__confirm simplert__confirm--radius'
@@ -257,6 +260,12 @@ export default {
           _self.hideAllButton = obj.hideAllButton
         } else {
           _self.hideAllButton = false
+        }
+
+        if (typeof obj.showXclose !== 'undefined') {
+          _self.showXclose = obj.showXclose
+        } else {
+          _self.showXclose = false
         }
 
         if (typeof obj.onOpen !== 'undefined') {
