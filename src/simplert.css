@@ -1,18 +1,11 @@
-html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 .simplert {
+  box-sizing: border-box;
   font-size: 14px;
   line-height: 1.15;
+}
+
+.simplert *, .simplert *:before, .simplert *:after {
+  box-sizing: inherit;
 }
 
 .simplert {
