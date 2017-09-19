@@ -17,6 +17,8 @@
 
 Vue 2 Simple Alert Component (SweetAlert Inspired)
 
+## Vue2-Simplert Now Coming as Vue.js Plugin
+Check : [https://github.com/mazipan/vue2-simplert-plugin](https://github.com/mazipan/vue2-simplert-plugin)
 
 ## Demo
 https://mazipan.github.io/vue2-simplert/
