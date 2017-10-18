@@ -1,11 +1,10 @@
 {
   "name": "vue2-simplert",
   "description": "Vue 2 Alert Component (SweetAlert Inspired)",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "license": "MIT",
   "author": "Irfan Maulana (https://github.com/mazipan/)",
-  "homepage": "https://mazipan.github.io/vue2-simplert/",
-  "main": "./src/main-dist.js",
+  "homepage": "https://mazipan.github.io/vue2-simplert/",  
   "keywords": [
     "vue2 alert",
     "vue2 sweet alert",
@@ -33,7 +32,10 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
+  "main": "./src/main-dist.js",
   "files": [
+    "dist/simplert.umd.js",
+    "dist/simplert.umd.js.map",
     "dist/simplert.bundle.js",
     "dist/simplert.bundle.js.map",
     "src/main-dist.js",
