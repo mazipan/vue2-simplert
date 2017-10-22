@@ -22,19 +22,19 @@ describe('Simplert.vue', () => {
     expect(vm.classSimplert).to.equal('custom simplert--shown')
   })
   it('Computed Class Content', () => {
-  	vm.useRadius = false
+    vm.useRadius = false
     expect(vm.classContent).to.equal('')
   })
   it('Computed Class Content When useRadius', () => {
-  	vm.useRadius = true
+    vm.useRadius = true
     expect(vm.classContent).to.equal('simplert__content--radius')
   })
   it('Computed Class Button Close', () => {
-  	vm.useRadius = false
+    vm.useRadius = false
     expect(vm.classBtnClose).to.equal('simplert__close')
   })
   it('Computed Class Button Close When useRadius', () => {
-  	vm.useRadius = true
+    vm.useRadius = true
     expect(vm.classBtnClose).to.equal('simplert__close simplert__close--radius')
   })
   it('Computed Class Button Close When customCloseBtnClass', () => {
@@ -42,11 +42,11 @@ describe('Simplert.vue', () => {
     expect(vm.classBtnClose).to.equal('custom')
   })
   it('Computed Class Button Confirm', () => {
-  	vm.useRadius = false
+    vm.useRadius = false
     expect(vm.classBtnConfirm).to.equal('simplert__confirm')
   })
   it('Computed Class Button Confirm When useRadius', () => {
-  	vm.useRadius = true
+    vm.useRadius = true
     expect(vm.classBtnConfirm).to.equal('simplert__confirm simplert__confirm--radius')
   })
   it('Computed Class Button Confirm When customConfirmBtnClass', () => {
@@ -55,7 +55,7 @@ describe('Simplert.vue', () => {
   })
   // -- UNIT TEST METHOD FUNCTION
   it('Close Overlay Wrong Class', () => {
-  	vm.showSimplert = true
+    vm.showSimplert = true
     vm.disableOverlayClick = false
     vm.closeOverlay({preventDefault: function () {}, target: {className: 'classDummy'}})
     expect(typeof vm.closeOverlay).to.equal('function')
@@ -83,24 +83,24 @@ describe('Simplert.vue', () => {
     expect(vm.showSimplert).to.be.true
   })
   it('Default Confirm Function', () => {
-  	vm.showSimplert = true
+    vm.showSimplert = true
     vm.whenConfirm({preventDefault: function () {}})
     expect(vm.showSimplert).to.be.false
   })
   it('Custom Confirm Function', () => {
-  	vm.showSimplert = true
-  	vm.onConfirm = function (){}
+    vm.showSimplert = true
+    vm.onConfirm = function (){}
     vm.whenConfirm({preventDefault: function () {}})
     expect(vm.showSimplert).to.be.false
   })
   it('Default Close Simplert', () => {
-  	vm.showSimplert = true
+    vm.showSimplert = true
     vm.closeSimplert({preventDefault: function () {}})
     expect(vm.showSimplert).to.be.false
   })
   it('Custom Close Simplert', () => {
-  	vm.showSimplert = true
-  	vm.onClose = function (){}
+    vm.showSimplert = true
+    vm.onClose = function (){}
     vm.closeSimplert({preventDefault: function () {}})
     expect(vm.showSimplert).to.be.false
   })
@@ -109,7 +109,7 @@ describe('Simplert.vue', () => {
     expect(vm.showSimplert).to.be.false
   })
   it('Open with title', () => {
-  	let obj = {
+    let obj = {
       title: 'title'
     }
     vm.openSimplert(obj)
@@ -117,7 +117,7 @@ describe('Simplert.vue', () => {
     expect(vm.title).to.equal('title')
   })
   it('Open with message', () => {
-  	let obj = {
+    let obj = {
       title: 'title',
       message: 'message'
     }
@@ -127,7 +127,7 @@ describe('Simplert.vue', () => {
     expect(vm.message).to.equal('message')
   })
   it('Open with type', () => {
-  	let obj = {
+    let obj = {
       title: 'title',
       message: 'message',
       type: 'success'
@@ -139,7 +139,7 @@ describe('Simplert.vue', () => {
     expect(vm.type).to.equal('success')
   })
   it('Open with custom class', () => {
-  	let obj = {
+    let obj = {
       title: 'title',
       message: 'message',
       customClass: 'custom-class'
@@ -151,7 +151,7 @@ describe('Simplert.vue', () => {
     expect(vm.customClass).to.equal('custom-class')
   })
   it('Open with custom icon', () => {
-  	let obj = {
+    let obj = {
       title: 'title',
       message: 'message',
       customIconUrl: 'url'
@@ -164,7 +164,7 @@ describe('Simplert.vue', () => {
     expect(vm.customIconUrl).to.equal('url')
   })
   it('Open with custom close button text', () => {
-  	let obj = {
+    let obj = {
       title: 'title',
       message: 'message',
       customCloseBtnText: 'close me'
@@ -176,7 +176,7 @@ describe('Simplert.vue', () => {
     expect(vm.customCloseBtnText).to.equal('close me')
   })
   it('Open with custom close button class', () => {
-  	let obj = {
+    let obj = {
       title: 'title',
       message: 'message',
       customCloseBtnClass: 'custom-class'
@@ -188,7 +188,7 @@ describe('Simplert.vue', () => {
     expect(vm.customCloseBtnClass).to.equal('custom-class')
   })
   it('Open with custom close function', () => {
-  	let obj = {
+    let obj = {
       title: 'title',
       message: 'message',
       onClose: function (){}
@@ -200,7 +200,7 @@ describe('Simplert.vue', () => {
     expect(vm.onClose).to.be.not.null
   })
   it('Open with confirm button', () => {
-  	let obj = {
+    let obj = {
       title: 'title',
       message: 'message',
       useConfirmBtn: true
@@ -212,7 +212,7 @@ describe('Simplert.vue', () => {
     expect(vm.useConfirmBtn).to.be.true
   })
   it('Open with custom confirm button text', () => {
-  	let obj = {
+    let obj = {
       title: 'title',
       message: 'message',
       useConfirmBtn: true,
@@ -226,7 +226,7 @@ describe('Simplert.vue', () => {
     expect(vm.customConfirmBtnText).to.equal('confirm me')
   })
   it('Open with custom confirm button class', () => {
-  	let obj = {
+    let obj = {
       title: 'title',
       message: 'message',
       useConfirmBtn: true,
@@ -240,7 +240,7 @@ describe('Simplert.vue', () => {
     expect(vm.customConfirmBtnClass).to.equal('custom-class')
   })
   it('Open with custom confirm function', () => {
-  	let obj = {
+    let obj = {
       title: 'title',
       message: 'message',
       useConfirmBtn: true,
