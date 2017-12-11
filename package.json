@@ -36,6 +36,8 @@
   "files": [
     "dist/simplert.umd.js",
     "dist/simplert.umd.js.gz",
+    "dist/simplert.umd.js.map",
+
     "dist/simplert.bundle.js",
     "dist/simplert.bundle.js.gz",
     "dist/simplert.bundle.js.map",
