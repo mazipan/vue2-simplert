@@ -1,4 +1,5 @@
 import Vue from 'vue'
+
 require('./simplert.css')
 
 Vue.component('simplert', {
