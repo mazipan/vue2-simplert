@@ -49,11 +49,7 @@
   </div>
 </template>
 
-<script type="text/javascript">
-/*!
-* Vue2-Simplert
-* @author : Irfan Maulana (https://github.com/mazipan)
-**/
+<script>
 export default {
   name: 'Simplert',
   props: {
@@ -282,4 +278,5 @@ export default {
   }
 }
 </script>
+
 <style lang="css" src="./simplert.css"></style>
