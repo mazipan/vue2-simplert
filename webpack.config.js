@@ -7,12 +7,13 @@ require('es6-promise').polyfill();
 
 module.exports = {
   entry: {
-    app: './src/main-dist.js'
+    umd: './src/main-dist.js',
+    bundle: './src/simplert.es5.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/dist',
-    filename: 'simplert.bundle.js',
+    filename: 'simplert.[name].js',
     library: 'Simplert',
     libraryTarget: 'umd',
     umdNamedDefine: true,
@@ -42,6 +43,11 @@ module.exports = {
         test: /\.js$/,
         exclude: path.resolve(__dirname, 'node_modules'),
         loader: 'babel-loader'
+      },
+      {
+        test: /\.css$/,
+        exclude: path.resolve(__dirname, 'node_modules'),
+        loader: 'css-loader'
       }
     ]
   },
