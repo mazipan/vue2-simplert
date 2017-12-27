@@ -1,11 +1,13 @@
 {
   "gitbook": "3.2.0",
   "title": "Vue2-Simplert",
+  "description": "Vue 2 Alert Component (SweetAlert Inspired)",
+  "author": "Irfan Maulana (https://www.gitbook.com/@mazipan)",
   "plugins": [
     "prism@1.0.0",
     "-highlight@2.0.3",
-    "github@3.0.0",
-    "favicon@0.0.2",
+    "github@2.0.0",
+    "favicon@0.0.1",
     "-sharing@1.0.2",
     "comment@1.0.5"
   ],
