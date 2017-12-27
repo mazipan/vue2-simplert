@@ -6,7 +6,8 @@
     "-highlight@2.0.3",
     "github@3.0.0",
     "favicon@0.0.2",
-    "-sharing@1.0.2"
+    "-sharing@1.0.2",
+    "comment@1.0.5"
   ],
   "root": "./docs",
   "pluginsConfig": {

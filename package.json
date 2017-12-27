@@ -4,7 +4,7 @@
   "version": "0.6.1",
   "license": "MIT",
   "author": "Irfan Maulana (https://github.com/mazipan/)",
-  "homepage": "https://mazipan.github.io/vue2-simplert/",  
+  "homepage": "https://mazipan.github.io/vue2-simplert/",
   "keywords": [
     "vue2 alert",
     "vue2 sweet alert",
@@ -31,29 +31,25 @@
     "build:commonjs": "cross-env NODE_ENV=production webpack --config webpack.dist.config.js",
     "dist": "npm run build:demo && npm run build:dist && npm run build:commonjs",
     "test": "./node_modules/.bin/jest --coverage",
-    "docs:serve": "gitbook serve"
+    "docs:serve": "gitbook install && gitbook serve"
   },
   "main": "dist/simplert.umd.js",
   "files": [
     "dist/simplert.umd.js",
     "dist/simplert.umd.js.gz",
     "dist/simplert.umd.js.map",
-
     "dist/simplert.bundle.js",
     "dist/simplert.bundle.js.gz",
     "dist/simplert.bundle.js.map",
-    
     "dist/simplert.common.css",
     "dist/simplert.common.css.gz",
     "dist/simplert.common.css.map",
     "dist/simplert.common.js",
     "dist/simplert.common.js.gz",
     "dist/simplert.common.js.map",
-    
     "src/main-dist.js",
     "src/Simplert.vue",
     "src/simplert.css",
-    
     "src/simplert.es5.js"
   ],
   "devDependencies": {
@@ -73,11 +69,11 @@
     "gitbook-cli": "2.3.2",
     "html-webpack-plugin": "^2.30.1",
     "jest": "^22.0.4",
-    "jest-vue": "^0.8.2",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
     "vue": "^2.5.13",
     "vue-loader": "^13.6.1",
+    "vue-jest": "^1.4.0",
     "vue-template-compiler": "^2.5.13",
     "vue-test-utils": "^1.0.0-beta.8",
     "webpack": "^3.10.0",
@@ -103,7 +99,7 @@
     ],
     "transform": {
       "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
-      ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue"
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
     }
   }
 }
