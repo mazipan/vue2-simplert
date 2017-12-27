@@ -1,0 +1,14 @@
+dist/
+src/
+test/
+node_modules
+package.json
+.editorconfig
+.eslintignore
+.npmignore
+.prettierrc
+.travis.yml
+CONTRIBUTING.md
+screenshoot.PNG
+webpack*
+yarn.lock
