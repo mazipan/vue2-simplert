@@ -1,59 +1,37 @@
 # vue2-simplert
 
-[![License](https://img.shields.io/github/license/mazipan/vue2-simplert.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert)
-[![Github Issue](https://img.shields.io/github/issues/mazipan/vue2-simplert.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert/issues)
-[![GitHub Fork](https://img.shields.io/github/forks/mazipan/vue2-simplert.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert/network)
-[![GitHub Star](https://img.shields.io/github/stars/mazipan/vue2-simplert.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert/stargazers)
+> Vue 2 Simple Alert Component (SweetAlert Inspired)
 
-[![version](https://img.shields.io/npm/v/vue2-simplert.svg)](https://www.npmjs.com/package/vue2-simplert)
-[![downloads monthly](https://img.shields.io/npm/dm/vue2-simplert.svg)](https://www.npmjs.com/package/vue2-simplert)
-[![downloads](https://img.shields.io/npm/dt/vue2-simplert.svg)](https://www.npmjs.com/package/vue2-simplert)
+[![License](https://img.shields.io/github/license/mazipan/vue2-simplert.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert) [![version](https://img.shields.io/npm/v/vue2-simplert.svg)](https://www.npmjs.com/package/vue2-simplert)
 
 [![Travis](https://img.shields.io/travis/mazipan/vue2-simplert.svg)](https://travis-ci.org/mazipan/vue2-simplert)
 [![codecov](https://codecov.io/gh/mazipan/vue2-simplert/branch/master/graph/badge.svg)](https://codecov.io/gh/mazipan/vue2-simplert)
 
-
-![vue2-simplert](https://mazipan.github.io/vue2-simplert/images/vue2-simplert-logo.png)
-
-Vue 2 Simple Alert Component (SweetAlert Inspired)
-
 ## Vue2-Simplert Now Coming as Vue.js Plugin
+
 Check : [https://github.com/mazipan/vue2-simplert-plugin](https://github.com/mazipan/vue2-simplert-plugin)
 
 ## Demo
+
 https://mazipan.github.io/vue2-simplert/
 
-## Download
-https://github.com/mazipan/vue2-simplert/wiki/Downloads
+## Documentation
 
-## Usage Guide
-https://github.com/mazipan/vue2-simplert/wiki/Usage-Guidance
-
-## Methods And Props
-https://github.com/mazipan/vue2-simplert/wiki/Methods-And-Props
-
-## Example Code
-https://github.com/mazipan/vue2-simplert/wiki/Example-Code
-
-## Stories
-https://github.com/mazipan/vue2-simplert/wiki/Stories
-
+ + [Download](https://mazipan.gitbooks.io/vue2-simplert/download.html)
+ + [Usage Guide](https://mazipan.gitbooks.io/vue2-simplert/usage.html)
+ + [Methods And Props](https://mazipan.gitbooks.io/vue2-simplert/method-and-props.html)
+ + [Example Code](https://mazipan.gitbooks.io/vue2-simplert/example.html)
+ + [Articles](https://mazipan.gitbooks.io/vue2-simplert/articles.html)
+ + [FAQ](https://mazipan.gitbooks.io/vue2-simplert/faq.html)
 
 ## Credit
+
 + Icon from [SweetAlert](https://github.com/t4t5/sweetalert)
 
 ## Contributing
 
 If you'd like to contribute, head to the [contributing guidelines](CONTRIBUTING.md). Inside you'll find directions for opening issues, coding standards, and notes on development.
 
-### Hope this will be useful for you all.
+![vue2-simplert](https://mazipan.github.io/vue2-simplert/images/vue2-simplert-logo.png)
 
-Contact Me :
-
-[![Email](https://img.shields.io/badge/mazipanneh-Email-yellow.svg?maxAge=3600)](mailto:mazipanneh@gmail.com)
-[![Website](https://img.shields.io/badge/mazipanneh-Blog-brightgreen.svg?maxAge=3600)](https://mazipanneh.com/blog/)
-[![Facebook](https://img.shields.io/badge/mazipanneh-Facebook-blue.svg?maxAge=3600)](https://facebook.com/mazipanneh)
-
-[![Twitter](https://img.shields.io/badge/Maz_Ipan-Twitter-55acee.svg?maxAge=3600)](https://twitter.com/Maz_Ipan)
-[![Linkedin](https://img.shields.io/badge/irfanmaulanamazipan-Linkedin-0077b5.svg?maxAge=3600)](https://id.linkedin.com/in/irfanmaulanamazipan)
-[![Slideshare](https://img.shields.io/badge/IrfanMaulana21-Slideshare-0077b5.svg?maxAge=3600)](https://www.slideshare.net/IrfanMaulana21)
+Copyright © 2017 by [Irfan Maulana](https://github.com/mazipan/)

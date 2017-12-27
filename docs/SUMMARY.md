@@ -1,10 +1,4 @@
-# Home
-
-## Demo
-
-https://mazipan.github.io/vue2-simplert/
-
-## Documentation
+# Summary
 
 + [Home](/README.md)
 + [Download](/download.md)

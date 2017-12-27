@@ -1,0 +1,37 @@
+{
+  "gitbook": "3.2.0",
+  "title": "Vue2-Simplert",
+  "description": "Vue 2 Alert Component (SweetAlert Inspired)",
+  "author": "Irfan Maulana (https://www.gitbook.com/@mazipan)",
+  "plugins": [
+    "prism",
+    "-highlight",
+    "github",
+    "favicon",
+    "-sharing",
+    "comment@1.0.5"
+  ],
+  "root": "/docs",
+  "pluginsConfig": {
+    "github": {
+      "url": "https://github.com/mazipan/vue2-simplert/"
+    },
+    "sharing": {
+      "facebook": true,
+      "twitter": true,
+      "google": false,
+      "weibo": false,
+      "instapaper": false,
+      "vk": false
+    },
+    "favicon": {
+      "shortcut": "favicon/favicon.ico",
+      "bookmark": "favicon/favicon.ico",
+      "appleTouch": "favicon/apple-icon-152x152.png",
+      "appleTouchMore": {
+        "120x120": "favicon/apple-icon-120x120.png",
+        "180x180": "favicon/apple-icon-180x180.png"
+      }
+    }
+  }
+}
