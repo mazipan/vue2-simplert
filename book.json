@@ -1,5 +1,5 @@
 {
-  "gitbook": "2.3.2",
+  "gitbook": "3.2.0",
   "title": "Vue2-Simplert",
   "plugins": [
     "prism@1.0.0",
