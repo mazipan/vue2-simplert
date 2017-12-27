@@ -1,0 +1,28 @@
+{
+  "gitbook": "2.3.2",
+  "title": "Vue2-Simplert",
+  "plugins": ["prism@1.0.0", "-highlight", "github", "favicon"],
+  "root": "./docs",
+  "pluginsConfig": {
+    "github": {
+      "url": "https://github.com/mazipan/vue2-simplert/"
+    },
+    "sharing": {
+      "facebook": true,
+      "twitter": true,
+      "google": false,
+      "weibo": false,
+      "instapaper": false,
+      "vk": false
+    },
+    "favicon":{
+        "shortcut": "favicon/favicon.ico",
+        "bookmark": "favicon/favicon.ico",
+        "appleTouch": "favicon/apple-icon-152x152.png",
+        "appleTouchMore": {
+            "120x120": "favicon/apple-icon-120x120.png",
+            "180x180": "favicon/apple-icon-180x180.png"
+        }
+    }
+  }
+}
