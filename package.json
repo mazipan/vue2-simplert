@@ -101,5 +101,11 @@
       "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
       ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
     }
+  },
+  "dependencies": {
+    "gitbook-plugin-comment": "^1.0.5",
+    "gitbook-plugin-favicon": "0.0.2",
+    "gitbook-plugin-github": "^2.0.0",
+    "gitbook-plugin-prism": "^2.3.0"
   }
 }
