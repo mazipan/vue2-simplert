@@ -11,7 +11,6 @@
     "-sharing",
     "comment@1.0.5"
   ],
-  "root": "./docs",
   "pluginsConfig": {
     "github": {
       "url": "https://github.com/mazipan/vue2-simplert/"

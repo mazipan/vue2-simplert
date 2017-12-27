@@ -1,9 +1,5 @@
-# Vue 2 Simple Alert Component (SweetAlert Inspired)
+# Summary
 
-## Demo
-https://mazipan.github.io/vue2-simplert/
-
-## Documentation
  + [Home](https://mazipan.gitbooks.io/vue2-simplert/)
  + [Download](https://mazipan.gitbooks.io/vue2-simplert/docs/download)
  + [Usage Guide](https://mazipan.gitbooks.io/vue2-simplert/docs/usage)
