@@ -40,8 +40,11 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exclude: path.resolve(__dirname, 'node_modules'),
         loader: 'babel-loader'
+      },
+      {
+        test: /\.css$/,
+        loader: 'css-loader'
       }
     ]
   },
@@ -54,16 +57,16 @@ module.exports = {
         'NODE_ENV': '"production"'
       }
     }),
+    new webpack.BannerPlugin({
+      banner: `Vue2-Simplert v.${npm.version}`
+    }),
+    new ExtractTextPlugin("simplert.common.css"),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
       },
       sourceMap: false
     }),
-    new webpack.BannerPlugin({
-      banner: `Vue2-Simplert v.${npm.version}`
-    }),
-    new ExtractTextPlugin("simplert.common.css"),
     new CompressionPlugin({
       algorithm: 'gzip'
     })

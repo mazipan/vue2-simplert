@@ -33,6 +33,7 @@ module.exports = {
         loader: 'vue-loader',
         options: {
           loaders: {
+            'css': 'vue-style-loader!css-loader',
             'scss': 'vue-style-loader!css-loader!sass-loader',
             'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
           }
@@ -41,12 +42,10 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exclude: path.resolve(__dirname, 'node_modules'),
         loader: 'babel-loader'
       },
       {
         test: /\.css$/,
-        exclude: path.resolve(__dirname, 'node_modules'),
         loader: 'css-loader'
       }
     ]

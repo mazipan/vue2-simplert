@@ -1,19 +1,19 @@
 <template>
   <div class="grid__row">
 
-    <div class="fixed-top">      
+    <div class="fixed-top">
       <a class="button button--radius button--green btn-top"  href="https://mazipan.gitbooks.io/vue2-simplert/"
          target="_blank">
           <i class="fa fa-book" aria-hidden="true"></i> Docs
-      </a> 
+      </a>
       <a class="button button--radius button--blue btn-top"  href="https://github.com/mazipan/vue2-simplert"
          target="_blank">
           <i class="fa fa-download" aria-hidden="true"></i> Download
-      </a> 
-    </div>  
+      </a>
+    </div>
 
-    <div class="header__title">      
-      <img src="https://mazipan.github.io/vue2-simplert/images/vue2-simplert-logo.png" 
+    <div class="header__title">
+      <img src="https://mazipan.github.io/vue2-simplert/images/vue2-simplert-logo.png"
       alt="Vue2-Simplert" title="Vue2-Simplert" />
 
       <h1 class="header__subtitle">
@@ -30,16 +30,16 @@
           <button class="button button--radius button--blue"
                   @click="open('Information!', 'Hey, I am Opened...', 'info')">
                 Click Me!
-          </button>  
-        </div>     
+          </button>
+        </div>
 
         <div class="grid__col-3 example__title">Success Alert</div>
         <div class="grid__col-3">
           <button class="button button--radius button--green"
                   @click="open('Success!', 'Hey, I am Opened...', 'success')">
                 Click Me!
-          </button>   
-        </div>       
+          </button>
+        </div>
       </div>
 
 
@@ -50,15 +50,15 @@
                   @click="open('Error!', 'Hey, I am Opened...', 'error')">
                 Click Me!
           </button>
-        </div>    
+        </div>
 
         <div class="grid__col-3 example__title">Warning Alert</div>
         <div class="grid__col-3">
           <button class="button button--radius button--orange"
                   @click="open('Warning!', 'Hey, I am Opened...', 'warning')">
                 Click Me!
-          </button>    
-        </div>   
+          </button>
+        </div>
       </div>
 
 
@@ -68,16 +68,16 @@
           <button class="button button--radius button--blue"
                   @click="open('', 'Hey, I am Opened, but I dont have title', '')">
                 Click Me!
-          </button>    
-        </div>     
+          </button>
+        </div>
 
         <div class="grid__col-3 example__title">Alert With HTML</div>
         <div class="grid__col-3">
           <button class="button button--radius button--orange"
                   @click="openCustomHtml">
                 Click Me!
-          </button>   
-        </div>      
+          </button>
+        </div>
       </div>
 
 
@@ -87,16 +87,16 @@
           <button class="button button--radius button--green"
                   @click="open('Custom Close Text', 'Hey, I am Opened...', '', '', 'Custom Close Text')">
                 Click Me!
-          </button>   
-        </div>    
+          </button>
+        </div>
 
         <div class="grid__col-3 example__title">Alert With Custom Close Class</div>
         <div class="grid__col-3">
           <button class="button button--radius button--blue"
                   @click="open('Custom Close Class', 'Hey, I am Opened...', '', '', '', 'button button--radius button--red')">
                 Click Me!
-          </button>   
-        </div>    
+          </button>
+        </div>
       </div>
 
       <div class="grid__row content__row">
@@ -105,16 +105,16 @@
           <button class="button button--radius button--red"
                   @click="openCustomFunction">
                 Click Me!
-          </button>   
-        </div>   
+          </button>
+        </div>
 
         <div class="grid__col-3 example__title">Alert With Custom Class</div>
         <div class="grid__col-3">
           <button class="button button--radius button--red"
                   @click="open('Custom Class', 'Hey, I am Opened...', '', '', '', '', 'custom-class')">
                 Click Me!
-          </button>   
-        </div>     
+          </button>
+        </div>
       </div>
 
       <div class="grid__row content__row">
@@ -123,16 +123,16 @@
           <button class="button button--radius button--green"
                   @click="open('Custom Icon', 'Hey, I am Opened...', '', '', '', '', '', 'https://cdn2.iconfinder.com/data/icons/social-productivity-line-art-1/128/face-sad-512.png')">
                 Click Me!
-          </button>   
-        </div>    
+          </button>
+        </div>
 
         <div class="grid__col-3 example__title">Alert With Confirm Button</div>
         <div class="grid__col-3">
           <button class="button button--radius button--red"
                   @click="openWithConfirm('Confirm Button', 'Hey, I have Confirm Button Now', false)">
                 Click Me!
-          </button>   
-        </div>    
+          </button>
+        </div>
       </div>
 
       <div class="grid__row content__row">
@@ -141,16 +141,16 @@
           <button class="button button--radius button--blue"
                   @click="openWithConfirm('Confirm Button Custom Text', 'Hey, I am Opened...', false, 'Custom Text Confirm')">
                 Click Me!
-          </button>   
-        </div>  
+          </button>
+        </div>
 
         <div class="grid__col-3 example__title">Alert With Confirm Function</div>
         <div class="grid__col-3">
           <button class="button button--radius button--orange"
                   @click="openWithConfirm('Confirm Function', 'Click Confirm to trigger function', true)">
                 Click Me!
-          </button>   
-        </div>    
+          </button>
+        </div>
       </div>
 
       <div class="grid__row content__row">
@@ -159,16 +159,16 @@
           <button class="button button--radius button--blue"
                   @click="openWithConfirm('Confirm Button Custom Class', 'Hey, I am Opened...', false, '', 'button button--radius button--red')">
                 Click Me!
-          </button>   
-        </div>    
+          </button>
+        </div>
 
         <div class="grid__col-3 example__title">Alert With Disable Overlay Click</div>
         <div class="grid__col-3">
           <button class="button button--radius button--green"
                   @click="openDisabledOverlayClick">
                 Click Me!
-          </button>   
-        </div>    
+          </button>
+        </div>
       </div>
 
        <div class="grid__row content__row">
@@ -177,16 +177,16 @@
           <button class="button button--radius button--orange"
                   @click="openWithHiddenButton">
                 Click Me!
-          </button>   
-        </div>    
-  
+          </button>
+        </div>
+
         <div class="grid__col-3 example__title">Alert With Very Custom Style</div>
         <div class="grid__col-3">
           <button class="button button--radius button--green"
                   @click="openWithStyle">
                 Click Me!
-          </button>   
-        </div>    
+          </button>
+        </div>
 
       </div>
 
@@ -199,7 +199,7 @@
           </button>
         </div>
 
-        
+
         <div class="grid__col-3 example__title">Alert with X close button</div>
         <div class="grid__col-3">
           <button class="button button--radius button--blue"
@@ -215,7 +215,7 @@
     <div class="grid__row content centered">
       <h2>Download</h2>
 
-      <p>        
+      <p>
         <a href="https://www.npmjs.com/package/vue2-simplert">
           <img src="https://img.shields.io/badge/download-npmjs-red.svg?maxAge=3600" alt="vue2simplert-npmjs">
         </a>
@@ -223,7 +223,7 @@
         <code>npm install vue2-simplert@latest --save-dev</code>
       </p>
 
-      <p>        
+      <p>
         <a href="https://yarnpkg.com/en/package/vue2-simplert">
           <img src="https://img.shields.io/badge/download-yarn-blue.svg?maxAge=3600" alt="vue2simplert-yarnpkg">
         </a>
@@ -236,8 +236,8 @@
       </p>
 
 
-      <p>        
-        Current Version 
+      <p>
+        Current Version
         <br/><br/>
         <a href="https://www.npmjs.com/package/vue2-simplert">
           <img src="https://img.shields.io/npm/v/vue2-simplert.svg" alt="vue2simplert-version">
@@ -270,7 +270,7 @@
               <i class="fa fa-comments" aria-hidden="true"></i>
             </a>
           </li>
-      </ul>    
+      </ul>
 
     </div>
 
@@ -279,23 +279,23 @@
 
       <p>
         Feel free to fork <i class="fa fa-code-fork"></i> Vue2-Simplert on <a href="https://github.com/mazipan/vue2-simplert"
-       target="_blank">GitHub <i class="fa fa-github"></i></a> if you have any features <i class="fa fa-cart-plus"></i> or bugs <i class="fa fa-bug"></i>!    
-      </p>      
+       target="_blank">GitHub <i class="fa fa-github"></i></a> if you have any features <i class="fa fa-cart-plus"></i> or bugs <i class="fa fa-bug"></i>!
+      </p>
 
     </div>
 
     <div class="grid__row content centered">
       <h2>Contact Developer</h2>
 
-      <p>    
+      <p>
 
         <a href="https://github.com/mazipan">
-          <img src="https://img.shields.io/badge/mazipan-Github-lightgrey.svg?maxAge=3600" 
+          <img src="https://img.shields.io/badge/mazipan-Github-lightgrey.svg?maxAge=3600"
             alt="Github">
         </a>
 
         <a href="mailto:mazipanneh@gmail.com">
-          <img src="https://img.shields.io/badge/mazipanneh-Email-yellow.svg?maxAge=3600" 
+          <img src="https://img.shields.io/badge/mazipanneh-Email-yellow.svg?maxAge=3600"
             alt="Email">
         </a>
 
@@ -304,34 +304,34 @@
         </a>
 
         <a href="https://facebook.com/mazipanneh">
-          <img src="https://img.shields.io/badge/mazipanneh-Facebook-blue.svg?maxAge=3600" 
+          <img src="https://img.shields.io/badge/mazipanneh-Facebook-blue.svg?maxAge=3600"
             alt="Facebook">
         </a>
 
         <br/>
 
         <a href="https://twitter.com/Maz_Ipan">
-          <img src="https://img.shields.io/badge/Maz_Ipan-Twitter-55acee.svg?maxAge=3600" 
+          <img src="https://img.shields.io/badge/Maz_Ipan-Twitter-55acee.svg?maxAge=3600"
             alt="Twitter">
-        </a>  
+        </a>
 
         <a href="https://id.linkedin.com/in/irfanmaulanamazipan">
-          <img src="https://img.shields.io/badge/irfanmaulanamazipan-Linkedin-0077b5.svg?maxAge=3600" 
+          <img src="https://img.shields.io/badge/irfanmaulanamazipan-Linkedin-0077b5.svg?maxAge=3600"
             alt="Linkedin">
-        </a> 
+        </a>
 
         <a href="https://www.slideshare.net/IrfanMaulana21">
-          <img src="https://img.shields.io/badge/IrfanMaulana21-Slideshare-0077b5.svg?maxAge=3600" 
+          <img src="https://img.shields.io/badge/IrfanMaulana21-Slideshare-0077b5.svg?maxAge=3600"
             alt="Slideshare">
-        </a>  
-      </p>      
+        </a>
+      </p>
 
     </div>
 
     <div class="grid__row content centered">
       <p>
-        Copyright © 2017 <a href="https://mazipanneh.com/blog/">Irfan Maulana</a>, All Rights Reserved.   
-      </p>      
+        Copyright © 2017 <a href="https://mazipanneh.com/blog/">Irfan Maulana</a>, All Rights Reserved.
+      </p>
     </div>
 
     <!-- Vue2-Simplert DOM start -->
@@ -433,7 +433,7 @@
           title: title,
           message: message,
           type: 'info',
-          useConfirmBtn: true,          
+          useConfirmBtn: true,
         }
 
         if (isCustomFunction) {
@@ -504,11 +504,11 @@
         }
 
         console.log('open simplert with obj : ', obj)
-        this.$refs.simplert.openSimplert(obj)        
+        this.$refs.simplert.openSimplert(obj)
       }
 
     }
   };
 </script>
 
-<style lang="scss" src="./custom-style.scss"></style>
+<style lang="css" src="./custom-style.css"></style>
