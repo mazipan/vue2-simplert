@@ -2,6 +2,8 @@ var path = require('path');
 var webpack = require('webpack')
 const CompressionPlugin = require("compression-webpack-plugin")
 
+const SRC = path.resolve(__dirname, "src");
+
 require('es6-promise').polyfill();
 
 module.exports = {
@@ -15,9 +17,10 @@ module.exports = {
     jsonpFunction: 'WebpackJsonp'
   },
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.js', '.json', '.vue'],
     alias: {
-      'vue$': 'vue/dist/vue.common.js'
+      'vue$': 'vue/dist/vue.esm.js',
+      '@': SRC
     }
   },
   module: {

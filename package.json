@@ -1,7 +1,7 @@
 {
   "name": "vue2-simplert",
   "description": "Vue 2 Alert Component (SweetAlert Inspired)",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "license": "MIT",
   "author": "Irfan Maulana (https://github.com/mazipan/)",
   "homepage": "https://mazipan.github.io/vue2-simplert/",
@@ -95,10 +95,12 @@
     "mapCoverage": true,
     "coverageDirectory": "test/coverage",
     "moduleNameMapper": {
-      "^vue$": "vue/dist/vue.common.js"
+      "^vue$": "vue/dist/vue.common.js",
+      "^@/(.*)$": "<rootDir>/src/$1"
     },
     "moduleFileExtensions": [
       "js",
+      "json",
       "vue"
     ],
     "transform": {

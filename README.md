@@ -1,10 +1,8 @@
-# vue2-simplert
+# ⚠️ vue2-simplert
 
 > Vue 2 Simple Alert Component (SweetAlert Inspired)
 
-[![License](https://img.shields.io/github/license/mazipan/vue2-simplert.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert) [![version](https://img.shields.io/npm/v/vue2-simplert.svg)](https://www.npmjs.com/package/vue2-simplert)
-
-[![Travis](https://img.shields.io/travis/mazipan/vue2-simplert.svg)](https://travis-ci.org/mazipan/vue2-simplert)
+[![License](https://img.shields.io/github/license/mazipan/vue2-simplert.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert) [![version](https://img.shields.io/npm/v/vue2-simplert.svg)](https://www.npmjs.com/package/vue2-simplert) [![Travis](https://img.shields.io/travis/mazipan/vue2-simplert.svg)](https://travis-ci.org/mazipan/vue2-simplert)
 [![codecov](https://codecov.io/gh/mazipan/vue2-simplert/branch/master/graph/badge.svg)](https://codecov.io/gh/mazipan/vue2-simplert)
 
 ## Vue2-Simplert Now Coming as Vue.js Plugin
@@ -17,16 +15,16 @@ https://mazipan.github.io/vue2-simplert/
 
 ## Documentation
 
- + [Download](https://mazipan.gitbooks.io/vue2-simplert/download.html)
- + [Usage Guide](https://mazipan.gitbooks.io/vue2-simplert/usage.html)
- + [Methods And Props](https://mazipan.gitbooks.io/vue2-simplert/method-and-props.html)
- + [Example Code](https://mazipan.gitbooks.io/vue2-simplert/example.html)
- + [Articles](https://mazipan.gitbooks.io/vue2-simplert/articles.html)
- + [FAQ](https://mazipan.gitbooks.io/vue2-simplert/faq.html)
+- [Download](https://mazipan.gitbooks.io/vue2-simplert/download.html)
+- [Usage Guide](https://mazipan.gitbooks.io/vue2-simplert/usage.html)
+- [Methods And Props](https://mazipan.gitbooks.io/vue2-simplert/method-and-props.html)
+- [Example Code](https://mazipan.gitbooks.io/vue2-simplert/example.html)
+- [Articles](https://mazipan.gitbooks.io/vue2-simplert/articles.html)
+- [FAQ](https://mazipan.gitbooks.io/vue2-simplert/faq.html)
 
 ## Credit
 
-+ Icon from [SweetAlert](https://github.com/t4t5/sweetalert)
+Icon from [SweetAlert](https://github.com/t4t5/sweetalert)
 
 ## Contributing
 

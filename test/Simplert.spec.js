@@ -1,7 +1,7 @@
 import { createLocalVue, shallow } from 'vue-test-utils'
 
 import Vue from 'vue'
-import Simplert from '../src/Simplert'
+import Simplert from '@/Simplert.vue'
 
 describe('Simplert.vue', () => {
   var vm = null

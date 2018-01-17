@@ -4,6 +4,8 @@ var npm = require("./package.json")
 const CompressionPlugin = require("compression-webpack-plugin")
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
+const SRC = path.resolve(__dirname, "src");
+
 require('es6-promise').polyfill();
 
 module.exports = {
@@ -18,9 +20,10 @@ module.exports = {
     libraryTarget: 'commonjs'
   },
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.js', '.json', '.vue'],
     alias: {
-      'vue$': 'vue/dist/vue.common.js'
+      'vue$': 'vue/dist/vue.esm.js',
+      '@': SRC
     }
   },
   devtool: '#source-map',
