@@ -9,6 +9,8 @@ All code example using same HTML template :
 </simplert>
 ```
 
+See [demo page](https://mazipan.github.io/vue2-simplert/) for check interface result.
+
 ## Table of Contents
 
 + [Information Alert](#information-alert)
@@ -42,6 +44,8 @@ let obj = {
 this.$refs.simplert.openSimplert(obj)
 ```
 
+[back to top](#table-of-contents)
+
 ## Success Alert
 
 ```javascript
@@ -52,6 +56,8 @@ let obj = {
 }
 this.$refs.simplert.openSimplert(obj)
 ```
+
+[back to top](#table-of-contents)
 
 ## Error Alert
 
@@ -64,6 +70,8 @@ let obj = {
 this.$refs.simplert.openSimplert(obj)
 ```
 
+[back to top](#table-of-contents)
+
 ## Warning Alert
 
 ```javascript
@@ -75,6 +83,8 @@ let obj = {
 this.$refs.simplert.openSimplert(obj)
 ```
 
+[back to top](#table-of-contents)
+
 ## Alert Without Title
 
 ```javascript
@@ -84,6 +94,8 @@ let obj = {
 }
 this.$refs.simplert.openSimplert(obj)
 ```
+
+[back to top](#table-of-contents)
 
 ## Alert With HTML Content
 
@@ -95,6 +107,8 @@ let obj = {
 }
 this.$refs.simplert.openSimplert(obj)
 ```
+
+[back to top](#table-of-contents)
 
 ## Alert With Custom Close Text
 
@@ -108,6 +122,8 @@ let obj = {
 this.$refs.simplert.openSimplert(obj)
 ```
 
+[back to top](#table-of-contents)
+
 ## Alert With Custom Close Class
 
 ```javascript
@@ -119,6 +135,8 @@ let obj = {
 }
 this.$refs.simplert.openSimplert(obj)
 ```
+
+[back to top](#table-of-contents)
 
 ## Alert With Custom Close Function
 
@@ -135,6 +153,8 @@ let obj = {
 this.$refs.simplert.openSimplert(obj)
 ```
 
+[back to top](#table-of-contents)
+
 ## Alert With Custom Class
 
 ```javascript
@@ -146,6 +166,8 @@ let obj = {
 }
 this.$refs.simplert.openSimplert(obj)
 ```
+
+[back to top](#table-of-contents)
 
 ## Alert With Custom Icon
 
@@ -159,6 +181,8 @@ let obj = {
 this.$refs.simplert.openSimplert(obj)
 ```
 
+[back to top](#table-of-contents)
+
 ## Alert With Confirm Button
 
 ```javascript
@@ -170,6 +194,8 @@ let obj = {
 }
 this.$refs.simplert.openSimplert(obj)
 ```
+
+[back to top](#table-of-contents)
 
 ## Alert With Confirm Button Custom Text
 
@@ -184,6 +210,8 @@ let obj = {
 this.$refs.simplert.openSimplert(obj)
 ```
 
+[back to top](#table-of-contents)
+
 ## Alert With Confirm Button Custom Class
 
 ```javascript
@@ -196,6 +224,8 @@ let obj = {
 }
 this.$refs.simplert.openSimplert(obj)
 ```
+
+[back to top](#table-of-contents)
 
 ## Alert With Confirm Button Function
 
@@ -213,6 +243,8 @@ let obj = {
 this.$refs.simplert.openSimplert(obj)
 ```
 
+[back to top](#table-of-contents)
+
 ## Alert With Disable Overlay Click
 
 ```javascript
@@ -225,6 +257,8 @@ let obj = {
 this.$refs.simplert.openSimplert(obj)
 ```
 
+[back to top](#table-of-contents)
+
 ## Alert With No Button Show
 
 ```javascript
@@ -236,6 +270,8 @@ let obj = {
 }
 this.$refs.simplert.openSimplert(obj)
 ```
+
+[back to top](#table-of-contents)
 
 ## Alert With onOpen Function
 
@@ -252,6 +288,8 @@ let obj = {
 this.$refs.simplert.openSimplert(obj)
 ```
 
+[back to top](#table-of-contents)
+
 ## Alert With Close X
 
 ```javascript
@@ -263,6 +301,8 @@ let obj = {
 }
 this.$refs.simplert.openSimplert(obj)
 ```
+
+[back to top](#table-of-contents)
 
 ![vue2-simplert](https://mazipan.github.io/vue2-simplert/images/vue2-simplert-logo.png)
 
