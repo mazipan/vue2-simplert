@@ -4,8 +4,8 @@ All code example using same HTML template :
 
 ```html
 <simplert :useRadius="true"
-          :useIcon="true"
-          ref="simplert">
+      :useIcon="true"
+      ref="simplert">
 </simplert>
 ```
 
@@ -37,9 +37,9 @@ See [demo page](https://mazipan.github.io/vue2-simplert/) for check interface re
 
 ```javascript
 let obj = {
-    title: 'Alert Title',
-    message: 'Alert Message',
-    type: 'info'
+  title: 'Alert Title',
+  message: 'Alert Message',
+  type: 'info'
 }
 this.$refs.simplert.openSimplert(obj)
 ```
@@ -50,9 +50,9 @@ this.$refs.simplert.openSimplert(obj)
 
 ```javascript
 let obj = {
-    title: 'Alert Title',
-    message: 'Alert Message',
-    type: 'success'
+  title: 'Alert Title',
+  message: 'Alert Message',
+  type: 'success'
 }
 this.$refs.simplert.openSimplert(obj)
 ```
@@ -63,9 +63,9 @@ this.$refs.simplert.openSimplert(obj)
 
 ```javascript
 let obj = {
-    title: 'Alert Title',
-    message: 'Alert Message',
-    type: 'error'
+  title: 'Alert Title',
+  message: 'Alert Message',
+  type: 'error'
 }
 this.$refs.simplert.openSimplert(obj)
 ```
@@ -76,9 +76,9 @@ this.$refs.simplert.openSimplert(obj)
 
 ```javascript
 let obj = {
-    title: 'Alert Title',
-    message: 'Alert Message',
-    type: 'warning'
+  title: 'Alert Title',
+  message: 'Alert Message',
+  type: 'warning'
 }
 this.$refs.simplert.openSimplert(obj)
 ```
@@ -89,8 +89,8 @@ this.$refs.simplert.openSimplert(obj)
 
 ```javascript
 let obj = {
-    message: 'Alert Message',
-    type: 'info'
+  message: 'Alert Message',
+  type: 'info'
 }
 this.$refs.simplert.openSimplert(obj)
 ```
@@ -101,9 +101,9 @@ this.$refs.simplert.openSimplert(obj)
 
 ```javascript
 let obj = {
-    title: 'Alert Title',
-    message: '<span style="color:red;">I am HTML</span>',
-    type: 'info'
+  title: 'Alert Title',
+  message: '<span style="color:red;">I am HTML</span>',
+  type: 'info'
 }
 this.$refs.simplert.openSimplert(obj)
 ```
@@ -114,10 +114,10 @@ this.$refs.simplert.openSimplert(obj)
 
 ```javascript
 let obj = {
-    title: 'Alert Title',
-    message: 'Alert Message',
-    type: 'info',
-    customCloseBtnText: 'I am Close Button'
+  title: 'Alert Title',
+  message: 'Alert Message',
+  type: 'info',
+  customCloseBtnText: 'I am Close Button'
 }
 this.$refs.simplert.openSimplert(obj)
 ```
@@ -128,10 +128,10 @@ this.$refs.simplert.openSimplert(obj)
 
 ```javascript
 let obj = {
-    title: 'Alert Title',
-    message: 'Alert Message',
-    type: 'info',
-    customCloseBtnClass: 'btn-warning'
+  title: 'Alert Title',
+  message: 'Alert Message',
+  type: 'info',
+  customCloseBtnClass: 'btn-warning'
 }
 this.$refs.simplert.openSimplert(obj)
 ```
@@ -142,13 +142,13 @@ this.$refs.simplert.openSimplert(obj)
 
 ```javascript
 let closeFn = function() {
-    alert("I am Closed")
+  alert("I am Closed")
 }
 let obj = {
-    title: 'Alert Title',
-    message: 'Alert Message',
-    type: 'info',
-    onClose: closeFn
+  title: 'Alert Title',
+  message: 'Alert Message',
+  type: 'info',
+  onClose: closeFn
 }
 this.$refs.simplert.openSimplert(obj)
 ```
@@ -159,10 +159,10 @@ this.$refs.simplert.openSimplert(obj)
 
 ```javascript
 let obj = {
-    title: 'Alert Title',
-    message: 'Alert Message',
-    type: 'info',
-    customClass: 'popup-custom-class'
+  title: 'Alert Title',
+  message: 'Alert Message',
+  type: 'info',
+  customClass: 'popup-custom-class'
 }
 this.$refs.simplert.openSimplert(obj)
 ```
@@ -173,10 +173,10 @@ this.$refs.simplert.openSimplert(obj)
 
 ```javascript
 let obj = {
-    title: 'Alert Title',
-    message: 'Alert Message',
-    type: 'info',
-    customIconUrl: 'https://cdn2.iconfinder.com/data/icons/social-productivity-line-art-1/128/face-sad-512.png'
+  title: 'Alert Title',
+  message: 'Alert Message',
+  type: 'info',
+  customIconUrl: 'https://cdn2.iconfinder.com/data/icons/social-productivity-line-art-1/128/face-sad-512.png'
 }
 this.$refs.simplert.openSimplert(obj)
 ```
@@ -187,10 +187,10 @@ this.$refs.simplert.openSimplert(obj)
 
 ```javascript
 let obj = {
-    title: 'Alert Title',
-    message: 'Alert Message',
-    type: 'info',
-    useConfirmBtn: true
+  title: 'Alert Title',
+  message: 'Alert Message',
+  type: 'info',
+  useConfirmBtn: true
 }
 this.$refs.simplert.openSimplert(obj)
 ```
@@ -201,11 +201,11 @@ this.$refs.simplert.openSimplert(obj)
 
 ```javascript
 let obj = {
-    title: 'Alert Title',
-    message: 'Alert Message',
-    type: 'info',
-    useConfirmBtn: true,
-    customConfirmBtnText: 'OK'
+  title: 'Alert Title',
+  message: 'Alert Message',
+  type: 'info',
+  useConfirmBtn: true,
+  customConfirmBtnText: 'OK'
 }
 this.$refs.simplert.openSimplert(obj)
 ```
@@ -216,11 +216,11 @@ this.$refs.simplert.openSimplert(obj)
 
 ```javascript
 let obj = {
-    title: 'Alert Title',
-    message: 'Alert Message',
-    type: 'info',
-    useConfirmBtn: true,
-    customConfirmBtnClass: 'btn-warning'
+  title: 'Alert Title',
+  message: 'Alert Message',
+  type: 'info',
+  useConfirmBtn: true,
+  customConfirmBtnClass: 'btn-warning'
 }
 this.$refs.simplert.openSimplert(obj)
 ```
@@ -231,14 +231,14 @@ this.$refs.simplert.openSimplert(obj)
 
 ```javascript
 let confirmFn = function() {
-    alert("I am Confirmed")
+  alert("I am Confirmed")
 }
 let obj = {
-    title: 'Alert Title',
-    message: 'Alert Message',
-    type: 'info',
-    useConfirmBtn: true,
-    onConfirm: confirmFn
+  title: 'Alert Title',
+  message: 'Alert Message',
+  type: 'info',
+  useConfirmBtn: true,
+  onConfirm: confirmFn
 }
 this.$refs.simplert.openSimplert(obj)
 ```
@@ -249,10 +249,10 @@ this.$refs.simplert.openSimplert(obj)
 
 ```javascript
 let obj = {
-    title: 'Alert Title',
-    message: 'Alert Message',
-    type: 'info',
-    disableOverlayClick: true
+  title: 'Alert Title',
+  message: 'Alert Message',
+  type: 'info',
+  disableOverlayClick: true
 }
 this.$refs.simplert.openSimplert(obj)
 ```
@@ -263,10 +263,10 @@ this.$refs.simplert.openSimplert(obj)
 
 ```javascript
 let obj = {
-    title: 'Alert Title',
-    message: 'Alert Message',
-    type: 'info',
-    hideAllButton: true
+  title: 'Alert Title',
+  message: 'Alert Message',
+  type: 'info',
+  hideAllButton: true
 }
 this.$refs.simplert.openSimplert(obj)
 ```
@@ -277,13 +277,13 @@ this.$refs.simplert.openSimplert(obj)
 
 ```javascript
 let openFn = function() {
-    alert("I am Confirmed")
+  alert("I am Confirmed")
 }
 let obj = {
-    title: 'Alert Title',
-    message: 'Alert Message',
-    type: 'info',
-    onOpen: openFn
+  title: 'Alert Title',
+  message: 'Alert Message',
+  type: 'info',
+  onOpen: openFn
 }
 this.$refs.simplert.openSimplert(obj)
 ```
@@ -294,10 +294,10 @@ this.$refs.simplert.openSimplert(obj)
 
 ```javascript
 let obj = {
-    title: 'Alert Title',
-    message: 'Alert Message',
-    type: 'info',
-    showXclose: true
+  title: 'Alert Title',
+  message: 'Alert Message',
+  type: 'info',
+  showXclose: true
 }
 this.$refs.simplert.openSimplert(obj)
 ```

@@ -2,6 +2,17 @@ body {
   background-color: #f2f4f6;
 }
 
+pre{
+  border: 0;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+code{
+  margin: 0;
+  padding: 0;
+}
+
 .centered {
   text-align: center;
 }
@@ -34,6 +45,7 @@ body {
 .example__title {
   font-size: 1.6rem;
   color: #a6b6b9;
+  margin: 1em;
 }
 
 .content__row {
