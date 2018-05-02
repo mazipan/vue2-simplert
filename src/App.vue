@@ -2,7 +2,7 @@
   <div class="grid__row">
 
     <div class="fixed-top">
-      <a class="button button--radius button--green btn-top"  href="https://mazipan.gitbooks.io/vue2-simplert/"
+      <a class="button button--radius button--green btn-top"  href="https://vue2-simplert.gitbook.io/docs/"
          target="_blank">
           <i class="fa fa-book" aria-hidden="true"></i> Docs
       </a>

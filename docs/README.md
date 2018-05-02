@@ -1,8 +1,10 @@
 # Home
 
+![vue2-simplert](https://mazipan.github.io/vue2-simplert/images/vue2-simplert-logo.png)
+
 ## Demo
 
-https://mazipanneh.gitbook.io/vue2-simplert/
+https://mazipan.github.io/vue2-simplert/
 
 ## Documentation
 
@@ -14,6 +16,5 @@ https://mazipanneh.gitbook.io/vue2-simplert/
 + [Articles](/articles.md)
 + [FAQ](/faq.md)
 
-![vue2-simplert](https://mazipan.github.io/vue2-simplert/images/vue2-simplert-logo.png)
 
 Copyright © 2017 by [Irfan Maulana](https://github.com/mazipan/)
