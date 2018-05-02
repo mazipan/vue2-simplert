@@ -15,12 +15,14 @@ https://mazipan.github.io/vue2-simplert/
 
 ## Documentation
 
-- [Download](https://mazipan.gitbooks.io/vue2-simplert/download.html)
-- [Usage Guide](https://mazipan.gitbooks.io/vue2-simplert/usage.html)
-- [Methods And Props](https://mazipan.gitbooks.io/vue2-simplert/method-and-props.html)
-- [Example Code](https://mazipan.gitbooks.io/vue2-simplert/example.html)
-- [Articles](https://mazipan.gitbooks.io/vue2-simplert/articles.html)
-- [FAQ](https://mazipan.gitbooks.io/vue2-simplert/faq.html)
+See docs in GitBook: https://vue2-simplert.gitbook.io
+
+- [Download](https://vue2-simplert.gitbook.io/docs/download)
+- [Usage Guide](https://vue2-simplert.gitbook.io/docs/usage)
+- [Methods And Props](https://vue2-simplert.gitbook.io/docs/method-and-props)
+- [Example Code](https://vue2-simplert.gitbook.io/docs/example)
+- [Articles](https://vue2-simplert.gitbook.io/docs/articles)
+- [FAQ](https://vue2-simplert.gitbook.io/docs/faq)
 
 ## Credit
 
