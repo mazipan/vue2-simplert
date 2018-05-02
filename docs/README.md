@@ -2,7 +2,7 @@
 
 ## Demo
 
-https://mazipan.github.io/vue2-simplert/
+https://mazipanneh.gitbook.io/vue2-simplert/
 
 ## Documentation
 
