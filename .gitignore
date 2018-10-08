@@ -38,3 +38,4 @@ jspm_packages
 .idea/
 e2e
 _book
+dist/

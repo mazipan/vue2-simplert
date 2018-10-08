@@ -3,6 +3,7 @@ const merge = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CompressionPlugin = require("compression-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const baseConfig = require('./webpack.config.base');
 
@@ -52,6 +53,9 @@ module.exports = merge(baseConfig, {
     }),
     new CompressionPlugin({
       algorithm: 'gzip'
-    })
+    }),
+    new CopyWebpackPlugin([
+      'images/*'
+    ])
   ]
 });

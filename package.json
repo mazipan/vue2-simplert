@@ -58,7 +58,7 @@
     "eslint": "^5.6.1",
     "eslint-plugin-vue": "4.7.1",
     "friendly-errors-webpack-plugin": "^1.7.0",
-    "gh-publish": "^2.2.5",
+    "gh-pages": "^2.0.1",
     "gitbook-cli": "2.3.2",
     "gitbook-plugin-comment": "^1.0.5",
     "gitbook-plugin-favicon": "0.0.2",
