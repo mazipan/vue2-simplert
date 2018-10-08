@@ -7,5 +7,4 @@ const plugin = {
 }
 
 Simplert.install = plugin.install
-
 export default Simplert
