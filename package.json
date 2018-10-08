@@ -30,7 +30,8 @@
     "build:lib": "cross-env NODE_ENV=production webpack --color --progress --hide-modules --config webpack.config.prod.js",
     "dist": "./node_modules/.bin/rimraf ./dist && npm run build:demo && npm run build:lib",
     "test": "./node_modules/.bin/jest --coverage",
-    "docs": "gitbook install && gitbook serve"
+    "docs": "gitbook install && gitbook serve",
+    "publish-demo": "node ./publish-demo.js"
   },
   "main": "dist/simplert.js",
   "files": [
@@ -57,6 +58,7 @@
     "eslint": "^5.6.1",
     "eslint-plugin-vue": "4.7.1",
     "friendly-errors-webpack-plugin": "^1.7.0",
+    "gh-publish": "^2.2.5",
     "gitbook-cli": "2.3.2",
     "gitbook-plugin-comment": "^1.0.5",
     "gitbook-plugin-favicon": "0.0.2",
