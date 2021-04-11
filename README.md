@@ -5,9 +5,9 @@
 [![License](https://img.shields.io/github/license/mazipan/vue2-simplert.svg?maxAge=3600)](https://github.com/mazipan/vue2-simplert) ![minified](https://badgen.net/bundlephobia/minzip/vue2-simplert) [![version](https://img.shields.io/npm/v/vue2-simplert.svg)](https://www.npmjs.com/package/vue2-simplert) [![Travis](https://img.shields.io/travis/mazipan/vue2-simplert.svg)](https://travis-ci.org/mazipan/vue2-simplert)
 [![codecov](https://codecov.io/gh/mazipan/vue2-simplert/branch/master/graph/badge.svg)](https://codecov.io/gh/mazipan/vue2-simplert)
 
-## Vue2-Simplert Now Coming as Vue.js Plugin
+## ❗️❗️❗️ Vue2-Simplert Now Coming as Vue.js Plugin
 
-Check : [https://github.com/mazipan/vue2-simplert-plugin](https://github.com/mazipan/vue2-simplert-plugin)
+Please use the plugin version: [https://github.com/mazipan/vue2-simplert-plugin](https://github.com/mazipan/vue2-simplert-plugin)
 
 ## Demo
 
